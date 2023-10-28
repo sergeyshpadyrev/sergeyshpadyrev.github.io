@@ -11,7 +11,8 @@
 - Буддизм с точки зрения программиста
   ( [Хабр](https://habr.com/ru/articles/522438/) )
 - Как я устал от JavaScript и создал свой собственный язык программирования
-  ( [Хабр](https://habr.com/ru/articles/524962/) )
+  ( [Хабр](https://habr.com/ru/articles/524962/)
+  / [dev.to](https://dev.to/sergeyshpadyrev/why-i-wrote-my-own-programming-language-based-on-javascript-435g) )
 - Как я победил прокрастинацию, узнал свои истинные желания, поставил четкие цели и достиг их
   ( [Хабр](https://habr.com/ru/articles/531480/) )
 - Как древние шумеры повлияли на значение скорости света, и почему Великая Французская Революция не смогла им помешать
