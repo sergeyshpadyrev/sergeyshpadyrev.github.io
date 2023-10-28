@@ -1,5 +1,7 @@
 # Cергей Шпадырев
 
+<img src="./images/avatar.jpeg" height="256px">
+
 ## Тексты
 
 ### 2020 год
