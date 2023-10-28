@@ -81,3 +81,12 @@
   ( [Хабр](https://habr.com/ru/articles/764504/)
   / [Пикабу](https://pikabu.ru/story/kak_upravlyat_vselennoy_ne_pokidaya_psikhiatricheskoy_lechebnitsyi_10738333)
   / [Дзен](https://dzen.ru/media/sergeyshpadyrev/kak-upravliat-vselennoi-ne-pokidaia-psihiatricheskoi-lechebnicy-652b9010d141d60240cbf30e) )
+
+## Проекты
+
+### Язык программирования Una
+
+Una - это функциональный язык программирования, вдохновленный философией LISP и экосистемой JavaScript.
+
+[Репозиторий](https://github.com/una-language/una-language)
+![GitHub Repo stars](https://img.shields.io/github/stars/una-language/una-language)
