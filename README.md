@@ -82,7 +82,8 @@
   / [Пикабу](https://pikabu.ru/story/kak_upravlyat_vselennoy_ne_pokidaya_psikhiatricheskoy_lechebnitsyi_10738333)
   / [Дзен](https://dzen.ru/media/sergeyshpadyrev/kak-upravliat-vselennoi-ne-pokidaia-psihiatricheskoi-lechebnicy-652b9010d141d60240cbf30e) )
 - Слово Божие — функциональное программирование как основа Вселенной (
-  [Хабр](https://habr.com/ru/articles/767864/) )
+  [Хабр](https://habr.com/ru/articles/767864/)
+  / [Пикабу](https://pikabu.ru/story/slovo_bozhie__funktsionalnoe_programmirovanie_kak_osnova_vselennoy_10785454) )
 
 ## Проекты
 
