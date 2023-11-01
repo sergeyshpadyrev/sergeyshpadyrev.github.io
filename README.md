@@ -68,7 +68,8 @@
   / [Дзен](https://dzen.ru/media/sergeyshpadyrev/dzen-i-rekursivnye-petli-64eb1e0d79aeaf5303f54dd5) )
 - Эйлер, Чёрч и Мандельброт — этюд о красоте и математике
   ( [Хабр](https://habr.com/ru/articles/724768/)
-  / [Пикабу](https://pikabu.ru/story/yeyler_chyorch_i_mandelbrot__yetyud_o_krasote_i_matematike_10602137) )
+  / [Пикабу](https://pikabu.ru/story/yeyler_chyorch_i_mandelbrot__yetyud_o_krasote_i_matematike_10602137)
+  / [Дзен](https://dzen.ru/media/sergeyshpadyrev/eiler-cherch-i-mandelbrot--etiud-o-krasote-i-matematike-65424e044e020949e13a5d0c) )
 - Искусственный интеллект, Большой Взрыв, чёрные дыры и филиокве — ищем ответ на вопрос, расколовший христианскую церковь
   ( [Хабр](https://habr.com/ru/articles/750620/)
   / [Пикабу](https://pikabu.ru/story/iskusstvennyiy_intellekt_bolshoy_vzryiv_chyornyie_dyiryi_i_filiokve__ishchem_otvet_na_vopros_raskolovshiy_khristianskuyu_tserkov_chast_1_10613991)
