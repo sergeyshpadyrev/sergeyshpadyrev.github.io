@@ -15,6 +15,8 @@
   ( [Хабр](https://habr.com/ru/articles/517888/) / [Копия](./posts/2020-09-04-matrix/index.md) )
 - Буддизм с точки зрения программиста
   ( [Хабр](https://habr.com/ru/articles/522438/) )
+- Стивен Вольфрам: кажется, мы близки к пониманию фундаментальной теории физики, и она прекрасна
+  ( [Хабр](https://habr.com/ru/articles/518206/) )
 - Как я устал от JavaScript и создал свой собственный язык программирования
   ( [Хабр](https://habr.com/ru/articles/524962/)
   / [dev.to](https://dev.to/sergeyshpadyrev/why-i-wrote-my-own-programming-language-based-on-javascript-435g) )
