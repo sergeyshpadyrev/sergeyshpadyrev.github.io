@@ -95,6 +95,10 @@
   [Хабр](https://habr.com/ru/articles/767864/)
   / [Пикабу](https://pikabu.ru/story/slovo_bozhie__funktsionalnoe_programmirovanie_kak_osnova_vselennoy_10785454)
   / [Дзен](https://dzen.ru/media/sergeyshpadyrev/slovo-bojie--funkcionalnoe-programmirovanie-kak-osnova-vselennoi-65424b291f26311882d4819d) )
+- Размышления о мире. Часть 1: Панкомпьютационализм (
+  [Хабр](https://habr.com/ru/articles/774950/)
+  / [Пикабу](https://pikabu.ru/story/razmyishleniya_o_mire_chast_1_pankompyutatsionalizm_10894773)
+  / [Дзен](https://dzen.ru/media/sergeyshpadyrev/razmyshleniia-o-mire-chast-1-pankompiutacionalizm-656f8eae904c575fc9782dfb) )
 
 ## Проекты
 
