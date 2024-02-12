@@ -100,6 +100,13 @@
   / [Пикабу](https://pikabu.ru/story/razmyishleniya_o_mire_chast_1_pankompyutatsionalizm_10894773)
   / [Дзен](https://dzen.ru/media/sergeyshpadyrev/razmyshleniia-o-mire-chast-1-pankompiutacionalizm-656f8eae904c575fc9782dfb) )
 
+### 2024 год
+
+- Размышления о мире. Часть 2: Панпсихизм⁠⁠ (
+  [Хабр](https://habr.com/ru/articles/778948/)
+  / [Пикабу](https://pikabu.ru/story/razmyishleniya_o_mire_chast_2_panpsikhizm_11124243)
+  / [Дзен](https://dzen.ru/a/Zcncl6o98R0soroX) )
+
 ## Проекты
 
 ### Язык программирования Una
