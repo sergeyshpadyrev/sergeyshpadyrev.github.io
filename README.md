@@ -107,6 +107,10 @@
   / [Пикабу](https://pikabu.ru/story/razmyishleniya_o_mire_chast_2_panpsikhizm_11124243)
   / [Дзен](https://dzen.ru/a/Zcncl6o98R0soroX) )
 
+- Левиафаны, слоёное бытие и ноосферные бомбы⁠⁠⁠ (
+  [Пикабу](https://pikabu.ru/story/leviafanyi_sloyonoe_byitie_i_noosfernyie_bombyi_11200070)
+  / [Дзен](https://dzen.ru/a/Zejf03cAeG-YsAa9) )
+
 ## Проекты
 
 ### Язык программирования Una
