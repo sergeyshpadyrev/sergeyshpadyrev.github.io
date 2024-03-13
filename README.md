@@ -111,6 +111,11 @@
   [Пикабу](https://pikabu.ru/story/leviafanyi_sloyonoe_byitie_i_noosfernyie_bombyi_11200070)
   / [Дзен](https://dzen.ru/a/Zejf03cAeG-YsAa9) )
 
+- Смысл жизни с точки зрения программиста-буддиста⁠⁠ (
+  [Хабр](https://habr.com/ru/articles/796049/)
+  / [Пикабу](https://pikabu.ru/story/smyisl_zhizni_s_tochki_zreniya_programmistabuddista_chast_1_11221936)
+  / [Дзен](https://dzen.ru/a/ZfH5RtC2Hniys2zB) )
+
 ## Проекты
 
 ### Язык программирования Una
