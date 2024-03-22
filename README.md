@@ -116,6 +116,11 @@
   / [Пикабу](https://pikabu.ru/story/smyisl_zhizni_s_tochki_zreniya_programmistabuddista_chast_1_11221936)
   / [Дзен](https://dzen.ru/a/ZfH5RtC2Hniys2zB) )
 
+- Нейросети, виртуальная реальность и Бог-солипсист⁠⁠ (
+  [Хабр](https://habr.com/ru/articles/801117/)
+  / [Пикабу](https://pikabu.ru/story/neyroseti_virtualnaya_realnost_i_bogsolipsist_11250990)
+  / [Дзен](https://dzen.ru/a/Zf1oX9SMfgUmdfHm) )
+
 ## Проекты
 
 ### Язык программирования Una
