@@ -121,6 +121,10 @@
   / [Пикабу](https://pikabu.ru/story/neyroseti_virtualnaya_realnost_i_bogsolipsist_11250990)
   / [Дзен](https://dzen.ru/a/Zf1oX9SMfgUmdfHm) )
 
+- Двоичный код Вселенной и симметричные языки⁠⁠ (
+  [Хабр](https://habr.com/ru/articles/804525/)
+  / [Дзен](https://dzen.ru/a/ZiO8mfut0nvvY-0_) )
+
 ## Проекты
 
 ### Язык программирования Una
