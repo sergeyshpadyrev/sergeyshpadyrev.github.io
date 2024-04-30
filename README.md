@@ -106,25 +106,20 @@
   [Хабр](https://habr.com/ru/articles/778948/)
   / [Пикабу](https://pikabu.ru/story/razmyishleniya_o_mire_chast_2_panpsikhizm_11124243)
   / [Дзен](https://dzen.ru/a/Zcncl6o98R0soroX) )
-
 - Левиафаны, слоёное бытие и ноосферные бомбы⁠⁠⁠ (
   [Пикабу](https://pikabu.ru/story/leviafanyi_sloyonoe_byitie_i_noosfernyie_bombyi_11200070)
   / [Дзен](https://dzen.ru/a/Zejf03cAeG-YsAa9) )
-
 - Смысл жизни с точки зрения программиста-буддиста⁠⁠ (
   [Хабр](https://habr.com/ru/articles/796049/)
   / [Пикабу](https://pikabu.ru/story/smyisl_zhizni_s_tochki_zreniya_programmistabuddista_chast_1_11221936)
   / [Дзен](https://dzen.ru/a/ZfH5RtC2Hniys2zB) )
-
 - Нейросети, виртуальная реальность и Бог-солипсист⁠⁠ (
   [Хабр](https://habr.com/ru/articles/801117/)
   / [Пикабу](https://pikabu.ru/story/neyroseti_virtualnaya_realnost_i_bogsolipsist_11250990)
   / [Дзен](https://dzen.ru/a/Zf1oX9SMfgUmdfHm) )
-
 - Двоичный код Вселенной и симметричные языки⁠⁠ (
   [Хабр](https://habr.com/ru/articles/804525/)
   / [Дзен](https://dzen.ru/a/ZiO8mfut0nvvY-0_) )
-
 - Как Фёдор Михайлович Достоевский и Фридрих Ницше повлияли на мировоззрение Дарта Вейдера⁠⁠ (
   [Хабр](https://habr.com/ru/articles/809907/)
   / [Пикабу](https://pikabu.ru/story/kak_fyodor_mikhaylovich_dostoevskiy_i_fridrikh_nitsshe_povliyali_na_mirovozzrenie_darta_veydera_11369391)
