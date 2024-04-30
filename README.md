@@ -120,7 +120,7 @@
 - Двоичный код Вселенной и симметричные языки⁠⁠ (
   [Хабр](https://habr.com/ru/articles/804525/)
   / [Дзен](https://dzen.ru/a/ZiO8mfut0nvvY-0_) )
-- Как Фёдор Михайлович Достоевский и Фридрих Ницше повлияли на мировоззрение Дарта Вейдера⁠⁠ (
+- Как Достоевский и Ницше повлияли на мировоззрение Дарта Вейдера⁠⁠ (
   [Хабр](https://habr.com/ru/articles/809907/)
   / [Пикабу](https://pikabu.ru/story/kak_fyodor_mikhaylovich_dostoevskiy_i_fridrikh_nitsshe_povliyali_na_mirovozzrenie_darta_veydera_11369391)
   / [Дзен](https://dzen.ru/a/ZjCea2aZSDarxdYV) )
