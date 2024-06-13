@@ -124,6 +124,10 @@
   [Хабр](https://habr.com/ru/articles/809907/)
   / [Пикабу](https://pikabu.ru/story/kak_fyodor_mikhaylovich_dostoevskiy_i_fridrikh_nitsshe_povliyali_na_mirovozzrenie_darta_veydera_11369391)
   / [Дзен](https://dzen.ru/a/ZjCea2aZSDarxdYV) )
+- Дзэн в искусстве программирования⁠ (
+  [Хабр](https://habr.com/ru/articles/809155/)
+  / [Пикабу](https://pikabu.ru/story/dzyen_v_iskusstve_programmirovaniya_11507271)
+  / [Дзен](https://dzen.ru/a/ZmsycwQYWFjv4VlO) )
 
 ## Проекты
 
