@@ -128,6 +128,10 @@
   [Хабр](https://habr.com/ru/articles/809155/)
   / [Пикабу](https://pikabu.ru/story/dzyen_v_iskusstve_programmirovaniya_11507271)
   / [Дзен](https://dzen.ru/a/ZmsycwQYWFjv4VlO) )
+- Вселенная как театр одного актёра⁠⁠ (
+  [Хабр](https://habr.com/ru/articles/821613/)
+  / [Пикабу](https://pikabu.ru/story/vselennaya_kak_teatr_odnogo_aktyora_11528663)
+  / [Дзен](https://dzen.ru/a/ZnQtrqN_lEeJWyfg) )
 
 ## Проекты
 
