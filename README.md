@@ -133,7 +133,8 @@
   / [Пикабу](https://pikabu.ru/story/vselennaya_kak_teatr_odnogo_aktyora_11528663)
   / [Дзен](https://dzen.ru/a/ZnQtrqN_lEeJWyfg) )
 - Как и зачем моё иллюзорное «я» пришло к буддизму⁠⁠ (
-  [Вастрик](https://vas3k.club/post/25082/) )
+  [Вастрик](https://vas3k.club/post/25082/)
+  / [Дзен](https://dzen.ru/a/ZqJjlpvhXzWr4ky3) )
 
 ## Проекты
 
