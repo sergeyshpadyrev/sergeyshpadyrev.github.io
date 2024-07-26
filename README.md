@@ -134,7 +134,6 @@
   / [Дзен](https://dzen.ru/a/ZnQtrqN_lEeJWyfg) )
 - Как и зачем моё иллюзорное «я» пришло к буддизму⁠⁠ (
   [Вастрик](https://vas3k.club/post/25082/)
-  / [Хабр](https://habr.com/ru/articles/831572/)
   / [Дзен](https://dzen.ru/a/ZqJjlpvhXzWr4ky3) )
 
 ## Проекты
