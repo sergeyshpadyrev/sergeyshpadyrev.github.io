@@ -136,6 +136,10 @@
   [Вастрик](https://vas3k.club/post/25082/)
   / [Пикабу](https://pikabu.ru/story/kak_i_zachem_moyo_illyuzornoe_ya_prishlo_k_buddizmu_chast_1_11683771)
   / [Дзен](https://dzen.ru/a/ZqJjlpvhXzWr4ky3) )
+- Почему я учусь видеть духов⁠⁠ (
+  [Вастрик](https://vas3k.club/post/25923/)
+  / [Пикабу](https://pikabu.ru/story/pochemu_ya_uchus_videt_dukhov_11881304)
+  / [Дзен](https://dzen.ru/a/ZwFS0UrHVi-eHgZF) )
 
 ## Проекты
 
