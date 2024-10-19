@@ -140,6 +140,10 @@
   [Вастрик](https://vas3k.club/post/25923/)
   / [Пикабу](https://pikabu.ru/story/pochemu_ya_uchus_videt_dukhov_11881304)
   / [Дзен](https://dzen.ru/a/ZwFS0UrHVi-eHgZF) )
+- Распределение IQ: как программисту выживать в мире, рассчитанном на дураков?⁠⁠ (
+  [Хабр](https://habr.com/ru/articles/850172/)
+  / [Пикабу](https://pikabu.ru/story/raspredelenie_iq_kak_programmistu_vyizhivat_v_mire_rasschitannom_na_durakov_11927414)
+  / [Дзен](https://dzen.ru/a/ZxN00cbsLig8rPUU) )
 
 ## Проекты
 
