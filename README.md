@@ -144,6 +144,10 @@
   [Хабр](https://habr.com/ru/articles/850172/)
   / [Пикабу](https://pikabu.ru/story/raspredelenie_iq_kak_programmistu_vyizhivat_v_mire_rasschitannom_na_durakov_11927414)
   / [Дзен](https://dzen.ru/a/ZxN00cbsLig8rPUU) )
+- Квантовый ластик, Хорхе Луис Борхес и сказка, которая пишет сама себя⁠⁠ (
+  [Хабр](https://habr.com/ru/articles/852870/)
+  / [Пикабу](https://pikabu.ru/story/kvantovyiy_lastik_khorkhe_luis_borkhes_i_skazka_kotoraya_pishet_sama_sebya_12049529)
+  / [Дзен](https://dzen.ru/a/Z0BK1xQHIkbcHXPg) )
 
 ## Проекты
 
