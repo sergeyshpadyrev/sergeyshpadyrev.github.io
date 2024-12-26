@@ -1,0 +1,24 @@
+.descriptionImage {
+  border-radius: 12px;
+  height: auto;
+  width: 200px;
+}
+
+.heroBanner {
+  overflow: hidden;
+  padding: 4rem;
+  position: relative;
+  text-align: center;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
