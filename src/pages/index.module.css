@@ -4,6 +4,12 @@
   width: 200px;
 }
 
+.descriptionText {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
 .heroBanner {
   overflow: hidden;
   padding: 4rem;

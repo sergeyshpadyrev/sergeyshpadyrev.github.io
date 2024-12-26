@@ -20,7 +20,12 @@ const HomepageHeader = () => {
         src="/img/avatar.jpg"
         alt="avatar"
       />
-      <div></div>
+      <div className={styles.descriptionText}>
+        Меня зовут Сергей.
+        <br /> Я работаю инженером-программистом и пишу философские эссе.
+        <br /> На этом сайте собраны все мои эссе, проекты, каналы и публикации
+        в них.
+      </div>
     </header>
   );
 };
