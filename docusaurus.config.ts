@@ -68,7 +68,7 @@ const config: Config = {
       items: [
         { to: "/docs/channels", label: "Каналы", position: "left" },
         { to: "/docs/publications", label: "Публикации", position: "left" },
-        { to: "/docs/category/essays", label: "Эссе", position: "left" },
+        { to: "/docs/category/эссе", label: "Эссе", position: "left" },
         { to: "/docs/category/заметки", label: "Заметки", position: "left" },
         { to: "/docs/videos", label: "Видео", position: "left" },
         { to: "/docs/projects", label: "Проекты", position: "left" },
