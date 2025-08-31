@@ -1,6 +1,6 @@
 {
-  "label": "Посты",
-  "position": 4,
+  "label": "Эссе",
+  "position": 3,
   "link": {
     "type": "generated-index"
   }
