@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Сергей Шпадырев",
   description: "Personal website of Сергей Шпадырев",
+  icons: {
+    icon: "/images/avatar.jpg",
+  },
 };
 
 export default function RootLayout({
