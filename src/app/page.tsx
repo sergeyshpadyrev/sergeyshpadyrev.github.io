@@ -31,6 +31,16 @@ export default function Home() {
           Инженер-программист и философ-эссеист
         </p>
       </div>
+      <a
+        href="/publications"
+        style={{
+          color: "#0066cc",
+          textDecoration: "none",
+          fontSize: "1.125rem",
+        }}
+      >
+        Публикации
+      </a>
     </main>
   );
 }
