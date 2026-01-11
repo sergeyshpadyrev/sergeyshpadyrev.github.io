@@ -1,3 +1,1 @@
-# Website
-
-Personal website
+# Sergey Shpadyrev website
