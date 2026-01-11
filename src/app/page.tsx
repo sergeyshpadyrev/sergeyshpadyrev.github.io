@@ -52,6 +52,16 @@ export default function Home() {
         >
           Публикации
         </a>
+        <a
+          href="/platforms"
+          style={{
+            color: "#0066cc",
+            textDecoration: "none",
+            fontSize: "1.125rem",
+          }}
+        >
+          Площадки
+        </a>
       </div>
     </main>
   );
