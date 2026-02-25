@@ -93,7 +93,6 @@ Cборник моих лучших эссе и заметок, написанн
 - [Телеграм-канал](https://t.me/+aoQm0ISH-3g4MTE0)
 - [MAX-канал](https://max.ru/join/swjQhKR_jE2aX_My1ITtNUVlEfLEaslrB-MiZ5-t5-w)
 - [Сообщество VK](https://vk.com/club231375709)
-- [Бусти-блог](https://boosty.to/sergeyshpadyrev)
 - [Хабр](https://habr.com/ru/users/SergioShpadi/publications/articles/)
 - [Пикабу](https://pikabu.ru/@sergeyshpadyrev)
 - [Дзен](https://dzen.ru/sergeyshpadyrev)

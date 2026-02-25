@@ -44,10 +44,6 @@ const channelLinks = [
     href: "https://vk.com/club231375709",
   },
   {
-    label: "Бусти-блог",
-    href: "https://boosty.to/sergeyshpadyrev",
-  },
-  {
     label: "Хабр",
     href: "https://habr.com/ru/users/SergioShpadi/publications/articles/",
   },
