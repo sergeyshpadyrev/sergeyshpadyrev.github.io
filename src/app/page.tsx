@@ -69,15 +69,15 @@ export default function Home() {
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 pb-24 pt-16">
         <section className="grid items-center gap-12 md:grid-cols-[360px_minmax(0,1fr)]">
-          <div className="relative mx-auto h-80 w-80 md:mx-0">
-            <div className="absolute -inset-5 rounded-[34px] border border-white/70 bg-white/40 shadow-[0_34px_90px_rgba(31,26,18,0.12)]" />
+          <div className="relative mx-auto h-96 w-72 md:mx-0">
+            <div className="absolute -inset-5 rounded-[36px] border border-white/70 bg-white/40 shadow-[0_34px_90px_rgba(31,26,18,0.12)]" />
             <Image
               src="/images/avatar.jpg"
               alt="Сергей Шпадырев"
-              width={320}
-              height={320}
+              width={288}
+              height={384}
               priority
-              className="relative h-80 w-80 rounded-[30px] object-cover shadow-lg"
+              className="relative h-96 w-72 rounded-[32px] object-cover shadow-lg"
             />
           </div>
           <div className="space-y-6 fade-in-up">
@@ -90,8 +90,8 @@ export default function Home() {
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-relaxed text-[#4c4134] sm:text-lg lg:text-xl">
-              На этом сайте собраны все мои публикации, эссе, заметки, видео и ссылки
-              на мои каналы
+              На этом сайте собраны все мои публикации, эссе, заметки, видео и
+              ссылки на мои каналы
             </p>
           </div>
         </section>
@@ -121,13 +121,14 @@ export default function Home() {
               </h2>
             </div>
             <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
-              Cборник моих лучших эссе и заметок, написанных с 2020 по 2025 годы.
-              Некоторые эссе вошли в него в неизменном виде, некоторые в
+              Cборник моих лучших эссе и заметок, написанных с 2020 по 2025
+              годы. Некоторые эссе вошли в него в неизменном виде, некоторые в
               отредактированном специально для этой книги варианте. В книге
               рассматривается множество тем: философские учения Древней Греции,
-              Индии, и Китая, христианская теология и европейская философия Нового
-              Времени, философия математики, физики и науки в целом, эпистемология,
-              буддийское учение, вопросы этики и психологии, философия постмодерна.
+              Индии, и Китая, христианская теология и европейская философия
+              Нового Времени, философия математики, физики и науки в целом,
+              эпистемология, буддийское учение, вопросы этики и психологии,
+              философия постмодерна.
             </p>
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="space-y-3">
@@ -171,17 +172,66 @@ export default function Home() {
         </section>
 
         <section
+          id="course"
+          className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
+          style={{ animationDelay: "170ms" }}
+        >
+          <div className="relative mx-auto w-full max-w-[320px]">
+            <div className="absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#efe1d2] shadow-[0_18px_45px_rgba(31,26,18,0.12)]" />
+            <Image
+              src="/images/statue.png"
+              alt="Обложка курса Панель управления собой"
+              width={320}
+              height={440}
+              className="relative w-full rounded-[22px] object-cover shadow-lg"
+            />
+          </div>
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">
+                Курс
+              </p>
+              <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
+                Панель управления собой
+              </h2>
+            </div>
+            <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
+              Курс лекций "Панель управления собой" рассказывает читателю о том,
+              как построить непрерывно работающий конвейер по медленному, но
+              неизбежному улучшению собственной жизни во всех её сферах. Не
+              ждите быстрого результата - путь к успеху займёт 5-10 лет
+              постоянных усилий и духовного роста, по прошествию которых Феррари
+              и виллы на берегу моря всё равно не будет. Но будет кое-что
+              гораздо более ценное - целостная многогранная жизнь.
+            </p>
+            <div className="flex flex-col gap-3">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]">
+                Курс доступен по подписке на Boosty
+              </p>
+              <a
+                className="inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]"
+                href="https://boosty.to/sergeyshpadyrev"
+                target="_blank"
+                rel="noreferrer"
+              >
+                ОТКРЫТЬ
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section
           id="channels"
           className="space-y-8 fade-in"
-          style={{ animationDelay: "220ms" }}
+          style={{ animationDelay: "260ms" }}
         >
           <div className="space-y-2">
             <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
               Каналы и платформы
             </h2>
             <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
-              Мои тексты, заметки и комментарии выходят на разных площадках. Здесь
-              собраны актуальные ссылки.
+              Мои тексты, заметки и комментарии выходят на разных площадках.
+              Здесь собраны актуальные ссылки.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
