@@ -1,12 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { getPostSummaries } from "@/lib/posts";
+import { getPostSummaries, type PostLinks } from "@/lib/posts";
 
 export const metadata = {
   title: "Посты — Сергей Шпадырев",
   description: "Все публикации и эссе Сергея Шпадырева.",
 };
+
+const platformLinks: Array<{ key: keyof PostLinks; label: string }> = [
+  { key: "dzen", label: "Дзен" },
+  { key: "habr", label: "Хабр" },
+  { key: "pikabu", label: "Пикабу" },
+  { key: "vastrik", label: "Вастрик" },
+];
 
 export default async function PostsPage() {
   const posts = await getPostSummaries();
@@ -42,35 +49,58 @@ export default async function PostsPage() {
                   </div>
                 </div>
               ) : null}
-              <Link
-                href={`/posts/${post.id}`}
+              <div
                 className="group rounded-[28px] border border-white/70 bg-white/55 p-4 shadow-[0_20px_50px_rgba(31,26,18,0.12)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
                 style={{ animationDelay: `${index * 60}ms` }}
               >
-                <div className="relative h-48 w-full overflow-hidden rounded-[22px] bg-[#efe1d2]">
-                  {post.image ? (
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw"
-                      className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                    />
-                  ) : (
-                    <div className="flex h-full items-center justify-center text-sm uppercase tracking-[0.2em] text-[#7b6a55]">
-                      Без обложки
-                    </div>
-                  )}
-                </div>
-                <div className="mt-4 flex items-start justify-between gap-4">
-                  <h2 className="text-lg font-semibold text-[#1f1a12]">
-                    {post.title}
-                  </h2>
-                  <span className="text-xl text-[#7b6a55] transition group-hover:translate-x-1">
-                    →
-                  </span>
-                </div>
-              </Link>
+                <Link href={`/posts/${post.id}`} className="block">
+                  <div className="relative h-48 w-full overflow-hidden rounded-[22px] bg-[#efe1d2]">
+                    {post.image ? (
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw"
+                        className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center text-sm uppercase tracking-[0.2em] text-[#7b6a55]">
+                        Без обложки
+                      </div>
+                    )}
+                  </div>
+                  <div className="mt-4 flex items-start justify-between gap-4">
+                    <h2 className="text-lg font-semibold text-[#1f1a12]">
+                      {post.title}
+                    </h2>
+                    <span className="text-xl text-[#7b6a55] transition group-hover:translate-x-1">
+                      →
+                    </span>
+                  </div>
+                </Link>
+                {post.links ? (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {platformLinks.map((platform) => {
+                      const href = post.links?.[platform.key];
+                      if (!href) {
+                        return null;
+                      }
+
+                      return (
+                        <a
+                          key={platform.key}
+                          href={href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center rounded-full border border-[#1f1a12]/20 bg-white/70 px-3 py-1 text-xs font-medium text-[#1f1a12] transition hover:border-[#1f1a12]/50 hover:bg-white"
+                        >
+                          {platform.label}
+                        </a>
+                      );
+                    })}
+                  </div>
+                ) : null}
+              </div>
             </div>
           ))}
         </section>
