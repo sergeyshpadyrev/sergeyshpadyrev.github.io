@@ -76,6 +76,17 @@ const podcastLinks = [
   },
 ];
 
+const lecturerLinks = [
+  {
+    label: "Университет мировоззрения УНИВЁРС",
+    href: "https://www.univers.id/",
+  },
+  {
+    label: "Клуб 42",
+    href: "https://club-42.ru/",
+  },
+];
+
 const linkClassName =
   "inline-flex items-center justify-center rounded-full border border-[#1f1a12]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#1f1a12] transition hover:border-[#1f1a12]/50 hover:bg-white";
 
@@ -402,6 +413,43 @@ export default async function Home() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {channelLinks.map((link, index) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
+                style={{ animationDelay: `${index * 70}ms` }}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-semibold text-[#1f1a12]">
+                    {link.label}
+                  </span>
+                  <span className="text-xl text-[#7b6a55] transition group-hover:translate-x-1">
+                    →
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="lecturer"
+          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
+          style={{ animationDelay: "300ms" }}
+        >
+          <div className="space-y-2">
+            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
+              Лекции
+            </h2>
+            <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
+              Выступаю как приглашённый лектор в рамках нескольких
+              интеллектуальных сообществ
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {lecturerLinks.map((link, index) => (
               <a
                 key={link.href}
                 href={link.href}
