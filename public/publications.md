@@ -1,9 +1,3 @@
-# Публикации
-
-На этой странице собраны ссылки на все мои лонгрид-эссе на разных ресурсах.
-
-### 2020 год
-
 - Почему мы живем не в Матрице, а в матрице?
   ( [Хабр](https://habr.com/ru/articles/517888/)
   / [Копия](./essays/01_matrix.md) )
@@ -22,9 +16,6 @@
 - Как древние шумеры повлияли на значение скорости света, и почему Великая Французская Революция не смогла им помешать
   ( [Хабр](https://habr.com/ru/articles/532758/)
   / [Копия](./essays/05_shumer_lightspeed.md) )
-
-### 2021 год
-
 - Как египетский фараон Аменхотеп основал христианство, и почему оно стало идеальным мемом
   ( [Хабр](https://habr.com/ru/articles/536446/)
   / [Копия](./essays/06_pharaoh_christianity.md) )
@@ -64,14 +55,6 @@
 - Панель управления собой: 10 простых шагов к порядку в вашей жизни
   ( [Хабр](https://habr.com/ru/articles/587598/)
   / [Копия](./essays/18_managment_panel.md) )
-
-### 2022 год
-
-- Вселенная Стивена Вольфрама
-  ( [Хабр](https://habr.com/ru/articles/649483/) )
-
-### 2023 год
-
 - Cознание — величайшая загадка Вселенной
   ( [Хабр](https://habr.com/ru/articles/715088/)
   / [Пикабу](https://pikabu.ru/story/coznanie__velichayshaya_zagadka_vselennoy_chast_1_9993314)
@@ -117,9 +100,6 @@
   / [Пикабу](https://pikabu.ru/story/razmyishleniya_o_mire_chast_1_pankompyutatsionalizm_10894773)
   / [Дзен](https://dzen.ru/media/sergeyshpadyrev/razmyshleniia-o-mire-chast-1-pankompiutacionalizm-656f8eae904c575fc9782dfb)
   / [Копия](./essays/27_thoughts1.md) )
-
-### 2024 год
-
 - Размышления о мире. Часть 2: Панпсихизм⁠⁠ (
   [Хабр](https://habr.com/ru/articles/778948/)
   / [Пикабу](https://pikabu.ru/story/razmyishleniya_o_mire_chast_2_panpsikhizm_11124243)
@@ -178,9 +158,6 @@
   / [Пикабу](https://pikabu.ru/story/kvantovyiy_lastik_khorkhe_luis_borkhes_i_skazka_kotoraya_pishet_sama_sebya_12049529)
   / [Дзен](https://dzen.ru/a/Z0BK1xQHIkbcHXPg)
   / [Копия](./essays/39_quantum_eraser.md) )
-
-### 2025 год
-
 - Язык мироздания — теория групп и теория категорий⁠⁠ (
   [Хабр](https://habr.com/ru/articles/879808/)
   / [Пикабу](https://pikabu.ru/story/yazyik_mirozdaniya__teoriya_grupp_i_teoriya_kategoriy_12644786)
@@ -241,9 +218,6 @@
   / [Пикабу](https://pikabu.ru/story/obektnoorientirovannaya_filosofiya_13533704)
   / [Дзен](https://dzen.ru/a/aUv3s3jJpVfwvXWF)
   / [Копия](./essays/51_object_oriented.md) )
-
-### 2026 год
-
 - Три ресурса человека и КПД его действий — как мудрость древних даосов сделала меня максимально продуктивным (
   [Хабр](https://habr.com/ru/articles/983390/)
   / [Пикабу](https://pikabu.ru/story/tri_resursa_cheloveka_i_kpd_ego_deystviy__kak_mudrost_drevnikh_daosov_sdelala_menya_maksimalno_produktivnyim_13589798)
