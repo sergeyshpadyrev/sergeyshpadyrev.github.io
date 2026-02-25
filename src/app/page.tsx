@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import { getPostSummaries } from "@/lib/posts";
 
 const digitalLinks = [
   {
@@ -60,7 +63,8 @@ const channelLinks = [
 const linkClassName =
   "inline-flex items-center justify-center rounded-full border border-[#1f1a12]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#1f1a12] transition hover:border-[#1f1a12]/50 hover:bg-white";
 
-export default function Home() {
+export default async function Home() {
+  const posts = (await getPostSummaries()).slice(0, 6);
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#f6f1e8] text-[#1f1a12]">
       <div className="pointer-events-none absolute -left-24 top-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#f2c07d]/50 blur-[120px] float-slow" />
@@ -150,7 +154,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="space-y-3">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]">
+                <p className="text-sm font-semibold upОpercase tracking-[0.2em] text-[#7b6a55]">
                   Бумажная версия
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -168,6 +172,60 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section
+          id="posts"
+          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
+          style={{ animationDelay: "160ms" }}
+        >
+          <div className="space-y-3">
+            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
+              Эссе
+            </h2>
+            <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
+              Свежие публикации из архива эссе, собранные в одном месте.
+            </p>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post, index) => (
+              <Link
+                key={post.id}
+                href={`/posts/${post.id}`}
+                className="group rounded-[24px] border border-white/70 bg-white/55 p-3 shadow-[0_18px_40px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
+                style={{ animationDelay: `${index * 60}ms` }}
+              >
+                <div className="relative h-36 w-full overflow-hidden rounded-[18px] bg-[#efe1d2]">
+                  {post.image ? (
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
+                      className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.2em] text-[#7b6a55]">
+                      Без обложки
+                    </div>
+                  )}
+                </div>
+                <div className="mt-3">
+                  <h3 className="text-base font-semibold text-[#1f1a12]">
+                    {post.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="flex justify-center">
+            <Link
+              href="/posts"
+              className="inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]"
+            >
+              Открыть все эссе
+            </Link>
           </div>
         </section>
 
@@ -214,7 +272,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                ОТКРЫТЬ
+                ОТКРЫТЬ КУРС
               </a>
             </div>
           </div>
