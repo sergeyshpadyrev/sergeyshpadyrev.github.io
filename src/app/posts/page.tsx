@@ -20,15 +20,9 @@ export default async function PostsPage() {
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-6 pb-24 pt-16">
         <header className="space-y-4 fade-in-up">
-          <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">
-            Посты
-          </p>
           <h1 className="font-display text-4xl text-[#1f1a12] sm:text-5xl">
-            Все публикации
+            Эссе
           </h1>
-          <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
-            Подборка эссе и заметок, отсортированных от самых новых к ранним.
-          </p>
         </header>
 
         <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

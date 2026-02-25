@@ -20,6 +20,14 @@ const extractOrder = (fileName: string) => {
 
 const sanitizeId = (id: string) => /^[a-z0-9_-]+$/i.test(id);
 
+export const getPostIds = async (): Promise<string[]> => {
+  const entries = await fs.readdir(postsDirectory, { withFileTypes: true });
+
+  return entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
+    .map((entry) => entry.name.replace(/\.md$/, ""));
+};
+
 export const getPostSummaries = async (): Promise<PostSummary[]> => {
   const entries = await fs.readdir(postsDirectory, { withFileTypes: true });
   const posts = await Promise.all(
