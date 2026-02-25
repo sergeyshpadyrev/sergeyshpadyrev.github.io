@@ -4,10 +4,17 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import { getPostById } from "@/lib/posts";
+import { getPostById, getPostIds } from "@/lib/posts";
 
 type PostPageProps = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
+};
+
+export const dynamicParams = false;
+
+export const generateStaticParams = async () => {
+  const ids = await getPostIds();
+  return ids.map((id) => ({ id }));
 };
 
 const markdownComponents = {
@@ -69,7 +76,7 @@ const markdownComponents = {
 };
 
 export default async function PostPage({ params }: PostPageProps) {
-  const { id } = params;
+  const { id } = await params;
   const post = await getPostById(id);
 
   if (!post) {
