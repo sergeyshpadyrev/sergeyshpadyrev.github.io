@@ -392,7 +392,7 @@ export default async function Home() {
 
         <section
           id="channels"
-          className="space-y-8 fade-in"
+          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
           style={{ animationDelay: "260ms" }}
         >
           <div className="space-y-2">
