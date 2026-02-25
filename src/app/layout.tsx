@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Сергей Шпадырев — эссе, заметки, публикации",
   description:
     "Публикации, эссе, заметки, видео и ссылки на каналы Сергея Шпадырева.",
+  icons: {
+    icon: "/images/avatar.jpg",
+  },
 };
 
 export default function RootLayout({

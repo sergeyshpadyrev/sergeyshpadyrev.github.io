@@ -90,12 +90,17 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="pointer-events-none absolute bottom-[-12rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-[#e4c9b0]/70 blur-[140px]" />
 
       <div className="relative mx-auto flex max-w-4xl flex-col gap-8 px-6 pb-24 pt-16">
-        <Link
-          href="/posts"
-          className="inline-flex w-fit items-center gap-2 rounded-full border border-[#1f1a12]/20 bg-white/70 px-4 py-2 text-sm font-medium text-[#1f1a12] transition hover:border-[#1f1a12]/40 hover:bg-white"
-        >
-          ← Все посты
-        </Link>
+        <div className="flex flex-wrap gap-3">
+          <Link href="/" className="nav-pill">
+            ← На главную
+          </Link>
+          <Link
+            href="/posts"
+            className="nav-pill"
+          >
+            ← Все посты
+          </Link>
+        </div>
 
         <article className="space-y-6 rounded-[32px] border border-white/70 bg-white/60 p-8 shadow-[0_28px_70px_rgba(31,26,18,0.12)] sm:p-12 fade-in">
           <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
