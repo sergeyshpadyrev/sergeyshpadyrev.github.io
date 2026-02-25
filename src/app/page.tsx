@@ -40,7 +40,7 @@ const channelLinks = [
     href: "https://max.ru/join/swjQhKR_jE2aX_My1ITtNUVlEfLEaslrB-MiZ5-t5-w",
   },
   {
-    label: "Сообщество в ВК",
+    label: "Сообщество в VK",
     href: "https://vk.com/club231375709",
   },
   {
