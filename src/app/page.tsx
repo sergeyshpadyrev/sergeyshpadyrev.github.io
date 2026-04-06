@@ -258,6 +258,37 @@ export default async function Home() {
         </section>
 
         <section
+          id="guest"
+          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
+          style={{ animationDelay: "180ms" }}
+        >
+          <div className="space-y-3">
+            <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">
+              Подкаст
+            </p>
+            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
+              В гостях у Айрата Хайруллина
+            </h2>
+            <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
+              Беседа о философии, буддизме, сознании и жизни.
+            </p>
+          </div>
+          <div className="mx-auto w-full max-w-3xl overflow-hidden rounded-[28px] border border-white/70 bg-white/60 shadow-[0_18px_40px_rgba(31,26,18,0.1)]">
+            <div className="aspect-video">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/c9oMDeq-hSQ"
+                title="В гостях у Айрата Хайруллина"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section
           id="course"
           className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
           style={{ animationDelay: "170ms" }}
