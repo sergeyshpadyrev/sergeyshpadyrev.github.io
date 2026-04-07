@@ -27,12 +27,11 @@ export default async function NotesPage() {
         </header>
 
         <section className="grid gap-6 sm:grid-cols-2">
-          {notes.map((note, index) => (
+          {notes.map((note) => (
             <Link
               key={note.id}
               href={`/notes/${note.id}`}
-              className="group rounded-[28px] border border-white/70 bg-white/55 p-6 shadow-[0_20px_50px_rgba(31,26,18,0.12)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
-              style={{ animationDelay: `${index * 60}ms` }}
+              className="group rounded-[28px] border border-white/70 bg-white/55 p-6 shadow-[0_20px_50px_rgba(31,26,18,0.12)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white"
             >
               <div className="flex items-start justify-between gap-4">
                 <h2 className="text-lg font-semibold text-[#1f1a12]">
