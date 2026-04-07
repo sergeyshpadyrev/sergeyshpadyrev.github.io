@@ -78,11 +78,11 @@ const podcastLinks = [
 
 const lecturerLinks = [
   {
-    label: "Университет мировоззрения УНИВЁРС",
+    label: "Университет мировоззрения «Унивёрс»",
     href: "https://www.univers.id/",
   },
   {
-    label: "Клуб 42",
+    label: "Философский лекторий «Клуб 42»",
     href: "https://club-42.ru/",
   },
 ];
