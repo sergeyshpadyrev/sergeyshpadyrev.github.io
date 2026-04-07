@@ -362,8 +362,8 @@ export default async function Home() {
               </h2>
             </div>
             <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
-              Мой совместный подкаст с Дионисом Диметором о физике, математике и
-              философии
+              Мой совместный камерный подкаст с Дионисом Диметором о физике,
+              математике и философии
             </p>
             <div className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]">
