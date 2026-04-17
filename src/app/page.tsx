@@ -273,17 +273,32 @@ export default async function Home() {
               Беседа о философии, буддизме, сознании и жизни.
             </p>
           </div>
-          <div className="mx-auto w-full max-w-3xl overflow-hidden rounded-[28px] border border-white/70 bg-white/60 shadow-[0_18px_40px_rgba(31,26,18,0.1)]">
-            <div className="aspect-video">
-              <iframe
-                className="h-full w-full"
-                src="https://www.youtube.com/embed/c9oMDeq-hSQ"
-                title="В гостях у Айрата Хайруллина"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                loading="lazy"
-              />
+          <div className="mx-auto grid w-full max-w-5xl gap-6 md:grid-cols-2">
+            <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/60 shadow-[0_18px_40px_rgba(31,26,18,0.1)]">
+              <div className="aspect-video">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/c9oMDeq-hSQ"
+                  title="В гостях у Айрата Хайруллина"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/60 shadow-[0_18px_40px_rgba(31,26,18,0.1)]">
+              <div className="aspect-video">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/qfKW9u_P574"
+                  title="В гостях у Айрата Хайруллина, второе видео"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>
