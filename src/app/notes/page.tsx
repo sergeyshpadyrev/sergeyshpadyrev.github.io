@@ -1,10 +1,10 @@
-import { getNoteSummaries } from "@/lib/notes";
+import { getNoteSummaries } from '@/lib/notes';
 
-import Notes from "@/components/screens/Notes";
+import Notes from '@/screens/Notes';
 
 export const metadata = {
-  title: "Заметки — Сергей Шпадырев",
-  description: "Короткие заметки и наблюдения Сергея Шпадырева.",
+  title: 'Заметки — Сергей Шпадырев',
+  description: 'Короткие заметки и наблюдения Сергея Шпадырева.',
 };
 
 export default async function NotesPage() {
