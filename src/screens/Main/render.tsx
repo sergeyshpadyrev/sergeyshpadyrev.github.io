@@ -11,40 +11,88 @@ const useRender = (
   style: ReturnType<typeof useStyle>
 ) => {
   const { digitalLinks, printLinks, channelLinks, podcastLinks, lecturerLinks } = logic;
-  const { linkClassName } = style;
+  const {
+    linkClassName,
+    main,
+    glowLeft,
+    glowRight,
+    glowBottom,
+    container,
+    heroSection,
+    sideImageSection,
+    contentSection,
+    avatarWrapper,
+    avatarBg,
+    avatar,
+    heroContent,
+    sectionHeader,
+    heroTitle,
+    heroSubtitle,
+    heroDescription,
+    sideImageWrapper,
+    bookImageBg,
+    podcastImageBg,
+    courseImageBg,
+    sideImage,
+    sideContent,
+    titleGroup,
+    sectionLabel,
+    sectionTitle,
+    sectionDescription,
+    sideDescription,
+    linksColumn,
+    linksLabel,
+    linksRow,
+    bookLinksGrid,
+    postsGrid,
+    postCard,
+    postImageWrapper,
+    postImage,
+    postNoImage,
+    postTitleWrapper,
+    cardTitle,
+    sectionFooter,
+    primaryButton,
+    videosGrid,
+    videoCard,
+    videoAspect,
+    videoIframe,
+    notesGrid,
+    noteCard,
+    courseButtonCol,
+    channelsGrid,
+    channelCard,
+    channelCardInner,
+    channelArrow,
+    channelsExtra,
+    lecturerGrid,
+  } = style;
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#f6f1e8] text-[#1f1a12]">
-      <div className="pointer-events-none absolute -left-24 top-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#f2c07d]/50 blur-[120px] float-slow" />
-      <div className="pointer-events-none absolute right-[-12rem] top-32 h-[30rem] w-[30rem] rounded-full bg-[#c9d9c1]/60 blur-[140px]" />
-      <div className="pointer-events-none absolute bottom-[-12rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-[#e4c9b0]/70 blur-[140px]" />
+    <main className={main}>
+      <div className={glowLeft} />
+      <div className={glowRight} />
+      <div className={glowBottom} />
 
-      <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 pb-24 pt-16">
-        <section
-          className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[360px_minmax(0,1fr)] md:items-center md:p-12 fade-in"
-          style={{ animationDelay: '80ms' }}
-        >
-          <div className="relative mx-auto h-96 w-72 md:mx-0">
-            <div className="absolute -inset-5 rounded-[36px] border border-white/70 bg-white/40 shadow-[0_34px_90px_rgba(31,26,18,0.12)]" />
+      <div className={container}>
+        <section className={heroSection} style={{ animationDelay: '80ms' }}>
+          <div className={avatarWrapper}>
+            <div className={avatarBg} />
             <Image
               src="/images/avatar.jpg"
               alt="Сергей Шпадырев"
               width={288}
               height={384}
               priority
-              className="relative h-96 w-72 rounded-[32px] object-cover shadow-lg"
+              className={avatar}
             />
           </div>
-          <div className="space-y-6 fade-in-up">
-            <div className="space-y-3">
-              <h1 className="font-display text-4xl leading-tight text-[#1f1a12] sm:text-5xl lg:text-6xl">
-                Сергей Шпадырев
-              </h1>
-              <h2 className="text-lg text-[#3f3529] sm:text-xl lg:text-2xl">
-                Инженер-программист и философ-публицист
-              </h2>
+          <div className={heroContent}>
+            <div className={sectionHeader}>
+              <h1 className={heroTitle}>Сергей Шпадырев</h1>
+              <h2 className={heroSubtitle}>Инженер-программист и философ-публицист</h2>
             </div>
-            <p className="max-w-2xl text-base leading-relaxed text-[#4c4134] sm:text-lg lg:text-xl">
+            <p className={heroDescription}>
               На этом сайте собраны все мои публикации, эссе, заметки, видео и ссылки на мои каналы
             </p>
           </div>
@@ -52,27 +100,25 @@ const useRender = (
 
         <section
           id="book"
-          className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
+          className={sideImageSection}
           style={{ animationDelay: '120ms' }}
         >
-          <div className="relative mx-auto w-full max-w-[320px]">
-            <div className="absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f3e6d3] shadow-[0_18px_45px_rgba(31,26,18,0.14)]" />
+          <div className={sideImageWrapper}>
+            <div className={bookImageBg} />
             <Image
               src="/images/book.png"
               alt="Обложка книги Вглядываясь в пустоту"
               width={320}
               height={440}
-              className="relative w-full rounded-[22px] object-cover shadow-lg"
+              className={sideImage}
             />
           </div>
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">Книга</p>
-              <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
-                Вглядываясь в пустоту
-              </h2>
+          <div className={sideContent}>
+            <div className={titleGroup}>
+              <p className={sectionLabel}>Книга</p>
+              <h2 className={sectionTitle}>Вглядываясь в пустоту</h2>
             </div>
-            <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
+            <p className={sideDescription}>
               Cборник моих лучших эссе и заметок, написанных с 2020 по 2025 годы. Некоторые эссе
               вошли в него в неизменном виде, некоторые в отредактированном специально для этой
               книги варианте. В книге рассматривается множество тем: философские учения Древней
@@ -80,12 +126,10 @@ const useRender = (
               философия математики, физики и науки в целом, эпистемология, буддийское учение,
               вопросы этики и психологии, философия постмодерна.
             </p>
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="space-y-3">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]">
-                  Электронная версия
-                </p>
-                <div className="flex flex-wrap gap-2">
+            <div className={bookLinksGrid}>
+              <div className={linksColumn}>
+                <p className={linksLabel}>Электронная версия</p>
+                <div className={linksRow}>
                   {digitalLinks.map((link) => (
                     <a
                       key={link.href}
@@ -99,11 +143,9 @@ const useRender = (
                   ))}
                 </div>
               </div>
-              <div className="space-y-3">
-                <p className="text-sm font-semibold upОpercase tracking-[0.2em] text-[#7b6a55]">
-                  Бумажная версия
-                </p>
-                <div className="flex flex-wrap gap-2">
+              <div className={linksColumn}>
+                <p className={linksLabel}>Бумажная версия</p>
+                <div className={linksRow}>
                   {printLinks.map((link) => (
                     <a
                       key={link.href}
@@ -123,49 +165,44 @@ const useRender = (
 
         <section
           id="posts"
-          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
+          className={contentSection}
           style={{ animationDelay: '160ms' }}
         >
-          <div className="space-y-3">
-            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">Эссе</h2>
-            <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
+          <div className={sectionHeader}>
+            <h2 className={sectionTitle}>Эссе</h2>
+            <p className={sectionDescription}>
               Свежие публикации из архива эссе, собранные в одном месте.
             </p>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className={postsGrid}>
             {props.posts.map((post, index) => (
               <Link
                 key={post.id}
                 href={`/posts/${post.id}`}
-                className="group rounded-[24px] border border-white/70 bg-white/55 p-3 shadow-[0_18px_40px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
+                className={postCard}
                 style={{ animationDelay: `${index * 60}ms` }}
               >
-                <div className="relative h-36 w-full overflow-hidden rounded-[18px] bg-[#efe1d2]">
+                <div className={postImageWrapper}>
                   {post.image ? (
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
                       sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
-                      className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                      className={postImage}
                     />
                   ) : (
-                    <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.2em] text-[#7b6a55]">
-                      Без обложки
-                    </div>
+                    <div className={postNoImage}>Без обложки</div>
                   )}
                 </div>
-                <div className="mt-3">
-                  <h3 className="text-base font-semibold text-[#1f1a12]">{post.title}</h3>
+                <div className={postTitleWrapper}>
+                  <h3 className={cardTitle}>{post.title}</h3>
                 </div>
               </Link>
             ))}
           </div>
-          <div className="flex justify-center">
-            <Link
-              href="/posts"
-              className="inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]"
-            >
+          <div className={sectionFooter}>
+            <Link href="/posts" className={primaryButton}>
               Открыть все эссе
             </Link>
           </div>
@@ -173,23 +210,19 @@ const useRender = (
 
         <section
           id="guest"
-          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
+          className={contentSection}
           style={{ animationDelay: '180ms' }}
         >
-          <div className="space-y-3">
-            <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">Подкаст</p>
-            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
-              В гостях у Айрата Хайруллина
-            </h2>
-            <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
-              Беседа о философии, буддизме, сознании и жизни.
-            </p>
+          <div className={sectionHeader}>
+            <p className={sectionLabel}>Подкаст</p>
+            <h2 className={sectionTitle}>В гостях у Айрата Хайруллина</h2>
+            <p className={sectionDescription}>Беседа о философии, буддизме, сознании и жизни.</p>
           </div>
-          <div className="mx-auto grid w-full max-w-5xl gap-6 md:grid-cols-2">
-            <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/60 shadow-[0_18px_40px_rgba(31,26,18,0.1)]">
-              <div className="aspect-video">
+          <div className={videosGrid}>
+            <div className={videoCard}>
+              <div className={videoAspect}>
                 <iframe
-                  className="h-full w-full"
+                  className={videoIframe}
                   src="https://www.youtube.com/embed/c9oMDeq-hSQ"
                   title="В гостях у Айрата Хайруллина"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -199,10 +232,10 @@ const useRender = (
                 />
               </div>
             </div>
-            <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/60 shadow-[0_18px_40px_rgba(31,26,18,0.1)]">
-              <div className="aspect-video">
+            <div className={videoCard}>
+              <div className={videoAspect}>
                 <iframe
-                  className="h-full w-full"
+                  className={videoIframe}
                   src="https://www.youtube.com/embed/qfKW9u_P574"
                   title="В гостях у Айрата Хайруллина, второе видео"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -217,34 +250,30 @@ const useRender = (
 
         <section
           id="podcast"
-          className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
+          className={sideImageSection}
           style={{ animationDelay: '230ms' }}
         >
-          <div className="relative mx-auto w-full max-w-[320px]">
-            <div className="absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f1e3d6] shadow-[0_18px_45px_rgba(31,26,18,0.12)]" />
+          <div className={sideImageWrapper}>
+            <div className={podcastImageBg} />
             <Image
               src="/images/dionis.png"
               alt="Обложка подкаста Философские разговоры о важном"
               width={320}
               height={440}
-              className="relative w-full rounded-[22px] object-cover shadow-lg"
+              className={sideImage}
             />
           </div>
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">Подкаст</p>
-              <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
-                Философские разговоры о важном
-              </h2>
+          <div className={sideContent}>
+            <div className={titleGroup}>
+              <p className={sectionLabel}>Подкаст</p>
+              <h2 className={sectionTitle}>Философские разговоры о важном</h2>
             </div>
-            <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
+            <p className={sideDescription}>
               Мой совместный камерный подкаст с Дионисом Диметором о физике, математике и философии
             </p>
-            <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]">
-                Слушать подкаст
-              </p>
-              <div className="flex flex-wrap gap-2">
+            <div className={linksColumn}>
+              <p className={linksLabel}>Слушать подкаст</p>
+              <div className={linksRow}>
                 {podcastLinks.map((link) => (
                   <a
                     key={link.href}
@@ -263,34 +292,31 @@ const useRender = (
 
         <section
           id="notes"
-          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
+          className={contentSection}
           style={{ animationDelay: '200ms' }}
         >
-          <div className="space-y-3">
-            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">Заметки</h2>
-            <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
+          <div className={sectionHeader}>
+            <h2 className={sectionTitle}>Заметки</h2>
+            <p className={sectionDescription}>
               Короткие записки об интересных наблюдениях из моего канала.
             </p>
           </div>
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className={notesGrid}>
             {props.notes.slice(0, 4).map((note, index) => (
               <Link
                 key={note.id}
                 href={`/notes/${note.id}`}
-                className="group rounded-[24px] border border-white/70 bg-white/55 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
+                className={noteCard}
                 style={{ animationDelay: `${index * 60}ms` }}
               >
                 <div>
-                  <h3 className="text-base font-semibold text-[#1f1a12]">{note.title}</h3>
+                  <h3 className={cardTitle}>{note.title}</h3>
                 </div>
               </Link>
             ))}
           </div>
-          <div className="flex justify-center">
-            <Link
-              href="/notes"
-              className="inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]"
-            >
+          <div className={sectionFooter}>
+            <Link href="/notes" className={primaryButton}>
               Открыть все заметки
             </Link>
           </div>
@@ -298,27 +324,25 @@ const useRender = (
 
         <section
           id="course"
-          className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
+          className={sideImageSection}
           style={{ animationDelay: '170ms' }}
         >
-          <div className="relative mx-auto w-full max-w-[320px]">
-            <div className="absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#efe1d2] shadow-[0_18px_45px_rgba(31,26,18,0.12)]" />
+          <div className={sideImageWrapper}>
+            <div className={courseImageBg} />
             <Image
               src="/images/statue.png"
               alt="Обложка курса Панель управления собой"
               width={320}
               height={440}
-              className="relative w-full rounded-[22px] object-cover shadow-lg"
+              className={sideImage}
             />
           </div>
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">Курс</p>
-              <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
-                Панель управления собой
-              </h2>
+          <div className={sideContent}>
+            <div className={titleGroup}>
+              <p className={sectionLabel}>Курс</p>
+              <h2 className={sectionTitle}>Панель управления собой</h2>
             </div>
-            <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
+            <p className={sideDescription}>
               Курс лекций "Панель управления собой" рассказывает читателю о том, как построить
               непрерывно работающий конвейер по медленному, но неизбежному улучшению собственной
               жизни во всех её сферах. Не ждите быстрого результата - путь к успеху займёт 5-10 лет
@@ -326,12 +350,10 @@ const useRender = (
               моря всё равно не будет. Но будет кое-что гораздо более ценное - целостная
               многогранная жизнь.
             </p>
-            <div className="flex flex-col gap-3">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]">
-                Курс доступен по подписке на Boosty
-              </p>
+            <div className={courseButtonCol}>
+              <p className={linksLabel}>Курс доступен по подписке на Boosty</p>
               <a
-                className="inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]"
+                className={primaryButton}
                 href="https://boosty.to/sergeyshpadyrev"
                 target="_blank"
                 rel="noreferrer"
@@ -344,54 +366,50 @@ const useRender = (
 
         <section
           id="channels"
-          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
+          className={contentSection}
           style={{ animationDelay: '260ms' }}
         >
-          <div className="space-y-2">
-            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">Каналы и платформы</h2>
-            <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
+          <div className={titleGroup}>
+            <h2 className={sectionTitle}>Каналы и платформы</h2>
+            <p className={sectionDescription}>
               Мои тексты, заметки и комментарии выходят на разных площадках. Здесь собраны
               актуальные ссылки.
             </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className={channelsGrid}>
             {channelLinks.map((link, index) => (
               <a
                 key={link.href}
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
+                className={channelCard}
                 style={{ animationDelay: `${index * 70}ms` }}
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-base font-semibold text-[#1f1a12]">{link.label}</span>
-                  <span className="text-xl text-[#7b6a55] transition group-hover:translate-x-1">
-                    →
-                  </span>
+                <div className={channelCardInner}>
+                  <span className={cardTitle}>{link.label}</span>
+                  <span className={channelArrow}>→</span>
                 </div>
               </a>
             ))}
           </div>
-          <div className="space-y-8 pt-4">
-            <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
+          <div className={channelsExtra}>
+            <p className={sectionDescription}>
               Выступаю как приглашённый лектор в рамках нескольких интеллектуальных сообществ
             </p>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className={lecturerGrid}>
               {lecturerLinks.map((link, index) => (
                 <a
                   key={link.href}
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
+                  className={channelCard}
                   style={{ animationDelay: `${index * 70}ms` }}
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="text-base font-semibold text-[#1f1a12]">{link.label}</span>
-                    <span className="text-xl text-[#7b6a55] transition group-hover:translate-x-1">
-                      →
-                    </span>
+                  <div className={channelCardInner}>
+                    <span className={cardTitle}>{link.label}</span>
+                    <span className={channelArrow}>→</span>
                   </div>
                 </a>
               ))}
