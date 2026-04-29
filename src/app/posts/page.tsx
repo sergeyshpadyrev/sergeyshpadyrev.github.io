@@ -1,6 +1,6 @@
 import { getPostSummaries } from '@/lib/posts';
 
-import Posts from '@/components/screens/Posts';
+import Posts from '@/screens/Posts';
 
 export const metadata = {
   title: 'Посты — Сергей Шпадырев',

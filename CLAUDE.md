@@ -5,8 +5,7 @@
 All the code is in `src` folder.
 
 - `app` folder contains the Next.js router routing
-- `components/screens` folder contains the screen components
-- `components/ui` folder contains the ui components
+- `screens` folder contains the screen components
 - `lib` folder contains the services
 
 ### Components structure

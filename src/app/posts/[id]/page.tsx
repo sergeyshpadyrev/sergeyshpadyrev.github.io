@@ -1,8 +1,8 @@
-import { notFound } from "next/navigation";
+import { notFound } from 'next/navigation';
 
-import { getPostById, getPostIds } from "@/lib/posts";
+import { getPostById, getPostIds } from '@/lib/posts';
 
-import Post from "@/components/screens/Post";
+import Post from '@/screens/Post';
 
 export const dynamicParams = false;
 

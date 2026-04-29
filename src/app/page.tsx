@@ -1,7 +1,7 @@
 import { getNoteSummaries } from '@/lib/notes';
 import { getPostSummaries } from '@/lib/posts';
 
-import Main from '@/components/screens/Main';
+import Main from '@/screens/Main';
 
 export default async function Home() {
   const posts = (await getPostSummaries()).slice(0, 6);

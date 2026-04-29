@@ -1,8 +1,8 @@
-import { notFound } from "next/navigation";
+import { notFound } from 'next/navigation';
 
-import { getNoteById, getNoteIds } from "@/lib/notes";
+import { getNoteById, getNoteIds } from '@/lib/notes';
 
-import Note from "@/components/screens/Note";
+import Note from '@/screens/Note';
 
 type NotePageProps = {
   params: Promise<{ id: string }>;
