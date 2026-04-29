@@ -1,12 +1,12 @@
-import type { PostLinks } from "@/lib/posts";
+import type { PostLinks } from '@/lib/posts';
 
-import type { Props } from "./types";
+import type { Props } from './types';
 
 const platformLinks: Array<{ key: keyof PostLinks; label: string }> = [
-  { key: "dzen", label: "Дзен" },
-  { key: "habr", label: "Хабр" },
-  { key: "pikabu", label: "Пикабу" },
-  { key: "vastrik", label: "Вастрик" },
+  { key: 'dzen', label: 'Дзен' },
+  { key: 'habr', label: 'Хабр' },
+  { key: 'pikabu', label: 'Пикабу' },
+  { key: 'vastrik', label: 'Вастрик' },
 ];
 
 const useLogic = (props: Props) => {

@@ -1,3 +1,6 @@
 export interface Props {
-  id: string;
+  note: {
+    id: string;
+    content: string;
+  };
 }

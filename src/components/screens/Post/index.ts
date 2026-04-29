@@ -1,3 +1,5 @@
+"use client";
+
 import { createComponent } from "../../utils";
 
 import useLogic from "./logic";
