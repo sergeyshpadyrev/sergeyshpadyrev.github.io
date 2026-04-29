@@ -100,7 +100,10 @@ export default async function Home() {
       <div className="pointer-events-none absolute bottom-[-12rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-[#e4c9b0]/70 blur-[140px]" />
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 pb-24 pt-16">
-        <section className="grid items-center gap-12 md:grid-cols-[360px_minmax(0,1fr)]">
+        <section
+          className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[360px_minmax(0,1fr)] md:items-center md:p-12 fade-in"
+          style={{ animationDelay: "80ms" }}
+        >
           <div className="relative mx-auto h-96 w-72 md:mx-0">
             <div className="absolute -inset-5 rounded-[36px] border border-white/70 bg-white/40 shadow-[0_34px_90px_rgba(31,26,18,0.12)]" />
             <Image
