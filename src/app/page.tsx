@@ -304,6 +304,45 @@ export default async function Home() {
         </section>
 
         <section
+          id="notes"
+          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
+          style={{ animationDelay: "200ms" }}
+        >
+          <div className="space-y-3">
+            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
+              Заметки
+            </h2>
+            <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
+              Короткие записки об интересных наблюдениях из моего канала.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2">
+            {notes.slice(0, 4).map((note, index) => (
+              <Link
+                key={note.id}
+                href={`/notes/${note.id}`}
+                className="group rounded-[24px] border border-white/70 bg-white/55 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
+                style={{ animationDelay: `${index * 60}ms` }}
+              >
+                <div>
+                  <h3 className="text-base font-semibold text-[#1f1a12]">
+                    {note.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="flex justify-center">
+            <Link
+              href="/notes"
+              className="inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]"
+            >
+              Открыть все заметки
+            </Link>
+          </div>
+        </section>
+
+        <section
           id="course"
           className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
           style={{ animationDelay: "170ms" }}
@@ -402,48 +441,6 @@ export default async function Home() {
         </section>
 
         <section
-          id="notes"
-          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
-          style={{ animationDelay: "200ms" }}
-        >
-          <div className="space-y-3">
-            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
-              Заметки
-            </h2>
-            <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
-              Короткие записки об интересных наблюдениях из моего канала.
-            </p>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {notes.map((note, index) => (
-              <Link
-                key={note.id}
-                href={`/notes/${note.id}`}
-                className="group rounded-[24px] border border-white/70 bg-white/55 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
-                style={{ animationDelay: `${index * 60}ms` }}
-              >
-                <div className="space-y-4">
-                  <span className="text-xs uppercase tracking-[0.24em] text-[#7b6a55]">
-                    Заметка
-                  </span>
-                  <h3 className="text-base font-semibold text-[#1f1a12]">
-                    {note.title}
-                  </h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="flex justify-center">
-            <Link
-              href="/notes"
-              className="inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]"
-            >
-              Открыть все заметки
-            </Link>
-          </div>
-        </section>
-
-        <section
           id="channels"
           className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
           style={{ animationDelay: "260ms" }}
@@ -478,42 +475,32 @@ export default async function Home() {
               </a>
             ))}
           </div>
-        </section>
-
-        <section
-          id="lecturer"
-          className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
-          style={{ animationDelay: "300ms" }}
-        >
-          <div className="space-y-2">
-            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
-              Лекции
-            </h2>
+          <div className="space-y-8 pt-4">
             <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
               Выступаю как приглашённый лектор в рамках нескольких
               интеллектуальных сообществ
             </p>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {lecturerLinks.map((link, index) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="group rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
-                style={{ animationDelay: `${index * 70}ms` }}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-base font-semibold text-[#1f1a12]">
-                    {link.label}
-                  </span>
-                  <span className="text-xl text-[#7b6a55] transition group-hover:translate-x-1">
-                    →
-                  </span>
-                </div>
-              </a>
-            ))}
+            <div className="grid gap-4 sm:grid-cols-2">
+              {lecturerLinks.map((link, index) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
+                  style={{ animationDelay: `${index * 70}ms` }}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-base font-semibold text-[#1f1a12]">
+                      {link.label}
+                    </span>
+                    <span className="text-xl text-[#7b6a55] transition group-hover:translate-x-1">
+                      →
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
       </div>
