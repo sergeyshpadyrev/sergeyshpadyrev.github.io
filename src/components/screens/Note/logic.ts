@@ -1,7 +1,3 @@
-import type { Props } from "./types";
-
-const useLogic = (props: Props) => {
-  return {};
-};
+const useLogic = () => {};
 
 export default useLogic;

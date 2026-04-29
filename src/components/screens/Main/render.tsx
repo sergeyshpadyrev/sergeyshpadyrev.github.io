@@ -1,24 +1,16 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import type useLogic from "./logic";
-import type useStyle from "./style";
-import type { Props } from "./types";
+import type useLogic from './logic';
+import type useStyle from './style';
+import type { Props } from './types';
 
 const useRender = (
-  _props: Props,
+  props: Props,
   logic: Awaited<ReturnType<typeof useLogic>>,
-  style: ReturnType<typeof useStyle>,
+  style: ReturnType<typeof useStyle>
 ) => {
-  const {
-    posts,
-    notes,
-    digitalLinks,
-    printLinks,
-    channelLinks,
-    podcastLinks,
-    lecturerLinks,
-  } = logic;
+  const { digitalLinks, printLinks, channelLinks, podcastLinks, lecturerLinks } = logic;
   const { linkClassName } = style;
 
   return (
@@ -30,7 +22,7 @@ const useRender = (
       <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 pb-24 pt-16">
         <section
           className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[360px_minmax(0,1fr)] md:items-center md:p-12 fade-in"
-          style={{ animationDelay: "80ms" }}
+          style={{ animationDelay: '80ms' }}
         >
           <div className="relative mx-auto h-96 w-72 md:mx-0">
             <div className="absolute -inset-5 rounded-[36px] border border-white/70 bg-white/40 shadow-[0_34px_90px_rgba(31,26,18,0.12)]" />
@@ -53,8 +45,7 @@ const useRender = (
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-relaxed text-[#4c4134] sm:text-lg lg:text-xl">
-              На этом сайте собраны все мои публикации, эссе, заметки, видео и
-              ссылки на мои каналы
+              На этом сайте собраны все мои публикации, эссе, заметки, видео и ссылки на мои каналы
             </p>
           </div>
         </section>
@@ -62,7 +53,7 @@ const useRender = (
         <section
           id="book"
           className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
-          style={{ animationDelay: "120ms" }}
+          style={{ animationDelay: '120ms' }}
         >
           <div className="relative mx-auto w-full max-w-[320px]">
             <div className="absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f3e6d3] shadow-[0_18px_45px_rgba(31,26,18,0.14)]" />
@@ -76,22 +67,18 @@ const useRender = (
           </div>
           <div className="space-y-6">
             <div className="space-y-2">
-              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">
-                Книга
-              </p>
+              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">Книга</p>
               <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
                 Вглядываясь в пустоту
               </h2>
             </div>
             <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
-              Cборник моих лучших эссе и заметок, написанных с 2020 по 2025
-              годы. Некоторые эссе вошли в него в неизменном виде, некоторые в
-              отредактированном специально для этой книги варианте. В книге
-              рассматривается множество тем: философские учения Древней Греции,
-              Индии, и Китая, христианская теология и европейская философия
-              Нового Времени, философия математики, физики и науки в целом,
-              эпистемология, буддийское учение, вопросы этики и психологии,
-              философия постмодерна.
+              Cборник моих лучших эссе и заметок, написанных с 2020 по 2025 годы. Некоторые эссе
+              вошли в него в неизменном виде, некоторые в отредактированном специально для этой
+              книги варианте. В книге рассматривается множество тем: философские учения Древней
+              Греции, Индии, и Китая, христианская теология и европейская философия Нового Времени,
+              философия математики, физики и науки в целом, эпистемология, буддийское учение,
+              вопросы этики и психологии, философия постмодерна.
             </p>
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="space-y-3">
@@ -137,18 +124,16 @@ const useRender = (
         <section
           id="posts"
           className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
-          style={{ animationDelay: "160ms" }}
+          style={{ animationDelay: '160ms' }}
         >
           <div className="space-y-3">
-            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
-              Эссе
-            </h2>
+            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">Эссе</h2>
             <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
               Свежие публикации из архива эссе, собранные в одном месте.
             </p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post, index) => (
+            {props.posts.map((post, index) => (
               <Link
                 key={post.id}
                 href={`/posts/${post.id}`}
@@ -171,9 +156,7 @@ const useRender = (
                   )}
                 </div>
                 <div className="mt-3">
-                  <h3 className="text-base font-semibold text-[#1f1a12]">
-                    {post.title}
-                  </h3>
+                  <h3 className="text-base font-semibold text-[#1f1a12]">{post.title}</h3>
                 </div>
               </Link>
             ))}
@@ -191,12 +174,10 @@ const useRender = (
         <section
           id="guest"
           className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
-          style={{ animationDelay: "180ms" }}
+          style={{ animationDelay: '180ms' }}
         >
           <div className="space-y-3">
-            <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">
-              Подкаст
-            </p>
+            <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">Подкаст</p>
             <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
               В гостях у Айрата Хайруллина
             </h2>
@@ -237,7 +218,7 @@ const useRender = (
         <section
           id="podcast"
           className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
-          style={{ animationDelay: "230ms" }}
+          style={{ animationDelay: '230ms' }}
         >
           <div className="relative mx-auto w-full max-w-[320px]">
             <div className="absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f1e3d6] shadow-[0_18px_45px_rgba(31,26,18,0.12)]" />
@@ -251,16 +232,13 @@ const useRender = (
           </div>
           <div className="space-y-6">
             <div className="space-y-2">
-              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">
-                Подкаст
-              </p>
+              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">Подкаст</p>
               <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
                 Философские разговоры о важном
               </h2>
             </div>
             <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
-              Мой совместный камерный подкаст с Дионисом Диметором о физике,
-              математике и философии
+              Мой совместный камерный подкаст с Дионисом Диметором о физике, математике и философии
             </p>
             <div className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]">
@@ -286,18 +264,16 @@ const useRender = (
         <section
           id="notes"
           className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
-          style={{ animationDelay: "200ms" }}
+          style={{ animationDelay: '200ms' }}
         >
           <div className="space-y-3">
-            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
-              Заметки
-            </h2>
+            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">Заметки</h2>
             <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
               Короткие записки об интересных наблюдениях из моего канала.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-2">
-            {notes.slice(0, 4).map((note, index) => (
+            {props.notes.slice(0, 4).map((note, index) => (
               <Link
                 key={note.id}
                 href={`/notes/${note.id}`}
@@ -305,9 +281,7 @@ const useRender = (
                 style={{ animationDelay: `${index * 60}ms` }}
               >
                 <div>
-                  <h3 className="text-base font-semibold text-[#1f1a12]">
-                    {note.title}
-                  </h3>
+                  <h3 className="text-base font-semibold text-[#1f1a12]">{note.title}</h3>
                 </div>
               </Link>
             ))}
@@ -325,7 +299,7 @@ const useRender = (
         <section
           id="course"
           className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
-          style={{ animationDelay: "170ms" }}
+          style={{ animationDelay: '170ms' }}
         >
           <div className="relative mx-auto w-full max-w-[320px]">
             <div className="absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#efe1d2] shadow-[0_18px_45px_rgba(31,26,18,0.12)]" />
@@ -339,21 +313,18 @@ const useRender = (
           </div>
           <div className="space-y-6">
             <div className="space-y-2">
-              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">
-                Курс
-              </p>
+              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">Курс</p>
               <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
                 Панель управления собой
               </h2>
             </div>
             <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
-              Курс лекций "Панель управления собой" рассказывает читателю о том,
-              как построить непрерывно работающий конвейер по медленному, но
-              неизбежному улучшению собственной жизни во всех её сферах. Не
-              ждите быстрого результата - путь к успеху займёт 5-10 лет
-              постоянных усилий и духовного роста, по прошествию которых Феррари
-              и виллы на берегу моря всё равно не будет. Но будет кое-что
-              гораздо более ценное - целостная многогранная жизнь.
+              Курс лекций "Панель управления собой" рассказывает читателю о том, как построить
+              непрерывно работающий конвейер по медленному, но неизбежному улучшению собственной
+              жизни во всех её сферах. Не ждите быстрого результата - путь к успеху займёт 5-10 лет
+              постоянных усилий и духовного роста, по прошествию которых Феррари и виллы на берегу
+              моря всё равно не будет. Но будет кое-что гораздо более ценное - целостная
+              многогранная жизнь.
             </p>
             <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]">
@@ -374,15 +345,13 @@ const useRender = (
         <section
           id="channels"
           className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
-          style={{ animationDelay: "260ms" }}
+          style={{ animationDelay: '260ms' }}
         >
           <div className="space-y-2">
-            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
-              Каналы и платформы
-            </h2>
+            <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">Каналы и платформы</h2>
             <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
-              Мои тексты, заметки и комментарии выходят на разных площадках.
-              Здесь собраны актуальные ссылки.
+              Мои тексты, заметки и комментарии выходят на разных площадках. Здесь собраны
+              актуальные ссылки.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -396,9 +365,7 @@ const useRender = (
                 style={{ animationDelay: `${index * 70}ms` }}
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-base font-semibold text-[#1f1a12]">
-                    {link.label}
-                  </span>
+                  <span className="text-base font-semibold text-[#1f1a12]">{link.label}</span>
                   <span className="text-xl text-[#7b6a55] transition group-hover:translate-x-1">
                     →
                   </span>
@@ -408,8 +375,7 @@ const useRender = (
           </div>
           <div className="space-y-8 pt-4">
             <p className="max-w-2xl text-base text-[#4c4134] sm:text-lg">
-              Выступаю как приглашённый лектор в рамках нескольких
-              интеллектуальных сообществ
+              Выступаю как приглашённый лектор в рамках нескольких интеллектуальных сообществ
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
               {lecturerLinks.map((link, index) => (
@@ -422,9 +388,7 @@ const useRender = (
                   style={{ animationDelay: `${index * 70}ms` }}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-base font-semibold text-[#1f1a12]">
-                      {link.label}
-                    </span>
+                    <span className="text-base font-semibold text-[#1f1a12]">{link.label}</span>
                     <span className="text-xl text-[#7b6a55] transition group-hover:translate-x-1">
                       →
                     </span>
