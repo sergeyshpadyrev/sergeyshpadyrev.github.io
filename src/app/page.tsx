@@ -304,6 +304,55 @@ export default async function Home() {
         </section>
 
         <section
+          id="podcast"
+          className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
+          style={{ animationDelay: "230ms" }}
+        >
+          <div className="relative mx-auto w-full max-w-[320px]">
+            <div className="absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f1e3d6] shadow-[0_18px_45px_rgba(31,26,18,0.12)]" />
+            <Image
+              src="/images/dionis.png"
+              alt="Обложка подкаста Философские разговоры о важном"
+              width={320}
+              height={440}
+              className="relative w-full rounded-[22px] object-cover shadow-lg"
+            />
+          </div>
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">
+                Подкаст
+              </p>
+              <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
+                Философские разговоры о важном
+              </h2>
+            </div>
+            <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
+              Мой совместный камерный подкаст с Дионисом Диметором о физике,
+              математике и философии
+            </p>
+            <div className="space-y-3">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]">
+                Слушать подкаст
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {podcastLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    className={linkClassName}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
           id="notes"
           className="space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in"
           style={{ animationDelay: "200ms" }}
@@ -387,55 +436,6 @@ export default async function Home() {
               >
                 ОТКРЫТЬ КУРС
               </a>
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="podcast"
-          className="grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in"
-          style={{ animationDelay: "230ms" }}
-        >
-          <div className="relative mx-auto w-full max-w-[320px]">
-            <div className="absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f1e3d6] shadow-[0_18px_45px_rgba(31,26,18,0.12)]" />
-            <Image
-              src="/images/dionis.png"
-              alt="Обложка подкаста Философские разговоры о важном"
-              width={320}
-              height={440}
-              className="relative w-full rounded-[22px] object-cover shadow-lg"
-            />
-          </div>
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <p className="text-sm uppercase tracking-[0.28em] text-[#7b6a55]">
-                Подкаст
-              </p>
-              <h2 className="font-display text-3xl text-[#1f1a12] sm:text-4xl">
-                Философские разговоры о важном
-              </h2>
-            </div>
-            <p className="text-base leading-relaxed text-[#4c4134] sm:text-lg">
-              Мой совместный камерный подкаст с Дионисом Диметором о физике,
-              математике и философии
-            </p>
-            <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]">
-                Слушать подкаст
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {podcastLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    className={linkClassName}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
         </section>
