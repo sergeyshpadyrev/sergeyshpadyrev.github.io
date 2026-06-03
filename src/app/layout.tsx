@@ -1,23 +1,22 @@
-import type { Metadata } from "next";
-import { Noto_Sans, Noto_Serif } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Noto_Sans, Noto_Serif } from 'next/font/google';
+import './globals.css';
 
 const notoSerif = Noto_Serif({
-  variable: "--font-display",
-  subsets: ["latin", "cyrillic"],
+  variable: '--font-display',
+  subsets: ['latin', 'cyrillic'],
 });
 
 const notoSans = Noto_Sans({
-  variable: "--font-body",
-  subsets: ["latin", "cyrillic"],
+  variable: '--font-body',
+  subsets: ['latin', 'cyrillic'],
 });
 
 export const metadata: Metadata = {
-  title: "Сергей Шпадырев — эссе, заметки, публикации",
-  description:
-    "Публикации, эссе, заметки, видео и ссылки на каналы Сергея Шпадырева.",
+  title: 'Сергей Шпадырев — философия',
+  description: 'Публикации, эссе, заметки, видео и ссылки на каналы Сергея Шпадырева.',
   icons: {
-    icon: "/images/avatar.jpg",
+    icon: '/images/avatar.jpg',
   },
 };
 
@@ -28,11 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body
-        className={`${notoSerif.variable} ${notoSans.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${notoSerif.variable} ${notoSans.variable} antialiased`}>{children}</body>
     </html>
   );
 }
