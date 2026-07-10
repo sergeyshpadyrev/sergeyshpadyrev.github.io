@@ -98,11 +98,7 @@ const useRender = (
           </div>
         </section>
 
-        <section
-          id="book"
-          className={sideImageSection}
-          style={{ animationDelay: '120ms' }}
-        >
+        <section id="book" className={sideImageSection} style={{ animationDelay: '120ms' }}>
           <div className={sideImageWrapper}>
             <div className={bookImageBg} />
             <Image
@@ -163,11 +159,7 @@ const useRender = (
           </div>
         </section>
 
-        <section
-          id="posts"
-          className={contentSection}
-          style={{ animationDelay: '160ms' }}
-        >
+        <section id="posts" className={contentSection} style={{ animationDelay: '160ms' }}>
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Эссе</h2>
             <p className={sectionDescription}>
@@ -208,11 +200,7 @@ const useRender = (
           </div>
         </section>
 
-        <section
-          id="guest"
-          className={contentSection}
-          style={{ animationDelay: '180ms' }}
-        >
+        <section id="guest" className={contentSection} style={{ animationDelay: '180ms' }}>
           <div className={sectionHeader}>
             <p className={sectionLabel}>Подкаст</p>
             <h2 className={sectionTitle}>В гостях у Айрата Хайруллина</h2>
@@ -248,11 +236,7 @@ const useRender = (
           </div>
         </section>
 
-        <section
-          id="podcast"
-          className={sideImageSection}
-          style={{ animationDelay: '230ms' }}
-        >
+        <section id="podcast" className={sideImageSection} style={{ animationDelay: '230ms' }}>
           <div className={sideImageWrapper}>
             <div className={podcastImageBg} />
             <Image
@@ -290,11 +274,7 @@ const useRender = (
           </div>
         </section>
 
-        <section
-          id="notes"
-          className={contentSection}
-          style={{ animationDelay: '200ms' }}
-        >
+        <section id="notes" className={contentSection} style={{ animationDelay: '200ms' }}>
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Заметки</h2>
             <p className={sectionDescription}>
@@ -322,11 +302,7 @@ const useRender = (
           </div>
         </section>
 
-        <section
-          id="course"
-          className={sideImageSection}
-          style={{ animationDelay: '170ms' }}
-        >
+        <section id="course" className={sideImageSection} style={{ animationDelay: '170ms' }}>
           <div className={sideImageWrapper}>
             <div className={courseImageBg} />
             <Image
@@ -343,7 +319,7 @@ const useRender = (
               <h2 className={sectionTitle}>Панель управления собой</h2>
             </div>
             <p className={sideDescription}>
-              Курс лекций "Панель управления собой" рассказывает читателю о том, как построить
+              Курс лекций «Панель управления собой» рассказывает читателю о том, как построить
               непрерывно работающий конвейер по медленному, но неизбежному улучшению собственной
               жизни во всех её сферах. Не ждите быстрого результата - путь к успеху займёт 5-10 лет
               постоянных усилий и духовного роста, по прошествию которых Феррари и виллы на берегу
@@ -364,11 +340,42 @@ const useRender = (
           </div>
         </section>
 
-        <section
-          id="channels"
-          className={contentSection}
-          style={{ animationDelay: '260ms' }}
-        >
+        <section id="music" className={sideImageSection} style={{ animationDelay: '220ms' }}>
+          <div className={sideImageWrapper}>
+            <div className={podcastImageBg} />
+            <Image
+              src="/images/iwasnotthere.jpeg"
+              alt="Обложка альбома Я не был там"
+              width={320}
+              height={320}
+              className={sideImage}
+            />
+          </div>
+          <div className={sideContent}>
+            <div className={titleGroup}>
+              <p className={sectionLabel}>Музыка</p>
+              <h2 className={sectionTitle}>Я не был там</h2>
+            </div>
+            <p className={sideDescription}>
+              Озвученная с помощью музыкальной генеративной нейросети песня на мои стихи
+            </p>
+            <div className={linksColumn}>
+              <p className={linksLabel}>Слушать песню</p>
+              <div className={linksRow}>
+                <a
+                  className={linkClassName}
+                  href="https://music.yandex.ru/album/42189204"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Яндекс.Музыка
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="channels" className={contentSection} style={{ animationDelay: '260ms' }}>
           <div className={titleGroup}>
             <h2 className={sectionTitle}>Каналы и платформы</h2>
             <p className={sectionDescription}>
