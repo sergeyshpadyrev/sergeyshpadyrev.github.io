@@ -36,7 +36,7 @@ const channelLinks = [
   },
   {
     label: 'MAX-канал',
-    href: 'https://max.ru/join/swjQhKR_jE2aX_My1ITtNUVlEfLEaslrB-MiZ5-t5-w',
+    href: 'https://max.ru/channel_sergeyshpadyrev',
   },
   {
     label: 'Сообщество в VK',
