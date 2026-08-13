@@ -20,6 +20,8 @@ const useRender = (
     container,
     heroSection,
     sideImageSection,
+    courseSection,
+    courseSectionInner,
     contentSection,
     avatarWrapper,
     avatarBg,
@@ -32,14 +34,20 @@ const useRender = (
     sideImageWrapper,
     bookImageBg,
     podcastImageBg,
-    courseImageBg,
+    courseVisual,
+    courseVisualGlow,
+    courseVisualFrame,
+    courseImage,
     sideImage,
     sideContent,
     titleGroup,
     sectionLabel,
+    courseSectionLabel,
     sectionTitle,
+    courseTitle,
     sectionDescription,
     sideDescription,
+    courseIntro,
     linksColumn,
     linksLabel,
     linksRow,
@@ -59,7 +67,12 @@ const useRender = (
     videoIframe,
     notesGrid,
     noteCard,
-    courseButtonCol,
+    courseCtaRow,
+    courseButton,
+    courseCardsGrid,
+    courseCard,
+    courseCardTitle,
+    courseCardDescription,
     channelsGrid,
     channelCard,
     channelCardInner,
@@ -302,40 +315,55 @@ const useRender = (
           </div>
         </section>
 
-        <section id="course" className={sideImageSection} style={{ animationDelay: '170ms' }}>
-          <div className={sideImageWrapper}>
-            <div className={courseImageBg} />
-            <Image
-              src="/images/statue.png"
-              alt="Обложка курса Конвейер управления собой"
-              width={320}
-              height={440}
-              className={sideImage}
-            />
-          </div>
-          <div className={sideContent}>
-            <div className={titleGroup}>
-              <p className={sectionLabel}>Курс</p>
-              <h2 className={sectionTitle}>Конвейер управления собой</h2>
+        <section id="course" className={courseSection} style={{ animationDelay: '170ms' }}>
+          <div className={courseSectionInner}>
+            <div className={courseVisual}>
+              <div className={courseVisualGlow} />
+              <div className={courseVisualFrame}>
+                <Image
+                  src="/images/statue.png"
+                  alt="Закрытый блог с курсами на Boosty"
+                  width={320}
+                  height={440}
+                  className={courseImage}
+                />
+              </div>
             </div>
-            <p className={sideDescription}>
-              Курс лекций «Конвейер управления собой» рассказывает читателю о том, как построить
-              непрерывно работающий конвейер по медленному, но неизбежному улучшению собственной
-              жизни во всех её сферах. Не ждите быстрого результата - путь к успеху займёт 5-10 лет
-              постоянных усилий и духовного роста, по прошествию которых Феррари и виллы на берегу
-              моря всё равно не будет. Но будет кое-что гораздо более ценное - целостная
-              многогранная жизнь.
-            </p>
-            <div className={courseButtonCol}>
-              <p className={linksLabel}>Курс доступен по подписке на Boosty</p>
-              <a
-                className={primaryButton}
-                href="https://boosty.to/sergeyshpadyrev"
-                target="_blank"
-                rel="noreferrer"
-              >
-                ОТКРЫТЬ КУРС
-              </a>
+            <div className={sideContent}>
+              <div className={titleGroup}>
+                <p className={courseSectionLabel}>Закрытый блог</p>
+                <h2 className={courseTitle}>Курсы лекций</h2>
+              </div>
+              <p className={courseIntro}>
+                В закрытом блоге на Boosty я публикую циклы лекций о построении системы управления
+                собственной жизнью.
+              </p>
+              <div className={courseCardsGrid}>
+                <article className={courseCard}>
+                  <h3 className={courseCardTitle}>Конвейер управления собой</h3>
+                  <p className={courseCardDescription}>
+                    Курс лекций о том, как построить непрерывно работающий конвейер по планированию
+                    и управлению своими делами.
+                  </p>
+                </article>
+                <article className={courseCard}>
+                  <h3 className={courseCardTitle}>Фабрика моей жизни</h3>
+                  <p className={courseCardDescription}>
+                    Курс лекций о проектировании собственной жизни как системы и созданию жизни по
+                    своему замыслу.
+                  </p>
+                </article>
+              </div>
+              <div className={courseCtaRow}>
+                <a
+                  className={courseButton}
+                  href="https://boosty.to/sergeyshpadyrev"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Перейти в закрытый блог
+                </a>
+              </div>
             </div>
           </div>
         </section>
