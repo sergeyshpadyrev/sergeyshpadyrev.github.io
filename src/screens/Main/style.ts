@@ -13,6 +13,10 @@ const useStyle = () => ({
     'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[360px_minmax(0,1fr)] md:items-center md:p-12 fade-in',
   sideImageSection:
     'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in',
+  courseSection:
+    'relative overflow-hidden rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in',
+  courseSectionInner:
+    'relative grid gap-10 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.6fr)] md:items-center',
   contentSection:
     'space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in',
   avatarWrapper: 'relative mx-auto h-96 w-72 md:mx-0',
@@ -31,13 +35,21 @@ const useStyle = () => ({
     'absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f1e3d6] shadow-[0_18px_45px_rgba(31,26,18,0.12)]',
   courseImageBg:
     'absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#efe1d2] shadow-[0_18px_45px_rgba(31,26,18,0.12)]',
+  courseVisual: 'relative mx-auto w-full max-w-[300px] md:max-w-[320px]',
+  courseVisualGlow: 'absolute -inset-8 rounded-[36px] bg-[#f2c07d]/30 blur-2xl',
+  courseVisualFrame:
+    'relative rotate-[-2deg] rounded-[30px] border border-white/70 bg-white/45 p-3 shadow-[0_22px_55px_rgba(31,26,18,0.14)]',
+  courseImage: 'relative w-full rounded-[24px] object-cover shadow-lg',
   sideImage: 'relative w-full rounded-[22px] object-cover shadow-lg',
   sideContent: 'space-y-6',
   titleGroup: 'space-y-2',
   sectionLabel: 'text-sm uppercase tracking-[0.28em] text-[#7b6a55]',
+  courseSectionLabel: 'text-sm uppercase tracking-[0.28em] text-[#7b6a55]',
   sectionTitle: 'font-display text-3xl text-[#1f1a12] sm:text-4xl',
+  courseTitle: 'font-display text-3xl leading-tight text-[#1f1a12] sm:text-4xl',
   sectionDescription: 'max-w-2xl text-base text-[#4c4134] sm:text-lg',
   sideDescription: 'text-base leading-relaxed text-[#4c4134] sm:text-lg',
+  courseIntro: 'max-w-2xl text-base leading-relaxed text-[#4c4134] sm:text-lg',
   linksColumn: 'space-y-3',
   linksLabel: 'text-sm font-semibold uppercase tracking-[0.2em] text-[#7b6a55]',
   linksRow: 'flex flex-wrap gap-2',
@@ -63,6 +75,16 @@ const useStyle = () => ({
   noteCard:
     'group rounded-[24px] border border-white/70 bg-white/55 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in',
   courseButtonCol: 'flex flex-col gap-3',
+  courseCtaRow: 'flex flex-col gap-4 pt-1 sm:flex-row sm:items-center',
+  courseButton:
+    'inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]',
+  courseCardsGrid: 'grid gap-4 lg:grid-cols-2',
+  courseCard:
+    'group relative overflow-hidden rounded-[24px] border border-white/70 bg-white/55 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white',
+  courseCardNumber:
+    'mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#1f1a12]/10 bg-[#efe1d2] text-sm font-semibold text-[#7b6a55]',
+  courseCardTitle: 'text-lg font-semibold text-[#1f1a12]',
+  courseCardDescription: 'mt-3 text-sm leading-relaxed text-[#4c4134] sm:text-base',
   channelsGrid: 'grid gap-4 sm:grid-cols-2 lg:grid-cols-3',
   channelCard:
     'group rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in',
