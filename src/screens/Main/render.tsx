@@ -115,7 +115,7 @@ const useRender = (
           <div className={sideImageWrapper}>
             <div className={bookImageBg} />
             <Image
-              src="/images/book.png"
+              src="/images/book1.png"
               alt="Обложка книги Вглядываясь в пустоту"
               width={320}
               height={440}
