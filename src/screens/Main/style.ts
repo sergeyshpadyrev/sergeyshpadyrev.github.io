@@ -29,6 +29,8 @@ const useStyle = () => ({
   heroSubtitle: 'text-lg text-[#3f3529] sm:text-xl lg:text-2xl',
   heroDescription: 'max-w-2xl text-base leading-relaxed text-[#4c4134] sm:text-lg lg:text-xl',
   sideImageWrapper: 'relative mx-auto w-full max-w-[320px]',
+  bookAnnouncementBadge:
+    'absolute -right-4 -top-4 z-10 rotate-3 rounded-full bg-[#b7422d] px-5 py-2 text-sm font-bold tracking-[0.2em] text-white shadow-[0_12px_24px_rgba(183,66,45,0.35)]',
   bookImageBg:
     'absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f3e6d3] shadow-[0_18px_45px_rgba(31,26,18,0.14)]',
   podcastImageBg:

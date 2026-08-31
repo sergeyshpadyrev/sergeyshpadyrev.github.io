@@ -32,6 +32,7 @@ const useRender = (
     heroSubtitle,
     heroDescription,
     sideImageWrapper,
+    bookAnnouncementBadge,
     bookImageBg,
     podcastImageBg,
     courseVisual,
@@ -172,6 +173,7 @@ const useRender = (
 
         <section className={sideImageSection} style={{ animationDelay: '140ms' }}>
           <div className={sideImageWrapper}>
+            <span className={bookAnnouncementBadge}>СКОРО</span>
             <div className={bookImageBg} />
             <Image
               src="/images/book2.png"
