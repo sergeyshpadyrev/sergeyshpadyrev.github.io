@@ -128,9 +128,7 @@ const useRender = (
               <h2 className={sectionTitle}>Вглядываясь в пустоту</h2>
             </div>
             <p className={sideDescription}>
-              Cборник моих лучших эссе и заметок, написанных с 2020 по 2025 годы. Некоторые эссе
-              вошли в него в неизменном виде, некоторые в отредактированном специально для этой
-              книги варианте. В книге рассматривается множество тем: философские учения Древней
+              Cборник моих лучших эссе и заметок, написанных с 2020 по 2025 годы. В книге рассматривается множество тем: философские учения Древней
               Греции, Индии, и Китая, христианская теология и европейская философия Нового Времени,
               философия математики, физики и науки в целом, эпистемология, буддийское учение,
               вопросы этики и психологии, философия постмодерна.
@@ -169,6 +167,26 @@ const useRender = (
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className={sideImageSection} style={{ animationDelay: '140ms' }}>
+          <div className={sideImageWrapper}>
+            <div className={bookImageBg} />
+            <Image
+              src="/images/book2.png"
+              alt="Обложка книги Геометрия смыслов"
+              width={320}
+              height={440}
+              className={sideImage}
+            />
+          </div>
+          <div className={sideContent}>
+            <div className={titleGroup}>
+              <p className={sectionLabel}>Книга</p>
+              <h2 className={sectionTitle}>Геометрия смыслов</h2>
+            </div>
+            <p className={sideDescription}>Cборник моих лучших эссе и заметок, написанных с 2025 по 2026 годы. В данный момент готовится к публикации. Ссылки появятся после выхода книги на онлайн-платформах.</p>
           </div>
         </section>
 
@@ -372,8 +390,7 @@ const useRender = (
           <div className={titleGroup}>
             <h2 className={sectionTitle}>Каналы и платформы</h2>
             <p className={sectionDescription}>
-              Мои тексты, заметки и комментарии выходят на разных площадках. Здесь собраны
-              актуальные ссылки.
+              Мои тексты, заметки и комментарии выходят на разных площадках:
             </p>
           </div>
           <div className={channelsGrid}>
@@ -395,7 +412,7 @@ const useRender = (
           </div>
           <div className={channelsExtra}>
             <p className={sectionDescription}>
-              Выступаю как приглашённый лектор в рамках нескольких интеллектуальных сообществ
+              Выступаю в качестве приглашённого лектора:
             </p>
             <div className={lecturerGrid}>
               {lecturerLinks.map((link, index) => (
