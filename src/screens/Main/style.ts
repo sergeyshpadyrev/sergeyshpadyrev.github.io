@@ -83,7 +83,7 @@ const useStyle = () => ({
   noteCard:
     'group rounded-[24px] border border-white/70 bg-white/55 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in',
   courseButtonCol: 'flex flex-col gap-3',
-  courseCtaRow: 'flex flex-col gap-4 pt-1 sm:flex-row sm:items-center',
+  courseCtaRow: 'flex flex-col items-center justify-center gap-4 pt-1 sm:flex-row',
   courseButton:
     'inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]',
   courseCardsGrid: 'grid gap-4 lg:grid-cols-2',

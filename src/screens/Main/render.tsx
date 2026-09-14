@@ -222,7 +222,7 @@ const useRender = (
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Эссе</h2>
             <p className={sectionDescription}>
-              Свежие публикации из архива эссе, собранные в одном месте.
+              Все мои эссе, собранные в одном месте
             </p>
           </div>
           <div className={postsGrid}>
@@ -261,9 +261,8 @@ const useRender = (
 
         <section id="guest" className={contentSection} style={{ animationDelay: '180ms' }}>
           <div className={sectionHeader}>
-            <p className={sectionLabel}>Подкаст</p>
-            <h2 className={sectionTitle}>В гостях у Айрата Хайруллина</h2>
-            <p className={sectionDescription}>Беседа о философии, буддизме, сознании и жизни.</p>
+            <h2 className={sectionTitle}>Видео</h2>
+            <p className={sectionDescription}>Беседы о философии и жизни</p>
           </div>
           <div className={videosGrid}>
             <div className={videoCard}>
@@ -292,6 +291,11 @@ const useRender = (
                 />
               </div>
             </div>
+          </div>
+          <div className={sectionFooter}>
+            <Link href="/videos" className={primaryButton}>
+              Открыть все видео
+            </Link>
           </div>
         </section>
 
