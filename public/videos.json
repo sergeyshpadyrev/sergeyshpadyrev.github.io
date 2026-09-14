@@ -63,6 +63,36 @@
       }
     ]
   },
+   {
+    "id": "universe",
+    "title": "Школа мировоззрения \"Унивёрс\"",
+    "videos": [
+      {
+        "id": "universe1",
+        "youtube": "https://www.youtube.com/embed/ki17i_57P1Q"
+      },
+      {
+        "id": "universe2",
+        "youtube": "https://www.youtube.com/embed/kriQJ1NlWeM"
+      },
+      {
+        "id": "universe3",
+        "youtube": "https://www.youtube.com/embed/Ew-MC-QWl_M"
+      },
+      {
+        "id": "universe4",
+        "youtube": "https://www.youtube.com/embed/LZGZ2FE1-xg"
+      },
+      {
+        "id": "universe5",
+        "youtube": "https://www.youtube.com/embed/OTrEgJiJ7-8"
+      },
+      {
+        "id": "universe6",
+        "youtube": "https://www.youtube.com/embed/I6rHVH5sf2I"
+      }
+    ]
+  },
   {
     "id": "dmitry",
     "title": "Беседа с Дмитрием Дмитриевым",
