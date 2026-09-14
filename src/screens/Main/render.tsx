@@ -10,7 +10,14 @@ const useRender = (
   logic: Awaited<ReturnType<typeof useLogic>>,
   style: ReturnType<typeof useStyle>
 ) => {
-  const { digitalLinks, printLinks, channelLinks, podcastLinks, lecturerLinks } = logic;
+  const {
+    digitalLinks,
+    printLinks,
+    geometryDigitalLinks,
+    channelLinks,
+    podcastLinks,
+    lecturerLinks,
+  } = logic;
   const {
     linkClassName,
     main,
@@ -20,6 +27,11 @@ const useRender = (
     container,
     heroSection,
     sideImageSection,
+    booksSection,
+    booksGrid,
+    bookItem,
+    bookImageWrapper,
+    bookImage,
     courseSection,
     courseSectionInner,
     contentSection,
@@ -112,83 +124,103 @@ const useRender = (
           </div>
         </section>
 
-        <section id="book" className={sideImageSection} style={{ animationDelay: '120ms' }}>
-          <div className={sideImageWrapper}>
-            <div className={bookImageBg} />
-            <Image
-              src="/images/book1.png"
-              alt="Обложка книги Вглядываясь в пустоту"
-              width={320}
-              height={440}
-              className={sideImage}
-            />
-          </div>
-          <div className={sideContent}>
-            <div className={titleGroup}>
-              <p className={sectionLabel}>Книга</p>
-              <h2 className={sectionTitle}>Вглядываясь в пустоту</h2>
-            </div>
-            <p className={sideDescription}>
-              Cборник моих лучших эссе и заметок, написанных с 2020 по 2025 годы. В книге рассматривается множество тем: философские учения Древней
-              Греции, Индии, и Китая, христианская теология и европейская философия Нового Времени,
-              философия математики, физики и науки в целом, эпистемология, буддийское учение,
-              вопросы этики и психологии, философия постмодерна.
-            </p>
-            <div className={bookLinksGrid}>
-              <div className={linksColumn}>
-                <p className={linksLabel}>Электронная версия</p>
-                <div className={linksRow}>
-                  {digitalLinks.map((link) => (
-                    <a
-                      key={link.href}
-                      className={linkClassName}
-                      href={link.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
+        <section id="book" className={booksSection} style={{ animationDelay: '120ms' }}>
+          <div className={booksGrid}>
+            <article className={bookItem}>
+              <div className={bookImageWrapper}>
+                <div className={bookImageBg} />
+                <Image
+                  src="/images/book1.png"
+                  alt="Обложка книги Вглядываясь в пустоту"
+                  width={320}
+                  height={440}
+                  className={bookImage}
+                />
+              </div>
+              <div className={sideContent}>
+                <div className={titleGroup}>
+                  <h2 className={sectionTitle}>Вглядываясь в пустоту</h2>
+                </div>
+                <p className={sideDescription}>
+                  Cборник моих эссе и заметок с 2020 по 2025 годы
+                </p>
+                <div className={bookLinksGrid}>
+                  <div className={linksColumn}>
+                    <p className={linksLabel}>Электронная версия</p>
+                    <div className={linksRow}>
+                      {digitalLinks.map((link) => (
+                        <a
+                          key={link.href}
+                          className={linkClassName}
+                          href={link.href}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                  <div className={linksColumn}>
+                    <p className={linksLabel}>Бумажная версия</p>
+                    <div className={linksRow}>
+                      {printLinks.map((link) => (
+                        <a
+                          key={link.href}
+                          className={linkClassName}
+                          href={link.href}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className={linksColumn}>
-                <p className={linksLabel}>Бумажная версия</p>
-                <div className={linksRow}>
-                  {printLinks.map((link) => (
-                    <a
-                      key={link.href}
-                      className={linkClassName}
-                      href={link.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            </article>
 
-        <section className={sideImageSection} style={{ animationDelay: '140ms' }}>
-          <div className={sideImageWrapper}>
-            <span className={bookAnnouncementBadge}>СКОРО</span>
-            <div className={bookImageBg} />
-            <Image
-              src="/images/book2.png"
-              alt="Обложка книги Геометрия смыслов"
-              width={320}
-              height={440}
-              className={sideImage}
-            />
-          </div>
-          <div className={sideContent}>
-            <div className={titleGroup}>
-              <p className={sectionLabel}>Книга</p>
-              <h2 className={sectionTitle}>Геометрия смыслов</h2>
-            </div>
-            <p className={sideDescription}>Cборник моих лучших эссе и заметок, написанных с 2025 по 2026 годы. В данный момент готовится к публикации. Ссылки появятся после выхода книги на онлайн-платформах.</p>
+            <article className={bookItem}>
+              <div className={bookImageWrapper}>
+                <div className={bookImageBg} />
+                <Image
+                  src="/images/book2.png"
+                  alt="Обложка книги Геометрия смыслов"
+                  width={320}
+                  height={440}
+                  className={bookImage}
+                />
+              </div>
+              <div className={sideContent}>
+                <div className={titleGroup}>
+                  <h2 className={sectionTitle}>Геометрия смыслов</h2>
+                </div>
+                <p className={sideDescription}>Cборник моих эссе и заметок с 2025 по 2026 годы</p>
+                <div className={bookLinksGrid}>
+                  <div className={linksColumn}>
+                    <p className={linksLabel}>Электронная версия</p>
+                    <div className={linksRow}>
+                      {geometryDigitalLinks.map((link) => (
+                        <a
+                          key={link.href}
+                          className={linkClassName}
+                          href={link.href}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                  <div className={linksColumn}>
+                    <p className={linksLabel}>Бумажная версия</p>
+                    <span className={bookAnnouncementBadge}>СКОРО</span>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
 

@@ -1,0 +1,31 @@
+[
+  {
+    "id": "kazan",
+    "title": "Интервью в Казани",
+    "videos": [
+      {
+        "id": "airat1",
+        "youtube": "https://www.youtube.com/embed/c9oMDeq-hSQ"
+      },
+      {
+        "id": "airat2",
+        "youtube": "https://www.youtube.com/embed/qfKW9u_P574"
+      },
+      {
+        "id": "dmitry1",
+        "youtube": "https://www.youtube.com/embed/F9N8Fhhs2Aw"
+      }
+    ]
+  },
+  {
+    "id": "anton",
+    "name": "Эфиры с Антоном Безмолитвенным",
+    "videos": [
+      {
+        "id": "anton1",
+        "youtube": "https://www.youtube.com/embed/LjCa5hNHI2M"
+      }
+    ]
+  }
+]
+

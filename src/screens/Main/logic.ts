@@ -29,6 +29,13 @@ const printLinks = [
   },
 ];
 
+const geometryDigitalLinks = [
+  {
+    label: 'Ридеро',
+    href: 'https://ridero.ru/books/geometriya_smyslov/',
+  },
+];
+
 const channelLinks = [
   {
     label: 'Телеграм-канал',
@@ -89,6 +96,7 @@ const lecturerLinks = [
 const useLogic = () => ({
   digitalLinks,
   printLinks,
+  geometryDigitalLinks,
   channelLinks,
   podcastLinks,
   lecturerLinks,
