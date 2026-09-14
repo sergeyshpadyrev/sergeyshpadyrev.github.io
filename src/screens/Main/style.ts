@@ -13,6 +13,12 @@ const useStyle = () => ({
     'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[360px_minmax(0,1fr)] md:items-center md:p-12 fade-in',
   sideImageSection:
     'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in',
+  booksSection:
+    'rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] lg:p-12 fade-in',
+  booksGrid: 'grid gap-16 lg:grid-cols-2 lg:gap-12',
+  bookItem: 'grid content-start gap-10',
+  bookImageWrapper: 'relative mx-auto aspect-[8/11] w-full max-w-[320px]',
+  bookImage: 'relative h-full w-full rounded-[22px] object-cover shadow-lg',
   courseSection:
     'relative overflow-hidden rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in',
   courseSectionInner:
@@ -30,7 +36,7 @@ const useStyle = () => ({
   heroDescription: 'max-w-2xl text-base leading-relaxed text-[#4c4134] sm:text-lg lg:text-xl',
   sideImageWrapper: 'relative mx-auto w-full max-w-[320px]',
   bookAnnouncementBadge:
-    'absolute -right-4 -top-4 z-10 rotate-3 rounded-full bg-[#b7422d] px-5 py-2 text-sm font-bold tracking-[0.2em] text-white shadow-[0_12px_24px_rgba(183,66,45,0.35)]',
+    'inline-flex rounded-full bg-[#b7422d] px-5 py-2 text-sm font-bold tracking-[0.2em] text-white shadow-[0_12px_24px_rgba(183,66,45,0.35)]',
   bookImageBg:
     'absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f3e6d3] shadow-[0_18px_45px_rgba(31,26,18,0.14)]',
   podcastImageBg:
