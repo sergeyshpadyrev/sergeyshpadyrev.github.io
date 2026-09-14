@@ -138,11 +138,8 @@ const useRender = (
                 />
               </div>
               <div className={sideContent}>
-                <div className={titleGroup}>
-                  <h2 className={sectionTitle}>Вглядываясь в пустоту</h2>
-                </div>
                 <p className={sideDescription}>
-                  Cборник моих эссе и заметок с 2020 по 2025 годы
+                  Cборник эссе и заметок, написанных с 2020 по 2025 годы, в которых происходит глубокое погружение в теории происхождения Вселенной, описываются различные подходы к вопросу о природе сознания, обсуждаются основания этики и даётся введение в философию буддизма. 
                 </p>
                 <div className={bookLinksGrid}>
                   <div className={linksColumn}>
@@ -193,10 +190,7 @@ const useRender = (
                 />
               </div>
               <div className={sideContent}>
-                <div className={titleGroup}>
-                  <h2 className={sectionTitle}>Геометрия смыслов</h2>
-                </div>
-                <p className={sideDescription}>Cборник моих эссе и заметок с 2025 по 2026 годы</p>
+                <p className={sideDescription}>Cборник эссе и заметок, написанных с 2025 по 2026 годы, в которых обсуждаются геометрическое пространство смыслов, карма и реинкарнация, информационные духи, физические причины страдания, сакральные основания власти и несубстанциональность времени и свободы воли.</p>
                 <div className={bookLinksGrid}>
                   <div className={linksColumn}>
                     <p className={linksLabel}>Электронная версия</p>
