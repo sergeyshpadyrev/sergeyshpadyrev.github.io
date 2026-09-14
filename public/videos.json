@@ -1,7 +1,7 @@
 [
   {
-    "id": "kazan",
-    "title": "Интервью в Казани",
+    "id": "airat",
+    "title": "Беседа с Айратом Хайруллиным",
     "videos": [
       {
         "id": "airat1",
@@ -10,7 +10,63 @@
       {
         "id": "airat2",
         "youtube": "https://www.youtube.com/embed/qfKW9u_P574"
+      }
+    ]
+  },
+  {
+    "id": "dionis",
+    "name": "Подкаст \"Философские разговоры о важном\"",
+    "videos": [
+      {
+        "id": "dionis1",
+        "youtube": "https://www.youtube.com/embed/kNGaajO98Og"
       },
+      {
+        "id": "dionis2",
+        "youtube": "https://www.youtube.com/embed/MRaIrrH7yTA"
+      },
+      {
+        "id": "dionis3",
+        "youtube": "https://www.youtube.com/embed/o-6mEB7L7uA"
+      },
+      {
+        "id": "dionis4",
+        "youtube": "https://www.youtube.com/embed/QbWVIxQ9Uhg"
+      },
+      {
+        "id": "dionis5",
+        "youtube": "https://www.youtube.com/embed/mUWSOWzTc78"
+      },
+      {
+        "id": "dionis6",
+        "youtube": "https://www.youtube.com/embed/c49XCTNgKZs"
+      },
+      {
+        "id": "dionis7",
+        "youtube": "https://www.youtube.com/embed/fTIMQwM7JMM"
+      },
+      {
+        "id": "dionis8",
+        "youtube": "https://www.youtube.com/embed/peF9EaWlP80"
+      },
+      {
+        "id": "dionis9",
+        "youtube": "https://www.youtube.com/embed/-ie511nfKeI"
+      },
+      {
+        "id": "dionis10",
+        "youtube": "https://www.youtube.com/embed/AQVhYZk4gtA"
+      },
+      {
+        "id": "dionis11",
+        "youtube": "https://www.youtube.com/embed/xbv7yNNWrR4"
+      }
+    ]
+  },
+  {
+    "id": "dmitry",
+    "title": "Беседа с Дмитрием Дмитриевым",
+    "videos": [
       {
         "id": "dmitry1",
         "youtube": "https://www.youtube.com/embed/F9N8Fhhs2Aw"
@@ -28,4 +84,3 @@
     ]
   }
 ]
-
