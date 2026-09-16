@@ -5,7 +5,9 @@ const videosPath = path.join(process.cwd(), "public", "videos.json");
 
 export interface Video {
   id: string;
-  youtube: string;
+  youtube?: string;
+  rutube?: string;
+  vk?: string;
 }
 
 export interface VideoSection {
