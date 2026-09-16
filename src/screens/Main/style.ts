@@ -14,7 +14,7 @@ const useStyle = () => ({
   sideImageSection:
     'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in',
   booksSection:
-    'rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] lg:p-12 fade-in',
+    'space-y-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] lg:p-12 fade-in',
   booksGrid: 'grid gap-16 lg:grid-cols-2 lg:gap-12',
   bookItem: 'grid content-start gap-10',
   bookImageWrapper: 'relative mx-auto aspect-[8/11] w-full max-w-[320px]',

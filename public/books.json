@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Вглядываясь в пустоту",
+    "description": "Cборник эссе и заметок, написанных с 2020 по 2025 годы, в которых происходит глубокое погружение в теории происхождения Вселенной, описываются различные подходы к вопросу о природе сознания, обсуждаются основания этики и даётся введение в философию буддизма.",
+    "image": "/images/book1.png",
+    "widgetUrl": "https://ridero.ru/books/widget/vglyadyvayas_v_pustotu/?book3d=true",
+    "digitalLinks": [
+      {
+        "label": "Литрес",
+        "href": "https://www.litres.ru/book/sergey-shpadyrev/vglyadyvayas-v-pustotu-sbornik-filosofskih-esse-72505846/"
+      },
+      {
+        "label": "Ридеро",
+        "href": "https://ridero.ru/books/vglyadyvayas_v_pustotu/"
+      },
+      {
+        "label": "Amazon",
+        "href": "https://www.amazon.com/dp/B0FRFZRK7T"
+      }
+    ],
+    "printLinks": [
+      {
+        "label": "Wildberries",
+        "href": "https://www.wildberries.ru/catalog/535326264/detail.aspx"
+      },
+      {
+        "label": "Озон",
+        "href": "https://www.ozon.ru/product/2867585042"
+      }
+    ]
+  },
+  {
+    "title": "Геометрия смыслов",
+    "description": "Cборник эссе и заметок, написанных с 2025 по 2026 годы, в которых обсуждаются геометрическое пространство смыслов, карма и реинкарнация, информационные духи, физические причины страдания, сакральные основания власти и несубстанциональность времени и свободы воли.",
+    "image": "/images/book2.png",
+    "widgetUrl": "https://ridero.ru/books/widget/geometriya_smyslov/?book3d=true",
+    "digitalLinks": [
+      {
+        "label": "Ридеро",
+        "href": "https://ridero.ru/books/geometriya_smyslov/"
+      }
+    ],
+    "printLinks": []
+  }
+]
