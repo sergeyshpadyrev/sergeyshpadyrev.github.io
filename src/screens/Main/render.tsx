@@ -11,9 +11,6 @@ const useRender = (
   style: ReturnType<typeof useStyle>
 ) => {
   const {
-    digitalLinks,
-    printLinks,
-    geometryDigitalLinks,
     channelLinks,
     podcastLinks,
     lecturerLinks,
@@ -126,95 +123,66 @@ const useRender = (
 
         <section id="book" className={booksSection} style={{ animationDelay: '120ms' }}>
           <div className={booksGrid}>
-            <article className={bookItem}>
-              <div className={bookImageWrapper}>
-                <div className={bookImageBg} />
-                <Image
-                  src="/images/book1.png"
-                  alt="Обложка книги Вглядываясь в пустоту"
-                  width={320}
-                  height={440}
-                  className={bookImage}
-                />
-              </div>
-              <div className={sideContent}>
-                <p className={sideDescription}>
-                  Cборник эссе и заметок, написанных с 2020 по 2025 годы, в которых происходит глубокое погружение в теории происхождения Вселенной, описываются различные подходы к вопросу о природе сознания, обсуждаются основания этики и даётся введение в философию буддизма. 
-                </p>
-                <div className={bookLinksGrid}>
-                  <div className={linksColumn}>
-                    <p className={linksLabel}>Электронная версия</p>
-                    <div className={linksRow}>
-                      {digitalLinks.map((link) => (
-                        <a
-                          key={link.href}
-                          className={linkClassName}
-                          href={link.href}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {link.label}
-                        </a>
-                      ))}
+            {props.books.map((book) => (
+              <article key={book.title} className={bookItem}>
+                <div className={bookImageWrapper}>
+                  <div className={bookImageBg} />
+                  <Image
+                    src={book.image}
+                    alt={`Обложка книги ${book.title}`}
+                    width={320}
+                    height={440}
+                    className={bookImage}
+                  />
+                </div>
+                <div className={sideContent}>
+                  <p className={sideDescription}>{book.description}</p>
+                  <div className={bookLinksGrid}>
+                    <div className={linksColumn}>
+                      <p className={linksLabel}>Электронная версия</p>
+                      <div className={linksRow}>
+                        {book.digitalLinks.map((link) => (
+                          <a
+                            key={link.href}
+                            className={linkClassName}
+                            href={link.href}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                  <div className={linksColumn}>
-                    <p className={linksLabel}>Бумажная версия</p>
-                    <div className={linksRow}>
-                      {printLinks.map((link) => (
-                        <a
-                          key={link.href}
-                          className={linkClassName}
-                          href={link.href}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {link.label}
-                        </a>
-                      ))}
+                    <div className={linksColumn}>
+                      <p className={linksLabel}>Бумажная версия</p>
+                      {book.printLinks.length > 0 ? (
+                        <div className={linksRow}>
+                          {book.printLinks.map((link) => (
+                            <a
+                              key={link.href}
+                              className={linkClassName}
+                              href={link.href}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {link.label}
+                            </a>
+                          ))}
+                        </div>
+                      ) : (
+                        <span className={bookAnnouncementBadge}>СКОРО</span>
+                      )}
                     </div>
                   </div>
                 </div>
-              </div>
-            </article>
-
-            <article className={bookItem}>
-              <div className={bookImageWrapper}>
-                <div className={bookImageBg} />
-                <Image
-                  src="/images/book2.png"
-                  alt="Обложка книги Геометрия смыслов"
-                  width={320}
-                  height={440}
-                  className={bookImage}
-                />
-              </div>
-              <div className={sideContent}>
-                <p className={sideDescription}>Cборник эссе и заметок, написанных с 2025 по 2026 годы, в которых обсуждаются геометрическое пространство смыслов, карма и реинкарнация, информационные духи, физические причины страдания, сакральные основания власти и несубстанциональность времени и свободы воли.</p>
-                <div className={bookLinksGrid}>
-                  <div className={linksColumn}>
-                    <p className={linksLabel}>Электронная версия</p>
-                    <div className={linksRow}>
-                      {geometryDigitalLinks.map((link) => (
-                        <a
-                          key={link.href}
-                          className={linkClassName}
-                          href={link.href}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {link.label}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                  <div className={linksColumn}>
-                    <p className={linksLabel}>Бумажная версия</p>
-                    <span className={bookAnnouncementBadge}>СКОРО</span>
-                  </div>
-                </div>
-              </div>
-            </article>
+              </article>
+            ))}
+          </div>
+          <div className={sectionFooter}>
+            <Link href="/books" className={primaryButton}>
+              Открыть все книги
+            </Link>
           </div>
         </section>
 

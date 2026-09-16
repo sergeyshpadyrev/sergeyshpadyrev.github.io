@@ -1,41 +1,3 @@
-import { getNoteSummaries } from '@/lib/notes';
-import { getPostSummaries } from '@/lib/posts';
-
-import type { Props } from './types';
-
-const digitalLinks = [
-  {
-    label: 'Литрес',
-    href: 'https://www.litres.ru/book/sergey-shpadyrev/vglyadyvayas-v-pustotu-sbornik-filosofskih-esse-72505846/',
-  },
-  {
-    label: 'Ридеро',
-    href: 'https://ridero.ru/books/vglyadyvayas_v_pustotu/',
-  },
-  {
-    label: 'Amazon',
-    href: 'https://www.amazon.com/dp/B0FRFZRK7T',
-  },
-];
-
-const printLinks = [
-  {
-    label: 'Wildberries',
-    href: 'https://www.wildberries.ru/catalog/535326264/detail.aspx',
-  },
-  {
-    label: 'Озон',
-    href: 'https://www.ozon.ru/product/2867585042',
-  },
-];
-
-const geometryDigitalLinks = [
-  {
-    label: 'Ридеро',
-    href: 'https://ridero.ru/books/geometriya_smyslov/',
-  },
-];
-
 const channelLinks = [
   {
     label: 'Телеграм-канал',
@@ -94,9 +56,6 @@ const lecturerLinks = [
 ];
 
 const useLogic = () => ({
-  digitalLinks,
-  printLinks,
-  geometryDigitalLinks,
   channelLinks,
   podcastLinks,
   lecturerLinks,
