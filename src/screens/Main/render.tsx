@@ -227,6 +227,34 @@ const useRender = (
           </div>
         </section>
 
+        <section id="notes" className={contentSection} style={{ animationDelay: '200ms' }}>
+          <div className={sectionHeader}>
+            <h2 className={sectionTitle}>Заметки</h2>
+            <p className={sectionDescription}>
+              Короткие записки об интересных наблюдениях из моего канала.
+            </p>
+          </div>
+          <div className={notesGrid}>
+            {props.notes.slice(0, 4).map((note, index) => (
+              <Link
+                key={note.id}
+                href={`/notes/${note.id}`}
+                className={noteCard}
+                style={{ animationDelay: `${index * 60}ms` }}
+              >
+                <div>
+                  <h3 className={cardTitle}>{note.title}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className={sectionFooter}>
+            <Link href="/notes" className={primaryButton}>
+              Открыть все заметки
+            </Link>
+          </div>
+        </section>
+
         <section id="guest" className={contentSection} style={{ animationDelay: '180ms' }}>
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Видео</h2>
@@ -263,72 +291,6 @@ const useRender = (
           <div className={sectionFooter}>
             <Link href="/videos" className={primaryButton}>
               Открыть все видео
-            </Link>
-          </div>
-        </section>
-
-        <section id="podcast" className={sideImageSection} style={{ animationDelay: '230ms' }}>
-          <div className={sideImageWrapper}>
-            <div className={podcastImageBg} />
-            <Image
-              src="/images/dionis.png"
-              alt="Обложка подкаста Философские разговоры о важном"
-              width={320}
-              height={440}
-              className={sideImage}
-            />
-          </div>
-          <div className={sideContent}>
-            <div className={titleGroup}>
-              <p className={sectionLabel}>Подкаст</p>
-              <h2 className={sectionTitle}>Философские разговоры о важном</h2>
-            </div>
-            <p className={sideDescription}>
-              Мой совместный камерный подкаст с Дионисом Диметором о физике, математике и философии
-            </p>
-            <div className={linksColumn}>
-              <p className={linksLabel}>Слушать подкаст</p>
-              <div className={linksRow}>
-                {podcastLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    className={linkClassName}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="notes" className={contentSection} style={{ animationDelay: '200ms' }}>
-          <div className={sectionHeader}>
-            <h2 className={sectionTitle}>Заметки</h2>
-            <p className={sectionDescription}>
-              Короткие записки об интересных наблюдениях из моего канала.
-            </p>
-          </div>
-          <div className={notesGrid}>
-            {props.notes.slice(0, 4).map((note, index) => (
-              <Link
-                key={note.id}
-                href={`/notes/${note.id}`}
-                className={noteCard}
-                style={{ animationDelay: `${index * 60}ms` }}
-              >
-                <div>
-                  <h3 className={cardTitle}>{note.title}</h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className={sectionFooter}>
-            <Link href="/notes" className={primaryButton}>
-              Открыть все заметки
             </Link>
           </div>
         </section>
@@ -386,6 +348,79 @@ const useRender = (
           </div>
         </section>
 
+        <section id="podcast" className={sideImageSection} style={{ animationDelay: '230ms' }}>
+          <div className={sideImageWrapper}>
+            <div className={podcastImageBg} />
+            <Image
+              src="/images/dionis.png"
+              alt="Обложка подкаста Философские разговоры о важном"
+              width={320}
+              height={440}
+              className={sideImage}
+            />
+          </div>
+          <div className={sideContent}>
+            <div className={titleGroup}>
+              <p className={sectionLabel}>Подкаст</p>
+              <h2 className={sectionTitle}>Философские разговоры о важном</h2>
+            </div>
+            <p className={sideDescription}>
+              Мой совместный камерный подкаст с Дионисом Диметором о физике, математике и философии
+            </p>
+            <div className={linksColumn}>
+              <p className={linksLabel}>Слушать подкаст</p>
+              <div className={linksRow}>
+                {podcastLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    className={linkClassName}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="music" className={sideImageSection} style={{ animationDelay: '220ms' }}>
+          <div className={sideImageWrapper}>
+            <div className={podcastImageBg} />
+            <Image
+              src="/images/iwasnotthere.jpeg"
+              alt="Обложка альбома Я не был там"
+              width={320}
+              height={320}
+              className={sideImage}
+            />
+          </div>
+          <div className={sideContent}>
+            <div className={titleGroup}>
+              <p className={sectionLabel}>Музыка</p>
+              <h2 className={sectionTitle}>Я не был там</h2>
+            </div>
+            <p className={sideDescription}>
+              Озвученная с помощью музыкальной генеративной нейросети песня на мои стихи
+            </p>
+            <div className={linksColumn}>
+              <p className={linksLabel}>Слушать песню</p>
+              <div className={linksRow}>
+                <a
+                  className={linkClassName}
+                  href="https://music.yandex.ru/album/42189204"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Яндекс.Музыка
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="channels" className={contentSection} style={{ animationDelay: '260ms' }}>
           <div className={titleGroup}>
             <h2 className={sectionTitle}>Каналы и платформы</h2>
@@ -430,41 +465,6 @@ const useRender = (
                   </div>
                 </a>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="music" className={sideImageSection} style={{ animationDelay: '220ms' }}>
-          <div className={sideImageWrapper}>
-            <div className={podcastImageBg} />
-            <Image
-              src="/images/iwasnotthere.jpeg"
-              alt="Обложка альбома Я не был там"
-              width={320}
-              height={320}
-              className={sideImage}
-            />
-          </div>
-          <div className={sideContent}>
-            <div className={titleGroup}>
-              <p className={sectionLabel}>Музыка</p>
-              <h2 className={sectionTitle}>Я не был там</h2>
-            </div>
-            <p className={sideDescription}>
-              Озвученная с помощью музыкальной генеративной нейросети песня на мои стихи
-            </p>
-            <div className={linksColumn}>
-              <p className={linksLabel}>Слушать песню</p>
-              <div className={linksRow}>
-                <a
-                  className={linkClassName}
-                  href="https://music.yandex.ru/album/42189204"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Яндекс.Музыка
-                </a>
-              </div>
             </div>
           </div>
         </section>
