@@ -41,6 +41,26 @@ body {
   animation: floatSlow 8s ease-in-out infinite;
 }
 
+.note-float {
+  animation: noteFloat 5.5s ease-in-out infinite;
+}
+
+.note-float:nth-child(3n + 2) {
+  animation-delay: -1.8s;
+  animation-duration: 6.5s;
+  animation-direction: reverse;
+}
+
+.note-float:nth-child(3n) {
+  animation-delay: -3.6s;
+  animation-duration: 7.5s;
+}
+
+.note-float:hover,
+.note-float:focus-visible {
+  animation-play-state: paused;
+}
+
 .nav-pill {
   display: inline-flex;
   width: fit-content;
@@ -98,5 +118,21 @@ body {
   }
   50% {
     transform: translateY(-12px);
+  }
+}
+
+@keyframes noteFloat {
+  0%,
+  100% {
+    transform: translate3d(-2px, 2px, 0) rotate(-0.4deg);
+  }
+  50% {
+    transform: translate3d(3px, -5px, 0) rotate(0.4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .note-float {
+    animation: none;
   }
 }

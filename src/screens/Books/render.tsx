@@ -41,8 +41,7 @@ const useRender = (
                 />
               </div>
 
-              <div className="space-y-6 px-2 pb-2 pt-6">
-                <h2 className="font-display text-2xl text-[#1f1a12]">{book.title}</h2>
+              <div className="px-2 pb-2 pt-6">
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="space-y-3">
                     <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#7b6a55]">

@@ -10,7 +10,7 @@ const useRender = (
   logic: Awaited<ReturnType<typeof useLogic>>,
   style: ReturnType<typeof useStyle>
 ) => {
-  const { channelLinks, podcastLinks, lecturerLinks } = logic;
+  const { channelLinks, podcastLinks, lecturerLinks, cloudNotes } = logic;
   const {
     linkClassName,
     main,
@@ -71,8 +71,8 @@ const useRender = (
     videoCard,
     videoAspect,
     videoIframe,
-    notesGrid,
-    noteCard,
+    notesCloud,
+    noteTag,
     courseCtaRow,
     courseButton,
     courseCardsGrid,
@@ -121,7 +121,7 @@ const useRender = (
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Книги</h2>
             <p className={sectionDescription}>
-              Мои сборники эссе и философских текстов в электронном и печатном виде
+              Мои сборники эссе и заметок в электронном и печатном виде
             </p>
           </div>
           <div className={booksGrid}>
@@ -234,17 +234,10 @@ const useRender = (
               Короткие записки об интересных наблюдениях из моего канала.
             </p>
           </div>
-          <div className={notesGrid}>
-            {props.notes.slice(0, 4).map((note, index) => (
-              <Link
-                key={note.id}
-                href={`/notes/${note.id}`}
-                className={noteCard}
-                style={{ animationDelay: `${index * 60}ms` }}
-              >
-                <div>
-                  <h3 className={cardTitle}>{note.title}</h3>
-                </div>
+          <div className={notesCloud}>
+            {cloudNotes.map((note) => (
+              <Link key={note.id} href={`/notes/${note.id}`} className={noteTag}>
+                {note.title}
               </Link>
             ))}
           </div>

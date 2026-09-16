@@ -15,7 +15,7 @@ export default async function Home() {
     <Main
       books={books}
       posts={postSummaries.slice(0, 6)}
-      notes={noteSummaries.slice(0, 6)}
+      notes={noteSummaries}
     />
   );
 }
