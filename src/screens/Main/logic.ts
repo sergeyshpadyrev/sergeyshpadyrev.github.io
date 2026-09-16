@@ -1,3 +1,5 @@
+import type { Props } from './types';
+
 const channelLinks = [
   {
     label: 'Телеграм-канал',
@@ -55,10 +57,19 @@ const lecturerLinks = [
   },
 ];
 
-const useLogic = () => ({
-  channelLinks,
-  podcastLinks,
-  lecturerLinks,
-});
+const useLogic = (props: Props) => {
+  const cloudSize = Math.min(14, props.notes.length);
+  const cloudNotes = Array.from(
+    { length: cloudSize },
+    (_, index) => props.notes[Math.floor((index * props.notes.length) / cloudSize)]
+  );
+
+  return {
+    channelLinks,
+    podcastLinks,
+    lecturerLinks,
+    cloudNotes,
+  };
+};
 
 export default useLogic;

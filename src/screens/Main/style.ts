@@ -79,9 +79,9 @@ const useStyle = () => ({
     'overflow-hidden rounded-[28px] border border-white/70 bg-white/60 shadow-[0_18px_40px_rgba(31,26,18,0.1)]',
   videoAspect: 'aspect-video',
   videoIframe: 'h-full w-full',
-  notesGrid: 'grid gap-5 md:grid-cols-2',
-  noteCard:
-    'group rounded-[24px] border border-white/70 bg-white/55 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in',
+  notesCloud: 'mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-2 py-2 sm:gap-3',
+  noteTag:
+    'note-float rounded-full border border-[#1f1a12]/15 bg-white/55 px-4 py-2 text-center text-xs font-medium text-[#1f1a12] shadow-[0_8px_18px_rgba(31,26,18,0.08)] transition-colors hover:border-[#1f1a12]/40 hover:bg-white sm:text-sm',
   courseButtonCol: 'flex flex-col gap-3',
   courseCtaRow: 'flex flex-col items-center justify-center gap-4 pt-1 sm:flex-row',
   courseButton:
