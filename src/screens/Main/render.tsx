@@ -10,11 +10,7 @@ const useRender = (
   logic: Awaited<ReturnType<typeof useLogic>>,
   style: ReturnType<typeof useStyle>
 ) => {
-  const {
-    channelLinks,
-    podcastLinks,
-    lecturerLinks,
-  } = logic;
+  const { channelLinks, podcastLinks, lecturerLinks } = logic;
   const {
     linkClassName,
     main,
@@ -122,6 +118,12 @@ const useRender = (
         </section>
 
         <section id="book" className={booksSection} style={{ animationDelay: '120ms' }}>
+          <div className={sectionHeader}>
+            <h2 className={sectionTitle}>Книги</h2>
+            <p className={sectionDescription}>
+              Мои сборники эссе и философских текстов в электронном и печатном виде
+            </p>
+          </div>
           <div className={booksGrid}>
             {props.books.map((book) => (
               <article key={book.title} className={bookItem}>
@@ -189,9 +191,7 @@ const useRender = (
         <section id="posts" className={contentSection} style={{ animationDelay: '160ms' }}>
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Эссе</h2>
-            <p className={sectionDescription}>
-              Все мои эссе, собранные в одном месте
-            </p>
+            <p className={sectionDescription}>Все мои эссе, собранные в одном месте</p>
           </div>
           <div className={postsGrid}>
             {props.posts.map((post, index) => (
@@ -446,9 +446,7 @@ const useRender = (
             ))}
           </div>
           <div className={channelsExtra}>
-            <p className={sectionDescription}>
-              Выступаю в качестве приглашённого лектора:
-            </p>
+            <p className={sectionDescription}>Выступаю в качестве приглашённого лектора:</p>
             <div className={lecturerGrid}>
               {lecturerLinks.map((link, index) => (
                 <a
