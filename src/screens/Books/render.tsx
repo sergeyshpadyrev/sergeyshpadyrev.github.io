@@ -7,7 +7,7 @@ import type { Props } from './types';
 const useRender = (
   props: Props,
   logic: ReturnType<typeof useLogic>,
-  style: ReturnType<typeof useStyle>,
+  style: ReturnType<typeof useStyle>
 ) => {
   void props;
 
@@ -22,12 +22,10 @@ const useRender = (
           <Link href="/" className="nav-pill">
             ← На главную
           </Link>
-          <h1 className="font-display text-4xl text-[#1f1a12] sm:text-5xl">
-            Книги
-          </h1>
+          <h1 className="font-display text-4xl text-[#1f1a12] sm:text-5xl">Книги</h1>
         </header>
 
-        <section className="grid gap-8 lg:grid-cols-2">
+        <section className="flex flex-col gap-8">
           {logic.books.map((book, index) => (
             <article
               key={book.title}
@@ -36,7 +34,7 @@ const useRender = (
             >
               <div className="overflow-hidden rounded-[20px] bg-white">
                 <iframe
-                  className="h-[480px] w-full sm:h-[540px]"
+                  className="h-[768px] w-full"
                   src={book.widgetUrl}
                   title={book.title}
                   loading="lazy"
@@ -44,9 +42,7 @@ const useRender = (
               </div>
 
               <div className="space-y-6 px-2 pb-2 pt-6">
-                <h2 className="font-display text-2xl text-[#1f1a12]">
-                  {book.title}
-                </h2>
+                <h2 className="font-display text-2xl text-[#1f1a12]">{book.title}</h2>
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="space-y-3">
                     <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#7b6a55]">
