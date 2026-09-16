@@ -5,11 +5,13 @@
     "videos": [
       {
         "id": "airat1",
-        "youtube": "https://www.youtube.com/embed/c9oMDeq-hSQ"
+        "youtube": "https://www.youtube.com/embed/c9oMDeq-hSQ",
+        "rutube": "https://rutube.ru/play/embed/748727a7b242d6b57ab2697f66d34ae9"
       },
       {
         "id": "airat2",
-        "youtube": "https://www.youtube.com/embed/qfKW9u_P574"
+        "youtube": "https://www.youtube.com/embed/qfKW9u_P574",
+        "rutube": "https://rutube.ru/play/embed/6693c6192715a926f411788ef5a60c4d"
       }
     ]
   },
@@ -19,43 +21,53 @@
     "videos": [
       {
         "id": "dionis1",
-        "youtube": "https://www.youtube.com/embed/kNGaajO98Og"
+        "youtube": "https://www.youtube.com/embed/kNGaajO98Og",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239017"
       },
       {
         "id": "dionis2",
-        "youtube": "https://www.youtube.com/embed/MRaIrrH7yTA"
+        "youtube": "https://www.youtube.com/embed/MRaIrrH7yTA",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239018"
       },
       {
         "id": "dionis3",
-        "youtube": "https://www.youtube.com/embed/o-6mEB7L7uA"
+        "youtube": "https://www.youtube.com/embed/o-6mEB7L7uA",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239019"
       },
       {
         "id": "dionis4",
-        "youtube": "https://www.youtube.com/embed/QbWVIxQ9Uhg"
+        "youtube": "https://www.youtube.com/embed/QbWVIxQ9Uhg",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239024"
       },
       {
         "id": "dionis5",
-        "youtube": "https://www.youtube.com/embed/mUWSOWzTc78"
+        "youtube": "https://www.youtube.com/embed/mUWSOWzTc78",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239025"
       },
       {
         "id": "dionis6",
-        "youtube": "https://www.youtube.com/embed/c49XCTNgKZs"
+        "youtube": "https://www.youtube.com/embed/c49XCTNgKZs",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239027"
       },
       {
         "id": "dionis7",
-        "youtube": "https://www.youtube.com/embed/fTIMQwM7JMM"
+        "youtube": "https://www.youtube.com/embed/fTIMQwM7JMM",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239029"
       },
       {
         "id": "dionis8",
-        "youtube": "https://www.youtube.com/embed/peF9EaWlP80"
+        "youtube": "https://www.youtube.com/embed/peF9EaWlP80",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239032"
       },
       {
         "id": "dionis9",
-        "youtube": "https://www.youtube.com/embed/-ie511nfKeI"
+        "youtube": "https://www.youtube.com/embed/-ie511nfKeI",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239037"
       },
       {
         "id": "dionis10",
-        "youtube": "https://www.youtube.com/embed/AQVhYZk4gtA"
+        "youtube": "https://www.youtube.com/embed/AQVhYZk4gtA",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239041"
       },
       {
         "id": "dionis11",
@@ -63,7 +75,7 @@
       }
     ]
   },
-   {
+  {
     "id": "universe",
     "title": "Школа мировоззрения \"Унивёрс\"",
     "videos": [
@@ -77,19 +89,23 @@
       },
       {
         "id": "universe3",
-        "youtube": "https://www.youtube.com/embed/Ew-MC-QWl_M"
+        "youtube": "https://www.youtube.com/embed/Ew-MC-QWl_M",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239022"
       },
       {
         "id": "universe4",
-        "youtube": "https://www.youtube.com/embed/LZGZ2FE1-xg"
+        "youtube": "https://www.youtube.com/embed/LZGZ2FE1-xg",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239023"
       },
       {
         "id": "universe5",
-        "youtube": "https://www.youtube.com/embed/OTrEgJiJ7-8"
+        "youtube": "https://www.youtube.com/embed/OTrEgJiJ7-8",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709"
       },
       {
         "id": "universe6",
-        "youtube": "https://www.youtube.com/embed/I6rHVH5sf2I"
+        "youtube": "https://www.youtube.com/embed/I6rHVH5sf2I",
+        "vk": "https://vk.ru/video_ext.php?oid=-231375709&id=456239020"
       }
     ]
   },
@@ -109,7 +125,8 @@
     "videos": [
       {
         "id": "anton1",
-        "youtube": "https://www.youtube.com/embed/LjCa5hNHI2M"
+        "youtube": "https://www.youtube.com/embed/LjCa5hNHI2M",
+        "vk": "https://vk.ru/video_ext.php?oid=4914401&id=456239859"
       }
     ]
   }
