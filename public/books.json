@@ -36,10 +36,27 @@
     "widgetUrl": "https://ridero.ru/books/widget/geometriya_smyslov/?book3d=true",
     "digitalLinks": [
       {
+        "label": "Литрес",
+        "href": "https://www.litres.ru/book/sergey-shpadyrev/geometriia-smyslov-sbornik-filosofskikh-esse-74465492/"
+      },
+      {
         "label": "Ридеро",
         "href": "https://ridero.ru/books/geometriya_smyslov/"
+      },
+      {
+        "label": "Amazon",
+        "href": "https://www.amazon.com/dp/B0HJZL3573"
       }
     ],
-    "printLinks": []
+    "printLinks": [
+      {
+        "label": "Wildberries",
+        "href": "https://www.wildberries.ru/catalog/1605248374/detail.aspx"
+      },
+      {
+        "label": "Озон",
+        "href": "https://www.ozon.ru/product/geometriya-smyslov-sbornik-filosofskih-esse-sergey-shpadyrev-5822611368/"
+      }
+    ]
   }
 ]
