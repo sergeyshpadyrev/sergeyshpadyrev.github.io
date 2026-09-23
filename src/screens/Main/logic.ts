@@ -1,3 +1,7 @@
+import { useEffect, useState } from 'react';
+
+import { getCountry } from '@/lib/country';
+
 import type { Props } from './types';
 
 const channelLinks = [
@@ -58,17 +62,41 @@ const lecturerLinks = [
 ];
 
 const useLogic = (props: Props) => {
+  const [isRussia, setIsRussia] = useState(false);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const detectCountry = async () => {
+      try {
+        setIsRussia((await getCountry(controller.signal)) === 'RU');
+      } catch {
+        // Keep YouTube selected when geolocation is unavailable.
+      }
+    };
+
+    void detectCountry();
+
+    return () => controller.abort();
+  }, []);
+
   const cloudSize = Math.min(14, props.notes.length);
   const cloudNotes = Array.from(
     { length: cloudSize },
     (_, index) => props.notes[Math.floor((index * props.notes.length) / cloudSize)]
   );
+  const videos = props.videos.flatMap((video) => {
+    const src = isRussia ? video.rutube : video.youtube;
+
+    return src ? [{ id: video.id, src }] : [];
+  });
 
   return {
     channelLinks,
     podcastLinks,
     lecturerLinks,
     cloudNotes,
+    videos,
   };
 };
 
