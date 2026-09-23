@@ -258,7 +258,7 @@ const useRender = (
               <div className={videoAspect}>
                 <iframe
                   className={videoIframe}
-                  src="https://www.youtube.com/embed/c9oMDeq-hSQ"
+                  src="https://rutube.ru/play/embed/748727a7b242d6b57ab2697f66d34ae9"
                   title="В гостях у Айрата Хайруллина"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
@@ -271,7 +271,7 @@ const useRender = (
               <div className={videoAspect}>
                 <iframe
                   className={videoIframe}
-                  src="https://www.youtube.com/embed/qfKW9u_P574"
+                  src="https://rutube.ru/play/embed/6693c6192715a926f411788ef5a60c4d"
                   title="В гостях у Айрата Хайруллина, второе видео"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
