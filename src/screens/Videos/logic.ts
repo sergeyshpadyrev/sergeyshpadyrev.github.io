@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { getCountry } from "@/lib/country";
 
@@ -7,8 +7,11 @@ import type { Props } from "./types";
 export type Hosting = "outside-russia" | "russia";
 
 const useLogic = (props: Props) => {
-  const [hosting, setHostingState] = useState<Hosting>("outside-russia");
-  const isHostingSelectedManually = useRef(false);
+  const [hostingState, setHostingState] = useState({
+    hosting: "outside-russia" as Hosting,
+    isManual: false,
+  });
+  const { hosting } = hostingState;
 
   useEffect(() => {
     const controller = new AbortController();
@@ -17,9 +20,14 @@ const useLogic = (props: Props) => {
       try {
         const country = await getCountry(controller.signal);
 
-        if (!isHostingSelectedManually.current) {
-          setHostingState(country === "RU" ? "russia" : "outside-russia");
-        }
+        setHostingState((current) =>
+          current.isManual
+            ? current
+            : {
+                hosting: country === "RU" ? "russia" : "outside-russia",
+                isManual: false,
+              },
+        );
       } catch {
         // Keep the default hosting when geolocation is unavailable.
       }
@@ -31,8 +39,7 @@ const useLogic = (props: Props) => {
   }, []);
 
   const setHosting = (value: Hosting) => {
-    isHostingSelectedManually.current = true;
-    setHostingState(value);
+    setHostingState({ hosting: value, isManual: true });
   };
 
   const sections = props.sections

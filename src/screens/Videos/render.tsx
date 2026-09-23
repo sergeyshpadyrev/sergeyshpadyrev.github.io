@@ -73,6 +73,7 @@ const useRender = (
                   >
                     <div className="aspect-video overflow-hidden rounded-[20px] bg-[#1f1a12]">
                       <iframe
+                        key={hosting}
                         className="h-full w-full"
                         src={video.src}
                         title={`${section.title}, видео ${videoIndex + 1}`}
