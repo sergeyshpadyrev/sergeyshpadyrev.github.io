@@ -10,7 +10,7 @@ const useRender = (
   logic: Awaited<ReturnType<typeof useLogic>>,
   style: ReturnType<typeof useStyle>
 ) => {
-  const { channelLinks, podcastLinks, lecturerLinks, cloudNotes } = logic;
+  const { channelLinks, podcastLinks, lecturerLinks, cloudNotes, videos } = logic;
   const {
     linkClassName,
     main,
@@ -254,32 +254,21 @@ const useRender = (
             <p className={sectionDescription}>Беседы о философии и жизни</p>
           </div>
           <div className={videosGrid}>
-            <div className={videoCard}>
-              <div className={videoAspect}>
-                <iframe
-                  className={videoIframe}
-                  src="https://rutube.ru/play/embed/748727a7b242d6b57ab2697f66d34ae9"
-                  title="В гостях у Айрата Хайруллина"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  loading="lazy"
-                />
+            {videos.map((video, index) => (
+              <div key={video.id} className={videoCard}>
+                <div className={videoAspect}>
+                  <iframe
+                    className={videoIframe}
+                    src={video.src}
+                    title={`Беседа с Айратом Хайруллиным, видео ${index + 1}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
               </div>
-            </div>
-            <div className={videoCard}>
-              <div className={videoAspect}>
-                <iframe
-                  className={videoIframe}
-                  src="https://rutube.ru/play/embed/6693c6192715a926f411788ef5a60c4d"
-                  title="В гостях у Айрата Хайруллина, второе видео"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  loading="lazy"
-                />
-              </div>
-            </div>
+            ))}
           </div>
           <div className={sectionFooter}>
             <Link href="/videos" className={primaryButton}>

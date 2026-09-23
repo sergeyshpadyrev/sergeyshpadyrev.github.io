@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+import { getCountry } from "@/lib/country";
+
 import type { Props } from "./types";
 
 export type Hosting = "outside-russia" | "russia";
@@ -13,16 +15,10 @@ const useLogic = (props: Props) => {
 
     const selectHostingByCountry = async () => {
       try {
-        const response = await fetch("https://api.country.is/", {
-          signal: controller.signal,
-        });
-
-        if (!response.ok) return;
-
-        const data = (await response.json()) as { country?: string };
+        const country = await getCountry(controller.signal);
 
         if (!isHostingSelectedManually.current) {
-          setHostingState(data.country === "RU" ? "russia" : "outside-russia");
+          setHostingState(country === "RU" ? "russia" : "outside-russia");
         }
       } catch {
         // Keep the default hosting when geolocation is unavailable.
