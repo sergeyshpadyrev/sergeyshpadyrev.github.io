@@ -110,16 +110,6 @@
     ]
   },
   {
-    "id": "dmitry",
-    "title": "Беседа с Дмитрием Дмитриевым",
-    "videos": [
-      {
-        "id": "dmitry1",
-        "youtube": "https://www.youtube.com/embed/F9N8Fhhs2Aw"
-      }
-    ]
-  },
-  {
     "id": "anton",
     "name": "Эфиры с Антоном Безмолитвенным",
     "videos": [
@@ -130,7 +120,18 @@
       },
       {
         "id": "anton2",
-        "youtube": "https://www.youtube.com/embed/CgDEBRV6Y90"
+        "youtube": "https://www.youtube.com/embed/CgDEBRV6Y90",
+        "vk": "https://vk.ru/video_ext.php?oid=4914401&id=456239860"
+      }
+    ]
+  },
+  {
+    "id": "dmitry",
+    "title": "Беседа с Дмитрием Дмитриевым",
+    "videos": [
+      {
+        "id": "dmitry1",
+        "youtube": "https://www.youtube.com/embed/F9N8Fhhs2Aw"
       }
     ]
   }
