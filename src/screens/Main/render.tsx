@@ -10,7 +10,7 @@ const useRender = (
   logic: Awaited<ReturnType<typeof useLogic>>,
   style: ReturnType<typeof useStyle>
 ) => {
-  const { channelLinks, podcastLinks, lecturerLinks, cloudNotes, videos } = logic;
+  const { essayLinks, noteLinks, podcastLinks, lecturerLinks, cloudNotes, videos } = logic;
   const {
     linkClassName,
     main,
@@ -83,6 +83,7 @@ const useRender = (
     channelCard,
     channelCardInner,
     channelArrow,
+    channelsGroup,
     channelsExtra,
     lecturerGrid,
   } = style;
@@ -283,47 +284,39 @@ const useRender = (
               <div className={courseVisualGlow} />
               <div className={courseVisualFrame}>
                 <Image
-                  src="/images/statue.png"
-                  alt="Закрытый блог с курсами на Boosty"
-                  width={320}
-                  height={440}
+                  src="/images/lectures-cover.png"
+                  alt="Обложка лектория"
+                  width={1456}
+                  height={816}
                   className={courseImage}
                 />
               </div>
             </div>
             <div className={sideContent}>
               <div className={titleGroup}>
-                <p className={courseSectionLabel}>Закрытый блог</p>
-                <h2 className={courseTitle}>Курсы лекций</h2>
+                <h2 className={courseTitle}>Лекторий</h2>
               </div>
               <p className={courseIntro}>
-                В закрытом блоге на Boosty я публикую циклы лекций о построении системы управления
-                собственной жизнью.
+                В закрытом блоге я публикую циклы философских лекций о построении системы управления
+                собой, инженерном подходе к своей жизни и внедрении буддизма в повседневные
+                практики.
               </p>
-              <div className={courseCardsGrid}>
-                <article className={courseCard}>
-                  <h3 className={courseCardTitle}>Конвейер управления собой</h3>
-                  <p className={courseCardDescription}>
-                    Курс лекций о том, как построить непрерывно работающий конвейер по планированию
-                    и управлению своими делами.
-                  </p>
-                </article>
-                <article className={courseCard}>
-                  <h3 className={courseCardTitle}>Фабрика моей жизни</h3>
-                  <p className={courseCardDescription}>
-                    Курс лекций о проектировании собственной жизни как системы и созданию жизни по
-                    своему замыслу.
-                  </p>
-                </article>
-              </div>
               <div className={courseCtaRow}>
+                <a
+                  className={courseButton}
+                  href="https://sponsr.ru/sergeyshpadyrev"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Открыть на Sponsr
+                </a>
                 <a
                   className={courseButton}
                   href="https://boosty.to/sergeyshpadyrev"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Перейти в закрытый блог
+                  Открыть на Boosty
                 </a>
               </div>
             </div>
@@ -406,26 +399,46 @@ const useRender = (
         <section id="channels" className={contentSection} style={{ animationDelay: '260ms' }}>
           <div className={titleGroup}>
             <h2 className={sectionTitle}>Каналы и платформы</h2>
-            <p className={sectionDescription}>
-              Мои тексты, заметки и комментарии выходят на разных площадках:
-            </p>
           </div>
-          <div className={channelsGrid}>
-            {channelLinks.map((link, index) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className={channelCard}
-                style={{ animationDelay: `${index * 70}ms` }}
-              >
-                <div className={channelCardInner}>
-                  <span className={cardTitle}>{link.label}</span>
-                  <span className={channelArrow}>→</span>
-                </div>
-              </a>
-            ))}
+          <div className={channelsGroup}>
+            <p className={sectionDescription}>Каналы публикации эссе:</p>
+            <div className={channelsGrid}>
+              {essayLinks.map((link, index) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={channelCard}
+                  style={{ animationDelay: `${index * 70}ms` }}
+                >
+                  <div className={channelCardInner}>
+                    <span className={cardTitle}>{link.label}</span>
+                    <span className={channelArrow}>→</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className={channelsGroup}>
+            <p className={sectionDescription}>Каналы публикации заметок и анонсов:</p>
+            <div className={channelsGrid}>
+              {noteLinks.map((link, index) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={channelCard}
+                  style={{ animationDelay: `${index * 70}ms` }}
+                >
+                  <div className={channelCardInner}>
+                    <span className={cardTitle}>{link.label}</span>
+                    <span className={channelArrow}>→</span>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
           <div className={channelsExtra}>
             <p className={sectionDescription}>Выступаю в качестве приглашённого лектора:</p>
