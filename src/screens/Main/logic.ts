@@ -4,19 +4,7 @@ import { getCountry } from '@/lib/country';
 
 import type { Props } from './types';
 
-const channelLinks = [
-  {
-    label: 'Телеграм-канал',
-    href: 'https://t.me/+aoQm0ISH-3g4MTE0',
-  },
-  {
-    label: 'MAX-канал',
-    href: 'https://max.ru/channel_sergeyshpadyrev',
-  },
-  {
-    label: 'Сообщество в VK',
-    href: 'https://vk.com/club231375709',
-  },
+const essayLinks = [
   {
     label: 'Хабр',
     href: 'https://habr.com/ru/users/SergioShpadi/publications/articles/',
@@ -28,6 +16,21 @@ const channelLinks = [
   {
     label: 'Дзен',
     href: 'https://dzen.ru/sergeyshpadyrev',
+  },
+];
+
+const noteLinks = [
+  {
+    label: 'Телеграм-канал',
+    href: 'https://t.me/+aoQm0ISH-3g4MTE0',
+  },
+  {
+    label: 'MAX-канал',
+    href: 'https://max.ru/channel_sergeyshpadyrev',
+  },
+  {
+    label: 'Сообщество в VK',
+    href: 'https://vk.com/club231375709',
   },
 ];
 
@@ -92,7 +95,8 @@ const useLogic = (props: Props) => {
   });
 
   return {
-    channelLinks,
+    essayLinks,
+    noteLinks,
     podcastLinks,
     lecturerLinks,
     cloudNotes,

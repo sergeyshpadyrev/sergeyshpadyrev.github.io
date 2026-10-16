@@ -21,8 +21,7 @@ const useStyle = () => ({
   bookImage: 'relative h-full w-full rounded-[22px] object-cover shadow-lg',
   courseSection:
     'relative overflow-hidden rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in',
-  courseSectionInner:
-    'relative grid gap-10 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.6fr)] md:items-center',
+  courseSectionInner: 'relative grid gap-10',
   contentSection:
     'space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in',
   avatarWrapper: 'relative mx-auto h-96 w-72 md:mx-0',
@@ -43,7 +42,7 @@ const useStyle = () => ({
     'absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f1e3d6] shadow-[0_18px_45px_rgba(31,26,18,0.12)]',
   courseImageBg:
     'absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#efe1d2] shadow-[0_18px_45px_rgba(31,26,18,0.12)]',
-  courseVisual: 'relative mx-auto w-full max-w-[300px] md:max-w-[320px]',
+  courseVisual: 'relative mx-auto w-full max-w-4xl lg:max-w-3xl',
   courseVisualGlow: 'absolute -inset-8 rounded-[36px] bg-[#f2c07d]/30 blur-2xl',
   courseVisualFrame:
     'relative rotate-[-2deg] rounded-[30px] border border-white/70 bg-white/45 p-3 shadow-[0_22px_55px_rgba(31,26,18,0.14)]',
@@ -83,7 +82,7 @@ const useStyle = () => ({
   noteTag:
     'note-float rounded-full border border-[#1f1a12]/15 bg-white/55 px-4 py-2 text-center text-xs font-medium text-[#1f1a12] shadow-[0_8px_18px_rgba(31,26,18,0.08)] transition-colors hover:border-[#1f1a12]/40 hover:bg-white sm:text-sm',
   courseButtonCol: 'flex flex-col gap-3',
-  courseCtaRow: 'flex flex-col items-center justify-center gap-4 pt-1 sm:flex-row',
+  courseCtaRow: 'flex flex-col items-center justify-center gap-4 pt-1 lg:flex-row',
   courseButton:
     'inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]',
   courseCardsGrid: 'grid gap-4 lg:grid-cols-2',
@@ -98,6 +97,7 @@ const useStyle = () => ({
     'group rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in',
   channelCardInner: 'flex items-center justify-between',
   channelArrow: 'text-xl text-[#7b6a55] transition group-hover:translate-x-1',
+  channelsGroup: 'space-y-4',
   channelsExtra: 'space-y-8 pt-4',
   lecturerGrid: 'grid gap-4 sm:grid-cols-2',
 });
