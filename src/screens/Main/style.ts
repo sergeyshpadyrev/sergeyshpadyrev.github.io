@@ -100,6 +100,11 @@ const useStyle = () => ({
   channelsGroup: 'space-y-4',
   channelsExtra: 'space-y-8 pt-4',
   lecturerGrid: 'grid gap-4 sm:grid-cols-2',
+  developmentGrid: 'grid gap-4 sm:grid-cols-2',
+  developmentCard:
+    'group flex items-start justify-between gap-5 rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in',
+  developmentCardContent: 'space-y-2',
+  developmentCardDescription: 'text-sm leading-relaxed text-[#4c4134] sm:text-base',
 });
 
 export default useStyle;

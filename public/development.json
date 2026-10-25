@@ -1,0 +1,12 @@
+[
+  {
+    "name": "react-component-structure",
+    "description": "Unified structure for React components",
+    "link": "https://github.com/sergeyshpadyrev/react-component-structure"
+  },
+  {
+    "name": "typed-remote-procedure-call",
+    "description": "RPC generation from TypeScript interfaces",
+    "link": "https://github.com/sergeyshpadyrev/typed-remote-procedure-call"
+  }
+]
