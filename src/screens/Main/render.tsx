@@ -86,6 +86,10 @@ const useRender = (
     channelsGroup,
     channelsExtra,
     lecturerGrid,
+    developmentGrid,
+    developmentCard,
+    developmentCardContent,
+    developmentCardDescription,
   } = style;
 
   return (
@@ -393,6 +397,31 @@ const useRender = (
                 </a>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="development" className={contentSection} style={{ animationDelay: '200ms' }}>
+          <div className={sectionHeader}>
+            <h2 className={sectionTitle}>Разработки</h2>
+            <p className={sectionDescription}>Мои проекты с открытым исходным кодом на GitHub</p>
+          </div>
+          <div className={developmentGrid}>
+            {props.developmentProjects.map((project, index) => (
+              <a
+                key={project.link}
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className={developmentCard}
+                style={{ animationDelay: `${index * 70}ms` }}
+              >
+                <div className={developmentCardContent}>
+                  <h3 className={cardTitle}>{project.name}</h3>
+                  <p className={developmentCardDescription}>{project.description}</p>
+                </div>
+                <span className={channelArrow} aria-hidden="true">→</span>
+              </a>
+            ))}
           </div>
         </section>
 
