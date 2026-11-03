@@ -1,0 +1,1 @@
+{"at":"2026-11-03T10:35:07.362Z","event":"mcp_tool_call","tool":"select_context_for_task","input":{"userRequest":"Я положил в репозиторий два репорта от Lighthouse (report-mobile.json и report-desktop.json). Изучи проблемы и исправь код, настройки Next.js и при необходимости изображения, чтобы повысить Lighthouse score, не меняя тексты."}}

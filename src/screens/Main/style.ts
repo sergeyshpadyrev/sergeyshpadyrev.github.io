@@ -10,7 +10,7 @@ const useStyle = () => ({
     'pointer-events-none absolute bottom-[-12rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-[#e4c9b0]/70 blur-[140px]',
   container: 'relative mx-auto flex max-w-6xl flex-col gap-20 px-6 pb-24 pt-16',
   heroSection:
-    'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[360px_minmax(0,1fr)] md:items-center md:p-12 fade-in',
+    'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[360px_minmax(0,1fr)] md:items-center md:p-12',
   sideImageSection:
     'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in',
   booksSection:
@@ -28,7 +28,7 @@ const useStyle = () => ({
   avatarBg:
     'absolute -inset-5 rounded-[36px] border border-white/70 bg-white/40 shadow-[0_34px_90px_rgba(31,26,18,0.12)]',
   avatar: 'relative h-96 w-72 rounded-[32px] object-cover shadow-lg',
-  heroContent: 'space-y-6 fade-in-up',
+  heroContent: 'space-y-6',
   sectionHeader: 'space-y-3',
   heroTitle: 'font-display text-4xl leading-tight text-[#1f1a12] sm:text-5xl lg:text-6xl',
   heroSubtitle: 'text-lg text-[#3f3529] sm:text-xl lg:text-2xl',
@@ -76,8 +76,6 @@ const useStyle = () => ({
   videosGrid: 'mx-auto grid w-full max-w-5xl gap-6 md:grid-cols-2',
   videoCard:
     'overflow-hidden rounded-[28px] border border-white/70 bg-white/60 shadow-[0_18px_40px_rgba(31,26,18,0.1)]',
-  videoAspect: 'aspect-video',
-  videoIframe: 'h-full w-full',
   notesCloud: 'mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-2 py-2 sm:gap-3',
   noteTag:
     'note-float rounded-full border border-[#1f1a12]/15 bg-white/55 px-4 py-2 text-center text-xs font-medium text-[#1f1a12] shadow-[0_8px_18px_rgba(31,26,18,0.08)] transition-colors hover:border-[#1f1a12]/40 hover:bg-white sm:text-sm',

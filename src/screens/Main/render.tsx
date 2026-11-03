@@ -5,6 +5,8 @@ import type useLogic from './logic';
 import type useStyle from './style';
 import type { Props } from './types';
 
+import VideoEmbed from './VideoEmbed';
+
 const useRender = (
   props: Props,
   logic: Awaited<ReturnType<typeof useLogic>>,
@@ -69,8 +71,6 @@ const useRender = (
     primaryButton,
     videosGrid,
     videoCard,
-    videoAspect,
-    videoIframe,
     notesCloud,
     noteTag,
     courseCtaRow,
@@ -103,11 +103,12 @@ const useRender = (
           <div className={avatarWrapper}>
             <div className={avatarBg} />
             <Image
-              src="/images/avatar.jpg"
+              src="/images/avatar.webp"
               alt="Сергей Шпадырев"
               width={288}
               height={384}
               priority
+              fetchPriority="high"
               className={avatar}
             />
           </div>
@@ -139,6 +140,8 @@ const useRender = (
                     alt={`Обложка книги ${book.title}`}
                     width={320}
                     height={440}
+                    loading="eager"
+                    fetchPriority="high"
                     className={bookImage}
                   />
                 </div>
@@ -261,17 +264,11 @@ const useRender = (
           <div className={videosGrid}>
             {videos.map((video, index) => (
               <div key={video.id} className={videoCard}>
-                <div className={videoAspect}>
-                  <iframe
-                    className={videoIframe}
-                    src={video.src}
-                    title={`Беседа с Айратом Хайруллиным, видео ${index + 1}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    loading="lazy"
-                  />
-                </div>
+                <VideoEmbed
+                  src={video.src}
+                  thumbnail={video.thumbnail}
+                  title={`Беседа с Айратом Хайруллиным, видео ${index + 1}`}
+                />
               </div>
             ))}
           </div>

@@ -90,8 +90,19 @@ const useLogic = (props: Props) => {
   );
   const videos = props.videos.flatMap((video) => {
     const src = isRussia ? video.rutube : video.youtube;
+    const youtubeId = video.youtube?.split('/').at(-1);
 
-    return src ? [{ id: video.id, src }] : [];
+    return src
+      ? [
+          {
+            id: video.id,
+            src,
+            thumbnail: youtubeId
+              ? `https://i.ytimg.com/vi_webp/${youtubeId}/hqdefault.webp`
+              : undefined,
+          },
+        ]
+      : [];
   });
 
   return {

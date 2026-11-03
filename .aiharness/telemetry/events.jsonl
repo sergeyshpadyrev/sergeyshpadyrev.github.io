@@ -1,0 +1,1 @@
+{"type":"mcp_tool_call","id":"a9efa7e4-efe1-4aff-9042-7da91a65b5d6","at":"2026-11-03T10:35:07.380Z","toolName":"select_context_for_task","durationMs":19,"status":"success","client":"opencode/2.2.1","profile":"kiro-all","resourceIds":[],"clientKind":"ide","clientVersion":"2.2.1","mcpServer":"GRACE","mcpServerScope":"grace"}
