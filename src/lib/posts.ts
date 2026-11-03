@@ -13,7 +13,7 @@ export type PostSummary = {
 };
 
 export type PostLinks = Partial<
-  Record<"dzen" | "habr" | "pikabu" | "vastrik", string>
+  Record<"dzen" | "habr" | "medium" | "pikabu" | "vastrik", string>
 >;
 
 type PostLinksEntry = {

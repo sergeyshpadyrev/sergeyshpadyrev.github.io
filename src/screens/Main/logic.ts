@@ -17,6 +17,10 @@ const essayLinks = [
     label: 'Дзен',
     href: 'https://dzen.ru/sergeyshpadyrev',
   },
+   {
+    label: 'Медиум',
+    href: 'https://medium.com/@sergeyshpadyrev',
+  },
 ];
 
 const noteLinks = [

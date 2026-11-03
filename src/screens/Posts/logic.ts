@@ -7,6 +7,7 @@ const platformLinks: Array<{ key: keyof PostLinks; label: string }> = [
   { key: 'habr', label: 'Хабр' },
   { key: 'pikabu', label: 'Пикабу' },
   { key: 'vastrik', label: 'Вастрик' },
+  { key: 'medium', label: 'Медиум' },
 ];
 
 const useLogic = (props: Props) => {
