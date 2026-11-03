@@ -48,6 +48,7 @@ const loadPostLinksMap = async () => {
       const links: PostLinks = {
         ...(typeof entry.dzen === "string" ? { dzen: entry.dzen } : {}),
         ...(typeof entry.habr === "string" ? { habr: entry.habr } : {}),
+        ...(typeof entry.medium === "string" ? { medium: entry.medium } : {}),
         ...(typeof entry.pikabu === "string" ? { pikabu: entry.pikabu } : {}),
         ...(typeof entry.vastrik === "string" ? { vastrik: entry.vastrik } : {}),
       };
