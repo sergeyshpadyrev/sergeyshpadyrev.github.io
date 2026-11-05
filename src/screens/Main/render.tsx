@@ -140,8 +140,7 @@ const useRender = (
                     alt={`Обложка книги ${book.title}`}
                     width={320}
                     height={440}
-                    loading="eager"
-                    fetchPriority="high"
+                    loading="lazy"
                     className={bookImage}
                   />
                 </div>
@@ -285,7 +284,7 @@ const useRender = (
               <div className={courseVisualGlow} />
               <div className={courseVisualFrame}>
                 <Image
-                  src="/images/lectures-cover.png"
+                  src="/images/lectures-cover.webp"
                   alt="Обложка лектория"
                   width={1456}
                   height={816}

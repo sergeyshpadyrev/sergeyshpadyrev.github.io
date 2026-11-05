@@ -1,6 +1,8 @@
 import { promises as fs } from "fs";
 import path from "path";
 
+import { getMarkdownSeo } from "./seo";
+
 const notesDirectory = path.join(process.cwd(), "public", "notes");
 
 export type NoteSummary = {
@@ -8,8 +10,6 @@ export type NoteSummary = {
   title: string;
   order: number;
 };
-
-const titleRegex = /^#\s+(.+)$/m;
 
 const extractOrder = (fileName: string) => {
   const match = fileName.match(/^(\d+)/);
@@ -37,11 +37,11 @@ export const getNoteSummaries = async (): Promise<NoteSummary[]> => {
           path.join(notesDirectory, entry.name),
           "utf8",
         );
-        const titleMatch = content.match(titleRegex);
+        const seo = getMarkdownSeo(content, id);
 
         return {
           id,
-          title: titleMatch ? titleMatch[1].trim() : id,
+          title: seo.title,
           order: extractOrder(entry.name),
         } satisfies NoteSummary;
       }),
@@ -64,7 +64,7 @@ export const getNoteById = async (id: string) => {
 
   try {
     const content = await fs.readFile(filePath, "utf8");
-    return { id, content };
+    return { id, content, ...getMarkdownSeo(content, id) };
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === "ENOENT") {
       return null;

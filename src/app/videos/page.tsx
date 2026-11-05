@@ -1,10 +1,20 @@
-import { getVideoSections } from "@/lib/videos";
+import type { Metadata } from 'next';
 
-import Videos from "@/screens/Videos";
+import { defaultImage } from '@/lib/seo';
+import { getVideoSections } from '@/lib/videos';
 
-export const metadata = {
-  title: "Видео — Сергей Шпадырев",
-  description: "Все видео Сергея Шпадырева.",
+import Videos from '@/screens/Videos';
+
+export const metadata: Metadata = {
+  title: 'Видео',
+  description: 'Беседы и лекции Сергея Шпадырева о философии и жизни.',
+  alternates: { canonical: '/videos/' },
+  openGraph: {
+    url: '/videos/',
+    title: 'Видео Сергея Шпадырева',
+    description: 'Беседы и лекции Сергея Шпадырева о философии и жизни.',
+    images: [{ url: defaultImage, alt: 'Сергей Шпадырев' }],
+  },
 };
 
 export default async function VideosPage() {

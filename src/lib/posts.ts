@@ -1,6 +1,8 @@
 import { promises as fs } from "fs";
 import path from "path";
 
+import { getMarkdownSeo } from "./seo";
+
 const postsDirectory = path.join(process.cwd(), "public", "posts");
 const postsLinksPath = path.join(process.cwd(), "public", "posts.json");
 
@@ -19,9 +21,6 @@ export type PostLinks = Partial<
 type PostLinksEntry = {
   id: string;
 } & PostLinks;
-
-const titleRegex = /^#\s+(.+)$/m;
-const imageRegex = /!\[[^\]]*\]\(([^)]+)\)/;
 
 const extractOrder = (fileName: string) => {
   const match = fileName.match(/^(\d+)/);
@@ -88,14 +87,13 @@ export const getPostSummaries = async (): Promise<PostSummary[]> => {
           path.join(postsDirectory, entry.name),
           "utf8",
         );
-        const titleMatch = content.match(titleRegex);
-        const imageMatch = content.match(imageRegex);
+        const seo = getMarkdownSeo(content, id);
         const links = linksById.get(id);
 
         return {
           id,
-          title: titleMatch ? titleMatch[1].trim() : id,
-          image: imageMatch ? imageMatch[1] : undefined,
+          title: seo.title,
+          image: seo.image,
           links,
           order: extractOrder(entry.name),
         } satisfies PostSummary;
@@ -119,7 +117,7 @@ export const getPostById = async (id: string) => {
 
   try {
     const content = await fs.readFile(filePath, "utf8");
-    return { id, content };
+    return { id, content, ...getMarkdownSeo(content, id) };
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === "ENOENT") {
       return null;
