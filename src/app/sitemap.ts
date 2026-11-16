@@ -15,6 +15,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: absoluteUrl('/notes/'), changeFrequency: 'weekly', priority: 0.9 },
     { url: absoluteUrl('/books/'), changeFrequency: 'monthly', priority: 0.8 },
     { url: absoluteUrl('/videos/'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: absoluteUrl('/paths/'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: absoluteUrl('/paths/self-management/'), changeFrequency: 'monthly', priority: 0.7 },
+    { url: absoluteUrl('/paths/noble-eightfold/'), changeFrequency: 'monthly', priority: 0.7 },
   ];
 
   return [
