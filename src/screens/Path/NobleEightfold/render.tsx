@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import type useLogic from './logic';
@@ -23,15 +24,45 @@ const useRender = (
           <Link href="/paths" className="nav-pill">
             ← Все пути
           </Link>
-          <div className="max-w-3xl space-y-3">
+          <div className="w-full space-y-3">
             <h1 className="font-display text-4xl sm:text-5xl">
               Благородный восьмеричный путь
             </h1>
-            <p className="text-lg leading-relaxed text-[#5b4f42]">
-              Материалы о мудрости, нравственном поведении и развитии ума.
-            </p>
           </div>
         </header>
+
+        <section aria-label="Основополагающий текст пути">
+          <Link
+            href="/posts/70_buddhism/"
+            className="group block max-w-xl overflow-hidden rounded-[2rem] border border-white/70 bg-white/60 shadow-[0_24px_70px_rgba(55,43,28,0.16)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1f1a12]"
+          >
+            <div className="space-y-3 p-6 sm:p-8">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9b4a35] sm:text-sm">
+                Основополагающий текст пути
+              </p>
+              <div className="flex items-end justify-between gap-6">
+                <h2 className="max-w-4xl font-display text-2xl leading-tight sm:text-3xl">
+                  Кибернетика ума и тысяча осколков Будды
+                </h2>
+                <span
+                  aria-hidden="true"
+                  className="text-3xl text-[#7b6a55] transition group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </div>
+            </div>
+            <Image
+              src="/images/poster51.webp"
+              alt=""
+              width={800}
+              height={448}
+              priority
+              className="h-auto w-full object-cover"
+              sizes="(min-width: 1152px) 1152px, calc(100vw - 48px)"
+            />
+          </Link>
+        </section>
 
         {sections.map((section, sectionIndex) => (
           <section
