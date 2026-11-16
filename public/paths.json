@@ -29,7 +29,7 @@
       {
         "id": "right-action",
         "title": "Правильное поведение",
-        "texts": ["five-oaths"]
+        "texts": ["five-oaths", "six-paramitas"]
       },
       {
         "id": "right-livelihood",
@@ -44,7 +44,7 @@
       {
         "id": "right-mindfulness",
         "title": "Правильное памятование",
-        "texts": ["five-memories"]
+        "texts": ["five-memories", "eight-worldly-concerns"]
       },
       {
         "id": "right-concentration",
@@ -53,7 +53,7 @@
       },
       {
         "id": "zen",
-        "title": "Дзен",
+        "title": "Дзэн",
         "texts": []
       },
       {
