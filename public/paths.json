@@ -2,6 +2,16 @@
   "noble-eightfold": {
     "sections": [
       {
+        "id": "buddha-story",
+        "title": "История Будды",
+        "texts": []
+      },
+      {
+        "id": "four-noble-truths",
+        "title": "Четыре благородные истины",
+        "texts": []
+      },
+      {
         "id": "right-view",
         "title": "Правильное воззрение",
         "texts": []
@@ -34,12 +44,17 @@
       {
         "id": "right-mindfulness",
         "title": "Правильное памятование",
-        "texts": []
+        "texts": ["five-memories"]
       },
       {
         "id": "right-concentration",
         "title": "Правильное сосредоточение",
         "texts": []
+      },
+       {
+        "id": "sutras",
+        "title": "Сутры",
+        "texts": ["sutra-heart"]
       }
     ]
   }
