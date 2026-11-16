@@ -51,7 +51,17 @@
         "title": "Правильное сосредоточение",
         "texts": ["four-mind-states"]
       },
-       {
+      {
+        "id": "zen",
+        "title": "Дзен",
+        "texts": []
+      },
+      {
+        "id": "stories",
+        "title": "Притчи",
+        "texts": []
+      },
+      {
         "id": "sutras",
         "title": "Сутры",
         "texts": ["sutra-heart"]
