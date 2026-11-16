@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 
+import { getNobleEightfoldSections } from '@/lib/paths';
 import { NobleEightfold } from '@/screens/Path';
 
 export const metadata: Metadata = {
-  title: 'Hello World',
+  title: 'Благородный восьмеричный путь',
+  description: 'Тексты о восьми направлениях Благородного восьмеричного пути.',
   alternates: { canonical: '/paths/noble-eightfold/' },
 };
 
-export default function NobleEightfoldPage() {
-  return <NobleEightfold />;
+export default async function NobleEightfoldPage() {
+  const sections = await getNobleEightfoldSections();
+  return <NobleEightfold sections={sections} />;
 }

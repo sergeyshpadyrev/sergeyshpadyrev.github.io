@@ -1,0 +1,51 @@
+{
+  "noble-eightfold": {
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "Введение",
+        "texts": ["what-is-the-path", "how-to-practice-the-path"]
+      },
+      {
+        "id": "right-view",
+        "title": "Правильное воззрение",
+        "texts": ["seeing-cause-and-effect", "four-noble-truths"]
+      },
+      {
+        "id": "right-intention",
+        "title": "Правильное намерение",
+        "texts": ["intention-of-kindness", "freedom-from-harm"]
+      },
+      {
+        "id": "right-speech",
+        "title": "Правильная речь",
+        "texts": ["truthful-speech", "words-that-unite"]
+      },
+      {
+        "id": "right-action",
+        "title": "Правильное поведение",
+        "texts": ["care-in-action", "respect-for-life"]
+      },
+      {
+        "id": "right-livelihood",
+        "title": "Правильный образ жизни",
+        "texts": ["honest-livelihood", "work-without-harm"]
+      },
+      {
+        "id": "right-effort",
+        "title": "Правильное усилие",
+        "texts": ["four-efforts", "steady-practice"]
+      },
+      {
+        "id": "right-mindfulness",
+        "title": "Правильное памятование",
+        "texts": ["mindfulness-of-body", "observing-feelings"]
+      },
+      {
+        "id": "right-concentration",
+        "title": "Правильное сосредоточение",
+        "texts": ["collected-mind", "conditions-for-concentration"]
+      }
+    ]
+  }
+}

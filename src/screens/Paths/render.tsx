@@ -1,10 +1,9 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import type useLogic from './logic';
 import type useStyle from './style';
 import type { Props } from './types';
-
-const rotations = Array.from({ length: 8 }, (_, index) => index * 45);
 
 const useRender = (
   props: Props,
@@ -27,54 +26,24 @@ const useRender = (
         </nav>
 
         <header className={style.header}>
-          <p className={style.eyebrow}>Практическая философия</p>
-          <h1 className={style.title}>Пути</h1>
+          <h1 className={style.title}>Философия и практика</h1>
           <p className={style.intro}>
-            Две системы практик, которые помогают навести порядок в делах и уме — и двигаться от
-            понимания к ежедневному действию.
+            Системы философских систем и практик, помогающих навести порядок в своих делах и уме
           </p>
         </header>
 
         <section className={style.grid} aria-label="Пути учения">
           {logic.paths.map((path) => (
             <Link key={path.href} href={path.href} className={style.card}>
-              <div className={style.cardTop}>
-                <span className={style.cardNumber}>{path.number}</span>
-                <span className={style.cardLabel}>{path.label}</span>
-              </div>
-
               <div className={style.visual} aria-hidden="true">
-                {path.visual === 'management' ? (
-                  <div className={style.managementVisual}>
-                    <div className={style.managementRing} />
-                    <div className={style.managementAxis} />
-                    <div className={style.managementNeedle} />
-                    <div className={style.managementCenter} />
-                  </div>
-                ) : (
-                  <div className={style.eightfoldVisual}>
-                    <div className={style.eightfoldRing} />
-                    <div className={style.eightfoldSpokes}>
-                      {rotations.map((rotation) => (
-                        <span
-                          key={`spoke-${rotation}`}
-                          className={style.spoke}
-                          style={{ transform: `rotate(${rotation}deg)` }}
-                        />
-                      ))}
-                      {rotations.map((rotation) => (
-                        <span
-                          key={`dot-${rotation}`}
-                          className={style.dot}
-                          style={{
-                            transform: `rotate(${rotation}deg) translateX(5.35rem) translate(-50%, -50%)`,
-                          }}
-                        />
-                      ))}
-                    </div>
-                    <span className={style.eightfoldCenter}>8</span>
-                  </div>
-                )}
+                <Image
+                  src={path.image}
+                  alt=""
+                  width={800}
+                  height={450}
+                  className={style.image}
+                  sizes="(min-width: 1024px) 512px, calc(100vw - 48px)"
+                />
               </div>
 
               <div className={style.cardContent}>
@@ -92,7 +61,7 @@ const useRender = (
         </section>
 
         <p className={style.footer}>
-          Путь начинается с карты, но становится настоящим только в ежедневной практике.
+          Каждый путь начинается с философской подготовки и меняет жизнь через ежедневную практику  
         </p>
       </div>
     </main>
