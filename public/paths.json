@@ -4,17 +4,17 @@
       {
         "id": "buddha-story",
         "title": "История Будды",
-        "texts": []
+        "texts": ["palace-prisoner", "four-meetings", "path-to-enlightment"]
       },
       {
         "id": "four-noble-truths",
         "title": "Четыре благородные истины",
-        "texts": []
+        "texts": ["noble-truth-1", "noble-truth-2", "noble-truth-3", "noble-truth-4"]
       },
       {
         "id": "right-view",
         "title": "Правильное воззрение",
-        "texts": []
+        "texts": ["anitia"]
       },
       {
         "id": "right-intention",
@@ -50,16 +50,6 @@
         "id": "right-concentration",
         "title": "Правильное сосредоточение",
         "texts": ["four-mind-states"]
-      },
-      {
-        "id": "zen",
-        "title": "Дзэн",
-        "texts": []
-      },
-      {
-        "id": "stories",
-        "title": "Притчи",
-        "texts": []
       },
       {
         "id": "sutras",
