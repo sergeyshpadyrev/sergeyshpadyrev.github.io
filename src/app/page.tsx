@@ -1,6 +1,7 @@
 import { getBooks } from '@/lib/books';
 import { getDevelopmentProjects } from '@/lib/development';
 import { getNoteSummaries } from '@/lib/notes';
+import { getPathCards } from '@/lib/paths';
 import { getPostSummaries } from '@/lib/posts';
 import { getVideoSections } from '@/lib/videos';
 import { absoluteUrl, serializeJsonLd, siteName } from '@/lib/seo';
@@ -8,13 +9,15 @@ import { absoluteUrl, serializeJsonLd, siteName } from '@/lib/seo';
 import Main from '@/screens/Main';
 
 export default async function Home() {
-  const [books, developmentProjects, postSummaries, noteSummaries, videoSections] = await Promise.all([
-    getBooks(),
-    getDevelopmentProjects(),
-    getPostSummaries(),
-    getNoteSummaries(),
-    getVideoSections(),
-  ]);
+  const [books, developmentProjects, paths, postSummaries, noteSummaries, videoSections] =
+    await Promise.all([
+      getBooks(),
+      getDevelopmentProjects(),
+      getPathCards(),
+      getPostSummaries(),
+      getNoteSummaries(),
+      getVideoSections(),
+    ]);
   const videos =
     videoSections.find((section) => section.id === 'airat')?.videos.slice(0, 2) ?? [];
 
@@ -42,6 +45,7 @@ export default async function Home() {
       <Main
         books={books}
         developmentProjects={developmentProjects}
+        paths={paths}
         posts={postSummaries.slice(0, 6)}
         notes={noteSummaries}
         videos={videos}

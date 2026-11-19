@@ -6,6 +6,7 @@ import type useStyle from './style';
 import type { Props } from './types';
 
 import VideoEmbed from './VideoEmbed';
+import PathsPreview from './PathsPreview';
 
 const useRender = (
   props: Props,
@@ -233,6 +234,8 @@ const useRender = (
             </Link>
           </div>
         </section>
+
+        <PathsPreview paths={props.paths} />
 
         <section id="notes" className={contentSection} style={{ animationDelay: '200ms' }}>
           <div className={sectionHeader}>
