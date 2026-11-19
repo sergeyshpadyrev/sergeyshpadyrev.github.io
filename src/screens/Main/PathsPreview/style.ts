@@ -13,10 +13,6 @@ const useStyle = () => ({
   cardContent: 'flex flex-1 flex-col pt-5',
   cardTitle: 'font-display text-2xl leading-tight text-[#1f1a12] sm:text-3xl',
   cardDescription: 'mt-3 text-sm leading-6 text-[#625749] sm:text-base sm:leading-7',
-  cardFooter: 'mt-auto flex items-center justify-between gap-4 border-t border-[#30261b]/10 pt-5',
-  result: 'text-sm font-semibold text-[#6a5b49]',
-  arrow:
-    'flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1f1a12] text-lg text-white transition duration-300 group-hover:translate-x-1 group-hover:bg-[#9b4a35] motion-reduce:transform-none motion-reduce:transition-none',
   footer: 'flex justify-center',
   button:
     'inline-flex items-center justify-center rounded-full border border-[#1f1a12] bg-[#1f1a12] px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f6f1e8] shadow-[0_16px_30px_rgba(31,26,18,0.18)] transition hover:-translate-y-0.5 hover:bg-[#2c251b]',
