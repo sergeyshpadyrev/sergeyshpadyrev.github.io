@@ -6,6 +6,7 @@ import { getMarkdownSeo } from './seo';
 
 const pathsConfigPath = path.join(process.cwd(), 'public', 'paths.json');
 const nobleEightfoldDirectory = path.join(process.cwd(), 'public', 'paths', 'noble-eightfold');
+const selfManagementDirectory = path.join(process.cwd(), 'public', 'paths', 'self-management');
 
 type PathSectionConfig = {
   id: string;
@@ -163,6 +164,65 @@ const readText = async (id: string) => {
   const content = await fs.readFile(path.join(nobleEightfoldDirectory, `${id}.md`), 'utf8');
 
   return { id, content, ...getMarkdownSeo(content, id) };
+};
+
+const getSelfManagementConfig = async () => {
+  const config = await getPathConfig('self-management');
+  const ids = config.sections.flatMap((section) => section.texts);
+
+  if (!ids.length || !ids.every((id) => typeof id === 'string' && isSafeId(id))) {
+    throw new Error('Некорректные тексты self-management в paths.json');
+  }
+
+  if (new Set(ids).size !== ids.length) {
+    throw new Error('Тексты self-management не должны повторяться в paths.json');
+  }
+
+  return ids;
+};
+
+const readSelfManagementText = async (id: string) => {
+  const content = await fs.readFile(
+    path.join(selfManagementDirectory, `${id}.md`),
+    'utf8',
+  );
+
+  return { id, content, ...getMarkdownSeo(content, id) };
+};
+
+export const getSelfManagementSections = async (): Promise<PathSection[]> => {
+  const config = await getPathConfig('self-management');
+
+  await getSelfManagementConfig();
+
+  return Promise.all(
+    config.sections.map(async (section) => ({
+      id: section.id,
+      title: section.title,
+      texts: await Promise.all(
+        section.texts.map(async (id) => {
+          const text = await readSelfManagementText(id);
+          return { id: text.id, title: text.title };
+        }),
+      ),
+    })),
+  );
+};
+
+export const getSelfManagementTextIds = getSelfManagementConfig;
+
+export const getSelfManagementTextById = async (id: string) => {
+  if (!isSafeId(id)) return null;
+
+  const configuredIds = await getSelfManagementConfig();
+  if (!configuredIds.includes(id)) return null;
+
+  try {
+    return await readSelfManagementText(id);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') return null;
+    throw error;
+  }
 };
 
 export const getNobleEightfoldSections = async (): Promise<PathSection[]> => {

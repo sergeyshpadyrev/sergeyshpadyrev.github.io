@@ -2,12 +2,22 @@ import type { MetadataRoute } from 'next';
 
 import { getNoteIds } from '@/lib/notes';
 import { getPostIds } from '@/lib/posts';
+import {
+  getNobleEightfoldTextIds,
+  getSelfManagementTextIds,
+} from '@/lib/paths';
 import { absoluteUrl } from '@/lib/seo';
 
 export const dynamic = 'force-static';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [postIds, noteIds] = await Promise.all([getPostIds(), getNoteIds()]);
+  const [postIds, noteIds, nobleEightfoldTextIds, selfManagementTextIds] =
+    await Promise.all([
+      getPostIds(),
+      getNoteIds(),
+      getNobleEightfoldTextIds(),
+      getSelfManagementTextIds(),
+    ]);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: absoluteUrl('/'), changeFrequency: 'weekly', priority: 1 },
@@ -29,6 +39,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...noteIds.map((id) => ({
       url: absoluteUrl(`/notes/${id}/`),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+    ...nobleEightfoldTextIds.map((id) => ({
+      url: absoluteUrl(`/paths/noble-eightfold/${id}/`),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+    ...selfManagementTextIds.map((id) => ({
+      url: absoluteUrl(`/paths/self-management/${id}/`),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),

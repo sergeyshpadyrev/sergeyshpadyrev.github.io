@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 
-import { getPathConfig, getPathPosts } from '@/lib/paths';
+import {
+  getPathConfig,
+  getPathPosts,
+  getSelfManagementSections,
+} from '@/lib/paths';
 import { SelfManagement } from '@/screens/Path';
 
 export const generateMetadata = async (): Promise<Metadata> => {
@@ -14,9 +18,10 @@ export const generateMetadata = async (): Promise<Metadata> => {
 };
 
 export default async function SelfManagementPage() {
-  const [config, posts] = await Promise.all([
+  const [config, posts, sections] = await Promise.all([
     getPathConfig('self-management'),
     getPathPosts('self-management'),
+    getSelfManagementSections(),
   ]);
 
   return (
@@ -24,6 +29,7 @@ export default async function SelfManagementPage() {
       title={config.title}
       mainPost={posts.mainPost}
       additionalPosts={posts.additionalPosts}
+      sections={sections}
     />
   );
 }

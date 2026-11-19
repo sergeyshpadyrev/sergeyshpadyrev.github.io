@@ -22,7 +22,38 @@
         "image": "/images/poster35.webp"
       }
     ],
-    "sections": []
+    "sections": [
+      {
+        "id": "defining-wishes",
+        "title": "Определение желаний",
+        "texts": ["wheel-of-balance", "last-wishes"]
+      },
+      {
+        "id": "processing-wishes",
+        "title": "Работа с желаниями",
+        "texts": ["wishes", "filtered-wishes", "priority-wishes"]
+      },
+      {
+        "id": "setting-goals",
+        "title": "Постановка целей",
+        "texts": ["goals"]
+      },
+      {
+        "id": "planning-projects",
+        "title": "Планирование проектов",
+        "texts": ["templates", "projects"]
+      },
+      {
+        "id": "organizing-tasks",
+        "title": "Организация задач",
+        "texts": ["urgent-tasks", "non-urgent-tasks", "routines"]
+      },
+      {
+        "id": "doing",
+        "title": "Выполнение",
+        "texts": ["today", "pomodoro", "done"]
+      }
+    ]
   },
   "noble-eightfold": {
     "title": "Избавление от страданий",
