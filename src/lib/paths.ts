@@ -70,7 +70,6 @@ const validatePath = (config: PathConfig, pathId: PathId) => {
     typeof config.title !== 'string' ||
     typeof config.description !== 'string' ||
     typeof config.metaDescription !== 'string' ||
-    typeof config.result !== 'string' ||
     typeof config.image !== 'string' ||
     !Array.isArray(config.additionalPosts) ||
     !Array.isArray(config.sections)

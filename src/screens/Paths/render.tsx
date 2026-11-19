@@ -50,7 +50,7 @@ const useRender = (
                 <h2 className={style.cardTitle}>{path.title}</h2>
                 <p className={style.cardDescription}>{path.description}</p>
                 <div className={style.cardFooter}>
-                  <span className={style.result}>{path.result}</span>
+                  <span className={style.result}>Открыть путь</span>
                   <span className={style.arrow} aria-hidden="true">
                     →
                   </span>
