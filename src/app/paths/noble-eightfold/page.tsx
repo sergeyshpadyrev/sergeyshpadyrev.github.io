@@ -1,42 +1,35 @@
 import type { Metadata } from 'next';
 
-import { getNobleEightfoldSections } from '@/lib/paths';
-import { getPostSummaries } from '@/lib/posts';
+import {
+  getNobleEightfoldSections,
+  getPathConfig,
+  getPathPosts,
+} from '@/lib/paths';
 import { NobleEightfold } from '@/screens/Path';
 
-const additionalPostIds = [
-  '53_prasanga',
-  '60_no_substance',
-  '58_cyberbuddha',
-  '67_retroreasons',
-  '36_illusion_of_me',
-  '30_meaning_of_life',
-  '34_dzen_programming',
-  '20_west_and_east',
-  '21_dzen_loops',
-  '35_one_actor_theatre',
-  '45_pythagoras_genius',
-  '48_soul',
-];
+export const generateMetadata = async (): Promise<Metadata> => {
+  const config = await getPathConfig('noble-eightfold');
 
-export const metadata: Metadata = {
-  title: 'Благородный восьмеричный путь',
-  description: 'Тексты о восьми направлениях Благородного восьмеричного пути.',
-  alternates: { canonical: '/paths/noble-eightfold/' },
+  return {
+    title: config.title,
+    description: config.metaDescription,
+    alternates: { canonical: '/paths/noble-eightfold/' },
+  };
 };
 
 export default async function NobleEightfoldPage() {
-  const [sections, posts] = await Promise.all([
+  const [config, sections, posts] = await Promise.all([
+    getPathConfig('noble-eightfold'),
     getNobleEightfoldSections(),
-    getPostSummaries(),
+    getPathPosts('noble-eightfold'),
   ]);
-  const postsById = new Map(posts.map((post) => [post.id, post]));
-  const additionalPosts = additionalPostIds.flatMap((id) => {
-    const post = postsById.get(id);
-    return post ? [post] : [];
-  });
 
   return (
-    <NobleEightfold sections={sections} additionalPosts={additionalPosts} />
+    <NobleEightfold
+      title={config.title}
+      mainPost={posts.mainPost}
+      sections={sections}
+      additionalPosts={posts.additionalPosts}
+    />
   );
 }

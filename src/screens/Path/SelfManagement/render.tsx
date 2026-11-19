@@ -10,7 +10,7 @@ const useRender = (
   logic: ReturnType<typeof useLogic>,
   style: ReturnType<typeof useStyle>
 ) => {
-  const { additionalPosts, mainPost } = props;
+  const { additionalPosts, mainPost, title } = props;
   void logic;
 
   return (
@@ -26,7 +26,7 @@ const useRender = (
           </Link>
           <div className="w-full space-y-3">
             <h1 className="font-display text-4xl sm:text-5xl">
-              Конвейер управления собой
+              {title}
             </h1>
           </div>
         </header>

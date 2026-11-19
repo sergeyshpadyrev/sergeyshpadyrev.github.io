@@ -1,5 +1,54 @@
 {
+  "self-management": {
+    "title": "Управление собой",
+    "description": "Инженерный подход к собственной жизни и построение конвейера управления своими делами",
+    "metaDescription": "Инженерный подход к собственной жизни и управлению делами.",
+    "result": "Открыть схему конвейера",
+    "image": "/images/poster49.webp",
+    "mainPost": {
+      "id": "68_conveyer",
+      "image": "/images/poster49.webp"
+    },
+    "additionalPosts": [
+      {
+        "id": "04_procrastination",
+        "image": "/images/procrast.webp"
+      },
+      {
+        "id": "18_managment_panel",
+        "image": "/images/panel.webp"
+      },
+      {
+        "id": "52_three_resources",
+        "image": "/images/poster35.webp"
+      }
+    ],
+    "sections": []
+  },
   "noble-eightfold": {
+    "title": "Избавление от страданий",
+    "description": "Воспроизводимый путь от страдания к спокойствию через мудрость, нравственность и дисциплину ума",
+    "metaDescription": "Тексты о восьми направлениях Благородного восьмеричного пути.",
+    "result": "Открыть карту пути",
+    "image": "/images/poster51.webp",
+    "mainPost": {
+      "id": "70_buddhism",
+      "image": "/images/poster51.webp"
+    },
+    "additionalPosts": [
+      { "id": "53_prasanga", "image": "/images/poster36.png" },
+      { "id": "60_no_substance", "image": "/images/poster43.webp" },
+      { "id": "58_cyberbuddha", "image": "/images/poster41.png" },
+      { "id": "67_retroreasons", "image": "/images/poster48.webp" },
+      { "id": "36_illusion_of_me", "image": "/images/poster20.webp" },
+      { "id": "30_meaning_of_life", "image": "/images/painting6.png" },
+      { "id": "34_dzen_programming", "image": "/images/poster18.webp" },
+      { "id": "20_west_and_east", "image": "/images/poster2.webp" },
+      { "id": "21_dzen_loops", "image": "/images/poster3.webp" },
+      { "id": "35_one_actor_theatre", "image": "/images/poster19.webp" },
+      { "id": "45_pythagoras_genius", "image": "/images/poster28.webp" },
+      { "id": "48_soul", "image": "/images/poster31.webp" }
+    ],
     "sections": [
       {
         "id": "buddha-story",

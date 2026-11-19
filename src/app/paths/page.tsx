@@ -1,21 +1,24 @@
 import type { Metadata } from 'next';
 
+import { getPathCards } from '@/lib/paths';
 import { defaultImage } from '@/lib/seo';
 
 import Paths from '@/screens/Paths';
 
 export const metadata: Metadata = {
-  title: 'Учение Сергея Шпадырева',
-  description: 'Разделы учения Сергея Шпадырева',
+  title: 'Пути обучения от Сергея Шпадырева',
+  description: 'Пути обучения от Сергея Шпадырева',
   alternates: { canonical: '/paths/' },
   openGraph: {
     url: '/paths/',
-    title: 'Учение Сергея Шпадырева',
-    description: 'Разделы учения Сергея Шпадырева',
+    title: 'Пути обучения от Сергея Шпадырева',
+    description: 'Пути обучения от Сергея Шпадырева',
     images: [{ url: defaultImage, alt: 'Сергей Шпадырев' }],
   },
 };
 
-export default function PathsPage() {
-  return <Paths />;
+export default async function PathsPage() {
+  const paths = await getPathCards();
+
+  return <Paths paths={paths} />;
 }
