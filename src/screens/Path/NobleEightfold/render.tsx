@@ -10,7 +10,7 @@ const useRender = (
   logic: ReturnType<typeof useLogic>,
   style: ReturnType<typeof useStyle>
 ) => {
-  const { sections } = props;
+  const { additionalPosts, sections } = props;
   void logic;
 
   return (
@@ -62,6 +62,46 @@ const useRender = (
               sizes="(min-width: 1152px) 1152px, calc(100vw - 48px)"
             />
           </Link>
+        </section>
+
+        <section className={style.section}>
+          <div className="flex items-center gap-4">
+            <h2 className="font-display text-2xl sm:text-3xl">
+              Связанные тексты
+            </h2>
+            <span className="h-px flex-1 bg-[#d8c9b6]" />
+          </div>
+
+          <div className={style.additionalCards}>
+            {additionalPosts.map((post) => (
+              <Link
+                key={post.id}
+                href={`/posts/${post.id}`}
+                className="group overflow-hidden rounded-[22px] border border-white/70 bg-white/60 shadow-[0_14px_36px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1f1a12] motion-reduce:transform-none motion-reduce:transition-none"
+              >
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#efe1d2]">
+                  {post.image ? (
+                    <Image
+                      src={post.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 352px, (min-width: 640px) 45vw, calc(100vw - 48px)"
+                      className="object-cover transition duration-300 group-hover:scale-[1.03] motion-reduce:transform-none motion-reduce:transition-none"
+                    />
+                  ) : null}
+                </div>
+                <div className="flex items-start justify-between gap-3 p-4">
+                  <h3 className="font-semibold leading-snug">{post.title}</h3>
+                  <span
+                    aria-hidden="true"
+                    className="shrink-0 text-xl text-[#7b6a55] transition group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </section>
 
         {sections.map((section, sectionIndex) => (
