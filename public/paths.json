@@ -36,7 +36,16 @@
     "additionalPosts": [
       { "id": "30_meaning_of_life", "image": "/images/painting6.png" },
       { "id": "53_prasanga", "image": "/images/poster36.png" },
-      { "id": "60_no_substance", "image": "/images/poster43.webp" }
+      { "id": "60_no_substance", "image": "/images/poster43.webp" },
+      { "id": "36_illusion_of_me", "image": "/images/poster20.webp" },
+      { "id": "45_pythagoras_genius", "image": "/images/poster28.webp" },
+      { "id": "48_soul", "image": "/images/poster31.webp" },
+      { "id": "58_cyberbuddha", "image": "/images/poster41.png" },
+      { "id": "67_retroreasons", "image": "/images/poster48.webp" },
+      { "id": "21_dzen_loops", "image": "/images/poster3.webp" },
+      { "id": "34_dzen_programming", "image": "/images/poster18.webp" },
+      { "id": "35_one_actor_theatre", "image": "/images/poster19.webp" },
+      { "id": "44_universe_rendering", "image": "/images/poster27.webp" }
     ],
     "additionalMaterials": [
       {
