@@ -22,38 +22,7 @@
         "image": "/images/poster35.webp"
       }
     ],
-    "sections": [
-      {
-        "id": "defining-wishes",
-        "title": "Определение желаний",
-        "texts": ["wheel-of-balance", "last-wishes"]
-      },
-      {
-        "id": "processing-wishes",
-        "title": "Работа с желаниями",
-        "texts": ["wishes", "filtered-wishes", "priority-wishes"]
-      },
-      {
-        "id": "setting-goals",
-        "title": "Постановка целей",
-        "texts": ["goals"]
-      },
-      {
-        "id": "planning-projects",
-        "title": "Планирование проектов",
-        "texts": ["templates", "projects"]
-      },
-      {
-        "id": "organizing-tasks",
-        "title": "Организация задач",
-        "texts": ["urgent-tasks", "non-urgent-tasks", "routines"]
-      },
-      {
-        "id": "doing",
-        "title": "Выполнение",
-        "texts": ["today", "pomodoro", "done"]
-      }
-    ]
+    "sections": []
   },
   "noble-eightfold": {
     "title": "Избавление от страданий",
@@ -65,75 +34,25 @@
       "image": "/images/poster51.webp"
     },
     "additionalPosts": [
-      { "id": "53_prasanga", "image": "/images/poster36.png" },
-      { "id": "60_no_substance", "image": "/images/poster43.webp" },
-      { "id": "58_cyberbuddha", "image": "/images/poster41.png" },
-      { "id": "36_illusion_of_me", "image": "/images/poster20.webp" },
       { "id": "30_meaning_of_life", "image": "/images/painting6.png" },
-      { "id": "34_dzen_programming", "image": "/images/poster18.webp" }
+      { "id": "53_prasanga", "image": "/images/poster36.png" },
+      { "id": "60_no_substance", "image": "/images/poster43.webp" }
     ],
     "sections": [
       {
-        "id": "buddha-story",
-        "title": "История Будды",
-        "texts": ["palace-prisoner", "four-meetings", "path-to-enlightment"]
-      },
-      {
-        "id": "four-noble-truths",
-        "title": "Четыре благородные истины",
-        "texts": ["noble-truth-1", "noble-truth-2", "noble-truth-3", "noble-truth-4"]
-      },
-      {
-        "id": "right-view",
-        "title": "Правильное воззрение",
-        "texts": [
-          "anitia",
-          "anatman",
-          "all-in-mind",
-          "emptiness",
-          "dharmas",
-          "kshanika",
-          "karma",
-          "five-scandhas",
-          "suffering-reason",
-          "two-arrows",
-          "sansara"
-        ]
-      },
-      {
-        "id": "right-intention",
-        "title": "Правильное намерение",
-        "texts": []
-      },
-      {
-        "id": "right-speech",
-        "title": "Правильная речь",
-        "texts": []
-      },
-      {
         "id": "right-action",
-        "title": "Правильное поведение",
-        "texts": ["five-oaths", "six-paramitas"]
-      },
-      {
-        "id": "right-livelihood",
-        "title": "Правильный образ жизни",
-        "texts": []
-      },
-      {
-        "id": "right-effort",
-        "title": "Правильное усилие",
-        "texts": []
-      },
-      {
-        "id": "right-mindfulness",
-        "title": "Правильное памятование",
-        "texts": ["three-treasures", "four-stamps", "five-memories", "eight-worldly-concerns"]
-      },
-      {
-        "id": "right-concentration",
-        "title": "Правильное сосредоточение",
-        "texts": ["four-mind-states"]
+        "title": "Памятования",
+        "texts": [
+          "three-treasures",
+          "four-noble-truths",
+          "four-stamps",
+          "four-mind-states",
+          "five-oaths",
+          "five-memories",
+          "six-paramitas",
+          "eightfold-path",
+          "eight-worldly-concerns"
+        ]
       },
       {
         "id": "sutras",

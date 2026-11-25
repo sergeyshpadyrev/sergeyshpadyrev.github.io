@@ -25,9 +25,7 @@ const useRender = (
             ← Все пути
           </Link>
           <div className="w-full space-y-3">
-            <h1 className="font-display text-4xl sm:text-5xl">
-              {title}
-            </h1>
+            <h1 className="font-display text-4xl sm:text-5xl">{title}</h1>
           </div>
         </header>
 
@@ -68,9 +66,7 @@ const useRender = (
 
         <section className={style.section}>
           <div className="flex items-center gap-4">
-            <h2 className="font-display text-2xl sm:text-3xl">
-              Связанные тексты
-            </h2>
+            <h2 className="font-display text-2xl sm:text-3xl">Важные тексты</h2>
             <span className="h-px flex-1 bg-[#d8c9b6]" />
           </div>
 
@@ -114,9 +110,7 @@ const useRender = (
             style={{ animationDelay: `${sectionIndex * 70}ms` }}
           >
             <div className="flex items-center gap-4">
-              <h2 className="font-display text-2xl sm:text-3xl">
-                {section.title}
-              </h2>
+              <h2 className="font-display text-2xl sm:text-3xl">{section.title}</h2>
               <span className="h-px flex-1 bg-[#d8c9b6]" />
             </div>
 
@@ -127,9 +121,7 @@ const useRender = (
                   href={`/paths/noble-eightfold/${text.id}`}
                   className="group flex min-h-32 items-center justify-between gap-5 rounded-[24px] border border-white/70 bg-white/60 p-6 shadow-[0_18px_45px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1f1a12]"
                 >
-                  <h3 className="text-lg font-semibold leading-snug">
-                    {text.title}
-                  </h3>
+                  <h3 className="text-lg font-semibold leading-snug">{text.title}</h3>
                   <span
                     aria-hidden="true"
                     className="text-2xl text-[#7b6a55] transition group-hover:translate-x-1"
