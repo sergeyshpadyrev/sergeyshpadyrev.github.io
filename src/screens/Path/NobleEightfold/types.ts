@@ -1,4 +1,4 @@
-import type { PathSection } from '@/lib/paths';
+import type { PathMaterial, PathSection } from '@/lib/paths';
 import type { PostSummary } from '@/lib/posts';
 
 export interface Props {
@@ -6,4 +6,5 @@ export interface Props {
   mainPost: PostSummary;
   sections: PathSection[];
   additionalPosts: PostSummary[];
+  additionalMaterials: PathMaterial[];
 }

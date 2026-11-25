@@ -13,7 +13,15 @@ const useRender = (
   logic: Awaited<ReturnType<typeof useLogic>>,
   style: ReturnType<typeof useStyle>
 ) => {
-  const { essayLinks, noteLinks, podcastLinks, lecturerLinks, cloudNotes, videos } = logic;
+  const {
+    essayLinks,
+    translationLinks,
+    noteLinks,
+    podcastLinks,
+    lecturerLinks,
+    cloudNotes,
+    videos,
+  } = logic;
   const {
     linkClassName,
     main,
@@ -203,11 +211,7 @@ const useRender = (
           </div>
           <div className={postsGrid}>
             {props.posts.map((post) => (
-              <Link
-                key={post.id}
-                href={`/posts/${post.id}`}
-                className={postCard}
-              >
+              <Link key={post.id} href={`/posts/${post.id}`} className={postCard}>
                 <div className={postImageWrapper}>
                   {post.image ? (
                     <Image
@@ -424,6 +428,25 @@ const useRender = (
             <p className={sectionDescription}>Каналы публикации эссе:</p>
             <div className={channelsGrid}>
               {essayLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={channelCard}
+                >
+                  <div className={channelCardInner}>
+                    <span className={cardTitle}>{link.label}</span>
+                    <span className={channelArrow}>→</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className={channelsGroup}>
+            <p className={sectionDescription}>Каналы публикации английских переводов:</p>
+            <div className={channelsGrid}>
+              {translationLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}

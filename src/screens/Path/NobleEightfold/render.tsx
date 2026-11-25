@@ -10,7 +10,7 @@ const useRender = (
   logic: ReturnType<typeof useLogic>,
   style: ReturnType<typeof useStyle>
 ) => {
-  const { additionalPosts, mainPost, sections, title } = props;
+  const { additionalMaterials, additionalPosts, mainPost, sections, title } = props;
   void logic;
 
   return (
@@ -132,6 +132,35 @@ const useRender = (
             </div>
           </section>
         ))}
+
+        {additionalMaterials.length > 0 ? (
+          <section className={style.section}>
+            <div className="flex items-center gap-4">
+              <h2 className="font-display text-2xl sm:text-3xl">Дополнительные материалы</h2>
+              <span className="h-px flex-1 bg-[#d8c9b6]" />
+            </div>
+
+            <div className={style.cards}>
+              {additionalMaterials.map((material) => (
+                <a
+                  key={material.url}
+                  href={material.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex min-h-32 items-center justify-between gap-5 rounded-[24px] border border-white/70 bg-white/60 p-6 shadow-[0_18px_45px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1f1a12]"
+                >
+                  <h3 className="text-lg font-semibold leading-snug">{material.name}</h3>
+                  <span
+                    aria-hidden="true"
+                    className="text-2xl text-[#7b6a55] transition group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        ) : null}
       </div>
     </main>
   );

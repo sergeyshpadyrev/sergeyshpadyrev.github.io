@@ -30,6 +30,7 @@ export default async function NobleEightfoldPage() {
       mainPost={posts.mainPost}
       sections={sections}
       additionalPosts={posts.additionalPosts}
+      additionalMaterials={config.additionalMaterials ?? []}
     />
   );
 }

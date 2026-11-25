@@ -38,6 +38,32 @@
       { "id": "53_prasanga", "image": "/images/poster36.png" },
       { "id": "60_no_substance", "image": "/images/poster43.webp" }
     ],
+    "additionalMaterials": [
+      {
+        "name": "Архив Александра Берзина",
+        "url": "https://studybuddhism.com/ru"
+      },
+      {
+        "name": "Архив сутр",
+        "url": "https://abhidharma.ru/"
+      },
+      {
+        "name": "Канал Буддизм ТВ на Youtube",
+        "url": "https://www.youtube.com/@tv_buddhism"
+      },
+      {
+        "name": "Канал Буддизм ТВ на Rutube",
+        "url": "https://rutube.ru/channel/37118079/"
+      },
+      {
+        "name": "Сайт Московского Буддийского Храма",
+        "url": "https://buddha-temple.ru/"
+      },
+      {
+        "name": "Сайт Тхеравады",
+        "url": "https://www.theravada.ru/"
+      }
+    ],
     "sections": [
       {
         "id": "right-action",

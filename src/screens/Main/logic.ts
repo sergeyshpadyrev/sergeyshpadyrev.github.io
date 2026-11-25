@@ -17,7 +17,10 @@ const essayLinks = [
     label: 'Дзен',
     href: 'https://dzen.ru/sergeyshpadyrev',
   },
-   {
+];
+
+const translationLinks = [
+  {
     label: 'Медиум',
     href: 'https://medium.com/@sergeyshpadyrev',
   },
@@ -113,6 +116,7 @@ const useLogic = (props: Props) => {
     essayLinks,
     noteLinks,
     podcastLinks,
+    translationLinks,
     lecturerLinks,
     cloudNotes,
     videos,

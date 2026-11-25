@@ -19,6 +19,11 @@ type PathPostConfig = {
   image: string;
 };
 
+export type PathMaterial = {
+  name: string;
+  url: string;
+};
+
 export type PathId = 'self-management' | 'noble-eightfold';
 
 export type PathConfig = {
@@ -30,6 +35,7 @@ export type PathConfig = {
   image: string;
   mainPost: PathPostConfig;
   additionalPosts: PathPostConfig[];
+  additionalMaterials?: PathMaterial[];
   sections: PathSectionConfig[];
 };
 
@@ -73,6 +79,14 @@ const validatePath = (config: PathConfig, pathId: PathId) => {
     typeof config.metaDescription !== 'string' ||
     typeof config.image !== 'string' ||
     !Array.isArray(config.additionalPosts) ||
+    (config.additionalMaterials !== undefined &&
+      (!Array.isArray(config.additionalMaterials) ||
+        !config.additionalMaterials.every(
+          (material) =>
+            material &&
+            typeof material.name === 'string' &&
+            typeof material.url === 'string'
+        ))) ||
     !Array.isArray(config.sections)
   ) {
     throw new Error(`Некорректные настройки пути ${pathId} в paths.json`);
