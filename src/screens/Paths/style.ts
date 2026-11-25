@@ -9,7 +9,7 @@ const useStyle = () => ({
   container:
     'relative mx-auto flex min-h-screen max-w-6xl flex-col px-6 pb-20 pt-8 sm:px-10 sm:pb-24 sm:pt-12',
   nav: 'mb-14 sm:mb-20',
-  header: 'mb-10 max-w-full fade-in-up motion-reduce:animate-none sm:mb-14',
+  header: 'mb-10 max-w-full sm:mb-14',
   title:
     'font-display text-5xl leading-[0.98] tracking-[-0.04em] text-[#1f1a12] sm:whitespace-nowrap sm:text-7xl',
   intro: 'mt-6 max-w-5xl text-lg leading-8 text-[#5f5548] sm:text-xl sm:leading-9',

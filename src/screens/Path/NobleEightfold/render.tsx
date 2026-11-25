@@ -20,7 +20,7 @@ const useRender = (
       <div className="pointer-events-none absolute bottom-[-12rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-[#e4c9b0]/70 blur-[140px]" />
 
       <div className={style.content}>
-        <header className="space-y-5 fade-in-up">
+        <header className="space-y-5">
           <Link href="/paths" className="nav-pill">
             ← Все пути
           </Link>
@@ -102,12 +102,11 @@ const useRender = (
           </div>
         </section>
 
-        {sections.map((section, sectionIndex) => (
+        {sections.map((section) => (
           <section
             key={section.id}
             id={section.id}
-            className={`${style.section} fade-in`}
-            style={{ animationDelay: `${sectionIndex * 70}ms` }}
+            className={style.section}
           >
             <div className="flex items-center gap-4">
               <h2 className="font-display text-2xl sm:text-3xl">{section.title}</h2>

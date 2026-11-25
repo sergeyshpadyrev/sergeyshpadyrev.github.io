@@ -93,7 +93,7 @@ const useRender = (
           </Link>
         </div>
 
-        <article className="space-y-6 rounded-[32px] border border-white/70 bg-white/60 p-8 shadow-[0_28px_70px_rgba(31,26,18,0.12)] sm:p-12 fade-in">
+        <article className="space-y-6 rounded-[32px] border border-white/70 bg-white/60 p-8 shadow-[0_28px_70px_rgba(31,26,18,0.12)] sm:p-12">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={markdownComponents}

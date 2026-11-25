@@ -12,18 +12,18 @@ const useStyle = () => ({
   heroSection:
     'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[360px_minmax(0,1fr)] md:items-center md:p-12',
   sideImageSection:
-    'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12 fade-in',
+    'grid gap-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:items-center md:p-12',
   booksSection:
-    'space-y-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] lg:p-12 fade-in',
+    'space-y-12 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] lg:p-12',
   booksGrid: 'grid gap-16 lg:grid-cols-2 lg:gap-12',
   bookItem: 'grid content-start gap-10',
   bookImageWrapper: 'relative mx-auto aspect-[8/11] w-full max-w-[320px]',
   bookImage: 'relative h-full w-full rounded-[22px] object-cover shadow-lg',
   courseSection:
-    'relative overflow-hidden rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in',
+    'relative overflow-hidden rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12',
   courseSectionInner: 'relative grid gap-10',
   contentSection:
-    'space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in',
+    'space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12',
   avatarWrapper: 'relative mx-auto h-96 w-72 md:mx-0',
   avatarBg:
     'absolute -inset-5 rounded-[36px] border border-white/70 bg-white/40 shadow-[0_34px_90px_rgba(31,26,18,0.12)]',
@@ -42,7 +42,7 @@ const useStyle = () => ({
     'absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#f1e3d6] shadow-[0_18px_45px_rgba(31,26,18,0.12)]',
   courseImageBg:
     'absolute -inset-6 rounded-[28px] border border-[#1f1a12]/10 bg-[#efe1d2] shadow-[0_18px_45px_rgba(31,26,18,0.12)]',
-  courseVisual: 'relative mx-auto w-full max-w-4xl lg:max-w-3xl',
+  courseVisual: 'relative mx-auto w-1/2 max-w-md lg:max-w-sm',
   courseVisualGlow: 'absolute -inset-8 rounded-[36px] bg-[#f2c07d]/30 blur-2xl',
   courseVisualFrame:
     'relative rotate-[-2deg] rounded-[30px] border border-white/70 bg-white/45 p-3 shadow-[0_22px_55px_rgba(31,26,18,0.14)]',
@@ -63,7 +63,7 @@ const useStyle = () => ({
   bookLinksGrid: 'grid gap-6 sm:grid-cols-2',
   postsGrid: 'grid gap-5 sm:grid-cols-2 lg:grid-cols-3',
   postCard:
-    'group rounded-[24px] border border-white/70 bg-white/55 p-3 shadow-[0_18px_40px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in',
+    'group rounded-[24px] border border-white/70 bg-white/55 p-3 shadow-[0_18px_40px_rgba(31,26,18,0.1)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white',
   postImageWrapper: 'relative h-36 w-full overflow-hidden rounded-[18px] bg-[#efe1d2]',
   postImage: 'object-cover transition duration-300 group-hover:scale-[1.03]',
   postNoImage:
@@ -92,7 +92,7 @@ const useStyle = () => ({
   courseCardDescription: 'mt-3 text-sm leading-relaxed text-[#4c4134] sm:text-base',
   channelsGrid: 'grid gap-4 sm:grid-cols-2 lg:grid-cols-3',
   channelCard:
-    'group rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in',
+    'group rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white',
   channelCardInner: 'flex items-center justify-between',
   channelArrow: 'text-xl text-[#7b6a55] transition group-hover:translate-x-1',
   channelsGroup: 'space-y-4',
@@ -100,7 +100,7 @@ const useStyle = () => ({
   lecturerGrid: 'grid gap-4 sm:grid-cols-2',
   developmentGrid: 'grid gap-4 sm:grid-cols-2',
   developmentCard:
-    'group flex items-start justify-between gap-5 rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in',
+    'group flex items-start justify-between gap-5 rounded-[24px] border border-white/70 bg-white/50 p-5 shadow-[0_18px_40px_rgba(31,26,18,0.08)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white',
   developmentCardContent: 'space-y-2',
   developmentCardDescription: 'text-sm leading-relaxed text-[#4c4134] sm:text-base',
 });

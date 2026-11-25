@@ -20,7 +20,7 @@ const useRender = (
       <div className="pointer-events-none absolute bottom-[-12rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-[#e4c9b0]/70 blur-[140px]" />
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-6 pb-24 pt-16">
-        <header className="space-y-4 fade-in-up">
+        <header className="space-y-4">
           <Link href="/" className="nav-pill">
             ← На главную
           </Link>
@@ -33,7 +33,7 @@ const useRender = (
           {posts.map((post, index) => (
             <div key={post.id} className="contents">
               {oldPostsIndex !== -1 && index === oldPostsIndex ? (
-                <div className="sm:col-span-2 lg:col-span-3 fade-in">
+                <div className="sm:col-span-2 lg:col-span-3">
                   <div className="flex items-center gap-4 text-[#7b6a55]">
                     <span className="h-px flex-1 bg-[#d8c9b6]" />
                     <span className="text-sm uppercase tracking-[0.3em]">
@@ -44,8 +44,7 @@ const useRender = (
                 </div>
               ) : null}
               <div
-                className="group rounded-[28px] border border-white/70 bg-white/55 p-4 shadow-[0_20px_50px_rgba(31,26,18,0.12)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white fade-in"
-                style={{ animationDelay: `${index * 60}ms` }}
+                className="group rounded-[28px] border border-white/70 bg-white/55 p-4 shadow-[0_20px_50px_rgba(31,26,18,0.12)] transition hover:-translate-y-1 hover:border-[#1f1a12]/30 hover:bg-white"
               >
                 <Link href={`/posts/${post.id}`} className="block">
                   <div className="relative h-48 w-full overflow-hidden rounded-[22px] bg-[#efe1d2]">

@@ -1,6 +1,6 @@
 const useStyle = () => ({
   section:
-    'space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12 fade-in',
+    'space-y-8 rounded-[36px] border border-white/60 bg-white/40 p-8 shadow-[0_28px_90px_rgba(31,26,18,0.12)] md:p-12',
   header: 'space-y-3',
   title: 'font-display text-3xl text-[#1f1a12] sm:text-4xl',
   description: 'max-w-2xl text-base text-[#4c4134] sm:text-lg',

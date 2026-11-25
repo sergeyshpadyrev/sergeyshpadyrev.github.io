@@ -18,7 +18,7 @@ const useRender = (
       <div className="pointer-events-none absolute bottom-[-12rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-[#e4c9b0]/70 blur-[140px]" />
 
       <div className="relative mx-auto flex max-w-5xl flex-col gap-12 px-6 pb-24 pt-16">
-        <header className="space-y-4 fade-in-up">
+        <header className="space-y-4">
           <Link href="/" className="nav-pill">
             ← На главную
           </Link>

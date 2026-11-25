@@ -18,7 +18,7 @@ const useRender = (
       <div className="pointer-events-none absolute bottom-[-12rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-[#e4c9b0]/70 blur-[140px]" />
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-6 pb-24 pt-16">
-        <header className="space-y-4 fade-in-up">
+        <header className="space-y-4">
           <Link href="/" className="nav-pill">
             ← На главную
           </Link>
@@ -26,11 +26,10 @@ const useRender = (
         </header>
 
         <section className="flex flex-col gap-8">
-          {logic.books.map((book, index) => (
+          {logic.books.map((book) => (
             <article
               key={book.title}
-              className="overflow-hidden rounded-[28px] border border-white/70 bg-white/55 p-4 shadow-[0_20px_50px_rgba(31,26,18,0.12)] backdrop-blur-sm fade-in"
-              style={{ animationDelay: `${index * 80}ms` }}
+              className="overflow-hidden rounded-[28px] border border-white/70 bg-white/55 p-4 shadow-[0_20px_50px_rgba(31,26,18,0.12)] backdrop-blur-sm"
             >
               <div className="overflow-hidden rounded-[20px] bg-white">
                 <iframe

@@ -13,7 +13,7 @@ const useRender = (
   void props;
 
   return (
-    <section id="paths" className={style.section} style={{ animationDelay: '120ms' }}>
+    <section id="paths" className={style.section}>
       <div className={style.header}>
         <h2 className={style.title}>Авторские пути</h2>
         <p className={style.description}>

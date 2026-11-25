@@ -22,7 +22,7 @@ const useRender = (
       <div className="pointer-events-none absolute bottom-[-12rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-[#e4c9b0]/70 blur-[140px]" />
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-6 pb-24 pt-16">
-        <header className="space-y-4 fade-in-up">
+        <header className="space-y-4">
           <Link href="/" className="nav-pill">
             ← На главную
           </Link>
@@ -56,11 +56,10 @@ const useRender = (
         </header>
 
         <div className="flex flex-col gap-12">
-          {sections.map((section, sectionIndex) => (
+          {sections.map((section) => (
             <section
               key={section.id}
-              className="space-y-5 fade-in"
-              style={{ animationDelay: `${sectionIndex * 80}ms` }}
+              className="space-y-5"
             >
               <h2 className="font-display text-2xl text-[#1f1a12] sm:text-3xl">
                 {section.title}

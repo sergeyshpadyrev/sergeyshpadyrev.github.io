@@ -100,7 +100,7 @@ const useRender = (
       <div className={glowBottom} />
 
       <div className={container}>
-        <section className={heroSection} style={{ animationDelay: '80ms' }}>
+        <section className={heroSection}>
           <div className={avatarWrapper}>
             <div className={avatarBg} />
             <Image
@@ -124,7 +124,7 @@ const useRender = (
           </div>
         </section>
 
-        <section id="book" className={booksSection} style={{ animationDelay: '120ms' }}>
+        <section id="book" className={booksSection}>
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Книги</h2>
             <p className={sectionDescription}>
@@ -196,18 +196,17 @@ const useRender = (
           </div>
         </section>
 
-        <section id="posts" className={contentSection} style={{ animationDelay: '160ms' }}>
+        <section id="posts" className={contentSection}>
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Эссе</h2>
             <p className={sectionDescription}>Все мои эссе, собранные в одном месте</p>
           </div>
           <div className={postsGrid}>
-            {props.posts.map((post, index) => (
+            {props.posts.map((post) => (
               <Link
                 key={post.id}
                 href={`/posts/${post.id}`}
                 className={postCard}
-                style={{ animationDelay: `${index * 60}ms` }}
               >
                 <div className={postImageWrapper}>
                   {post.image ? (
@@ -237,7 +236,7 @@ const useRender = (
 
         <PathsPreview paths={props.paths} />
 
-        <section id="notes" className={contentSection} style={{ animationDelay: '200ms' }}>
+        <section id="notes" className={contentSection}>
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Заметки</h2>
             <p className={sectionDescription}>
@@ -258,7 +257,7 @@ const useRender = (
           </div>
         </section>
 
-        <section id="guest" className={contentSection} style={{ animationDelay: '180ms' }}>
+        <section id="guest" className={contentSection}>
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Видео</h2>
             <p className={sectionDescription}>Беседы о философии и жизни</p>
@@ -281,7 +280,7 @@ const useRender = (
           </div>
         </section>
 
-        <section id="course" className={courseSection} style={{ animationDelay: '170ms' }}>
+        <section id="course" className={courseSection}>
           <div className={courseSectionInner}>
             <div className={courseVisual}>
               <div className={courseVisualGlow} />
@@ -297,7 +296,7 @@ const useRender = (
             </div>
             <div className={sideContent}>
               <div className={titleGroup}>
-                <h2 className={courseTitle}>Лекторий</h2>
+                <h2 className={courseTitle}>Закрытый блог</h2>
               </div>
               <p className={courseIntro}>
                 В закрытом блоге я публикую циклы философских лекций о построении системы управления
@@ -305,14 +304,6 @@ const useRender = (
                 практики.
               </p>
               <div className={courseCtaRow}>
-                <a
-                  className={courseButton}
-                  href="https://sponsr.ru/sergeyshpadyrev"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Открыть на Sponsr
-                </a>
                 <a
                   className={courseButton}
                   href="https://boosty.to/sergeyshpadyrev"
@@ -326,7 +317,7 @@ const useRender = (
           </div>
         </section>
 
-        <section id="podcast" className={sideImageSection} style={{ animationDelay: '230ms' }}>
+        <section id="podcast" className={sideImageSection}>
           <div className={sideImageWrapper}>
             <div className={podcastImageBg} />
             <Image
@@ -364,7 +355,7 @@ const useRender = (
           </div>
         </section>
 
-        <section id="music" className={sideImageSection} style={{ animationDelay: '220ms' }}>
+        <section id="music" className={sideImageSection}>
           <div className={sideImageWrapper}>
             <div className={podcastImageBg} />
             <Image
@@ -399,46 +390,46 @@ const useRender = (
           </div>
         </section>
 
-        <section id="development" className={contentSection} style={{ animationDelay: '200ms' }}>
+        <section id="development" className={contentSection}>
           <div className={sectionHeader}>
             <h2 className={sectionTitle}>Разработки</h2>
             <p className={sectionDescription}>Мои проекты с открытым исходным кодом на GitHub</p>
           </div>
           <div className={developmentGrid}>
-            {props.developmentProjects.map((project, index) => (
+            {props.developmentProjects.map((project) => (
               <a
                 key={project.link}
                 href={project.link}
                 target="_blank"
                 rel="noreferrer"
                 className={developmentCard}
-                style={{ animationDelay: `${index * 70}ms` }}
               >
                 <div className={developmentCardContent}>
                   <h3 className={cardTitle}>{project.name}</h3>
                   <p className={developmentCardDescription}>{project.description}</p>
                 </div>
-                <span className={channelArrow} aria-hidden="true">→</span>
+                <span className={channelArrow} aria-hidden="true">
+                  →
+                </span>
               </a>
             ))}
           </div>
         </section>
 
-        <section id="channels" className={contentSection} style={{ animationDelay: '260ms' }}>
+        <section id="channels" className={contentSection}>
           <div className={titleGroup}>
             <h2 className={sectionTitle}>Каналы и платформы</h2>
           </div>
           <div className={channelsGroup}>
             <p className={sectionDescription}>Каналы публикации эссе:</p>
             <div className={channelsGrid}>
-              {essayLinks.map((link, index) => (
+              {essayLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
                   className={channelCard}
-                  style={{ animationDelay: `${index * 70}ms` }}
                 >
                   <div className={channelCardInner}>
                     <span className={cardTitle}>{link.label}</span>
@@ -451,14 +442,13 @@ const useRender = (
           <div className={channelsGroup}>
             <p className={sectionDescription}>Каналы публикации заметок и анонсов:</p>
             <div className={channelsGrid}>
-              {noteLinks.map((link, index) => (
+              {noteLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
                   className={channelCard}
-                  style={{ animationDelay: `${index * 70}ms` }}
                 >
                   <div className={channelCardInner}>
                     <span className={cardTitle}>{link.label}</span>
@@ -471,14 +461,13 @@ const useRender = (
           <div className={channelsExtra}>
             <p className={sectionDescription}>Выступаю в качестве приглашённого лектора:</p>
             <div className={lecturerGrid}>
-              {lecturerLinks.map((link, index) => (
+              {lecturerLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
                   className={channelCard}
-                  style={{ animationDelay: `${index * 70}ms` }}
                 >
                   <div className={channelCardInner}>
                     <span className={cardTitle}>{link.label}</span>

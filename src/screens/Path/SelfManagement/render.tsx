@@ -20,7 +20,7 @@ const useRender = (
       <div className="pointer-events-none absolute bottom-[-12rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-[#e4c9b0]/70 blur-[140px]" />
 
       <div className={style.content}>
-        <header className="space-y-5 fade-in-up">
+        <header className="space-y-5">
           <Link href="/paths" className="nav-pill">
             ← Все пути
           </Link>
