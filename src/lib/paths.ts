@@ -184,7 +184,7 @@ const getSelfManagementConfig = async () => {
   const config = await getPathConfig('self-management');
   const ids = config.sections.flatMap((section) => section.texts);
 
-  if (!ids.length || !ids.every((id) => typeof id === 'string' && isSafeId(id))) {
+  if (!ids.every((id) => typeof id === 'string' && isSafeId(id))) {
     throw new Error('Некорректные тексты self-management в paths.json');
   }
 
