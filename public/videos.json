@@ -145,6 +145,17 @@
     ]
   },
   {
+    "id": "isst",
+    "name": "Эфиры в Институте сознания и социальных технологий",
+    "videos": [
+      {
+        "id": "isst1",
+        "youtube": "https://www.youtube.com/embed/V67HrvxxywU",
+        "vk": "https://vk.ru/video_ext.php?oid=212829877_456239400"
+      }
+    ]
+  },
+  {
     "id": "dmitry",
     "title": "Беседа с Дмитрием Дмитриевым",
     "videos": [
