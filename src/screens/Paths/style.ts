@@ -22,10 +22,6 @@ const useStyle = () => ({
   cardContent: 'relative z-10 mt-auto',
   cardTitle: 'font-display text-3xl leading-tight tracking-[-0.025em] text-[#1f1a12] sm:text-4xl',
   cardDescription: 'mt-4 text-base leading-7 text-[#625749]',
-  cardFooter: 'mt-7 flex items-center justify-between gap-4 border-t border-[#30261b]/10 pt-5',
-  result: 'text-sm font-semibold text-[#6a5b49]',
-  arrow:
-    'flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1f1a12] text-lg text-white transition duration-300 group-hover:translate-x-1 group-hover:bg-[#9b4a35] motion-reduce:transform-none motion-reduce:transition-none',
   footer:
     'mx-auto mt-16 max-w-2xl text-center font-display text-xl leading-8 text-[#766958] sm:mt-20 sm:text-2xl sm:leading-9',
 });

@@ -26,9 +26,10 @@ const useRender = (
         </nav>
 
         <header className={style.header}>
-          <h1 className={style.title}>Философия и практика</h1>
+          <h1 className={style.title}>Авторские пути</h1>
           <p className={style.intro}>
-            Системы философских систем и практик, помогающих навести порядок в своих делах и уме
+            Системы философии и практики по наведению порядка в уме и делах <br />
+            Каждый путь начинается с философской подготовки и меняет жизнь через ежедневную практику
           </p>
         </header>
 
@@ -49,20 +50,10 @@ const useRender = (
               <div className={style.cardContent}>
                 <h2 className={style.cardTitle}>{path.title}</h2>
                 <p className={style.cardDescription}>{path.description}</p>
-                <div className={style.cardFooter}>
-                  <span className={style.result}>Открыть путь</span>
-                  <span className={style.arrow} aria-hidden="true">
-                    →
-                  </span>
-                </div>
               </div>
             </Link>
           ))}
         </section>
-
-        <p className={style.footer}>
-          Каждый путь начинается с философской подготовки и меняет жизнь через ежедневную практику
-        </p>
       </div>
     </main>
   );
