@@ -14,7 +14,14 @@ const noteLinks = [
 const lecturerLinks = [
   { label: 'Университет мировоззрения «Унивёрс»', href: 'https://www.univers.id/' },
   { label: 'Философский лекторий «Клуб 42»', href: 'https://club-42.ru/' },
+  { label: 'Институт сознания и социальных технологий', href: 'https://isst.ru/' },
 ];
 
-const useLogic = (props: Props) => ({ props, essayLinks, translationLinks, noteLinks, lecturerLinks });
+const useLogic = (props: Props) => ({
+  props,
+  essayLinks,
+  translationLinks,
+  noteLinks,
+  lecturerLinks,
+});
 export default useLogic;
